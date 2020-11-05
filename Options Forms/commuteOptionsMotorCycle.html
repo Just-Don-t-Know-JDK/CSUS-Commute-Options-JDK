@@ -54,7 +54,7 @@
                     <label for="usr">What year was your motorcycle made?</label>
                     <input type="number" class = "form-control" id ="makeYear" placeholder="Enter motorcycle year" name = "year" min = "1900" max = "2025" required>
                     <div class = "invalid-feedback">Please enter a valid year</div>
-                    <input type="submit">
+                    <!-- <input type="submit"> -->
                 </div>
             </form>
             <!-- make of motorcycle  -->
@@ -69,14 +69,45 @@
                     </select>
                 </div>
             </form>
-            <!-- model of car -->
+            <!-- model of motorcycle -->
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">What is your motorcycle model?</label>
                     <input type="text" class = "form-control" id ="motorcycleModel" placeholder="Enter motorcycle model" name = "model" required>
                     <div class = "invalid-feedback">Please select a valid model</div>
-                    <input type="submit">
+                    <!-- <input type="submit"> -->
                 </div>
+            </form>
+            <!-- insurance cost 
+              hard coded in max and min amounts-->
+            <form action="/action_page.php" class = "was-validated">
+                <div class = "form-group">
+                    <label for="usr">How much do you pay for insurance (monthly)?</label>
+                    <input type="number" class = "form-control" id ="insuranceCost" placeholder="Enter monthly insurance cost" name = "cost" min = "0" max = "100000" required>
+                    <div class = "invalid-feedback">Please enter a valid amount</div>
+                      <!-- <input type="submit"> -->
+                </div>
+            </form>
+            <!-- amount spent on parking. need to anticipate types of parking: daily parking pass,
+             semester parking pass, off campus parking, or free
+            -->
+            <div class="form-check-inline">
+                <label class="form-check-label" required>
+                <input type="radio" class="form-check-input" name="optradio">Semester parking pass
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Daily parking pass
+                </label>
+            </div>
+            <div class="form-check-inline disabled">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio" >off campus parking
+                </label>
+            </div>
+        </div>
+            
 
         </div>
 
