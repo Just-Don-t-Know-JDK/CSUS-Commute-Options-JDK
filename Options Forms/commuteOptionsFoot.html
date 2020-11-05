@@ -47,4 +47,16 @@
             </div>
             <a href="../Options.html" class="btn btn-primary btn-sm">Back</a>
         </div>
-        <a href="../Data Analysis.html" class="btn btn-primary btn-lg btn-block">See Results</a>
+        <div class = container>
+          <form action="/action_page.php" class = "was-validated">
+            <div class = "form-group">
+                <label for="usr">What is your address?</label>
+                <input type="text" class = "form-control" id ="address" placeholder="Enter your address" name = "model" required>
+                <div class = "invalid-feedback">invalid address</div>
+                <p>*Your address will not be saved for security purposes.</p>
+                <!-- <input type="submit"> -->
+            </div>
+          </form>
+          <a href="../Data Analysis.html" class="btn btn-primary btn-lg btn-block">See Results</a>
+        </div>
+        
