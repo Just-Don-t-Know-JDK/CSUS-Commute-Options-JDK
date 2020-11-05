@@ -28,37 +28,45 @@
             }
 
             body {
-                display: -ms-flexbox;
-                display: -webkit-box;
-                display: flex;
                 -ms-flex-pack: center;
                 -webkit-box-pack: center;
                 justify-content: center;
-                box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+                box-shadow: inset 0 0 70px 90px rgba(0, 0, 0, 0.6);
             }
-
-            .cover-container {
-                max-width: 46em;
+            .rgba-gradient {
+                background: -moz-linear-gradient(25deg, rgba(241, 90, 34, 0.6), rgba(247, 202, 24, 0.6) 100%);
+                background: -webkit-linear-gradient(25deg, rgba(241, 90, 34, 0.6), rgba(247, 202, 24, 0.6) 100%);
+                background: -o-linear-gradient(25deg, rgba(241, 90, 34, 0.6), rgba(247, 202, 24, 0.6) 100%);
+                background: linear-gradient(to 25deg, rgba(241, 90, 34, 0.6), rgba(247, 202, 24, 0.6) 100%);
             }
             
         </style>
     </head>
 
-    <body class="text-center">
+    
 
+    <body class="view" style="background: url('img/bg.jpg'); background-repeat: no-repeat; background-position: center center; background-size: fixed;">
         <!-- Navbar later -->
-        
+
         <!-- Welcome Message -->
-        <div class="cover-container d-flex justify-content-center align-self-center">
-            <main role="main">
-                <h1 class="display-4">Welcome to Sac State's Commute Options Helper Tool!</h1>
-                <h2 class="cover-heading">Take our quiz to discover the best way to get to Sac State for you!</h2>
-                <hr class="my-4">
-                <p>You may either start with a short survey to help UTAPS learn more about how people commute to Sac State, or jump straight into questions relevant to calculating your personal commuter profile.</p>
-                <a href="Survey.html" class="btn btn-lg btn-outline-success" role="button">Start Survey</a>
-                <a href="Options.html" class="btn btn-lg btn-outline-warning" role="button">Skip Survey</a>
-            </main>
+        <div class="rgba-gradient d-flex justify-content-center align-items-center" style="height: 100%;">
+            <div class="containter">
+                <div class="row">
+                    <div class="col-md-6 text-center mx-auto">
+                        <h1 class="font-weight-bold">Welcome to Sac State's Commute Options Helper Tool!</h1>
+                        <div style="height: 50px;"></div>
+                        <h3>Take our quiz to discover the best way to get to Sac State for you!</h3>
+                        <hr>
+                        <p>You may either start with a short survey to help UTAPS learn more about how people commute to Sac State,
+                             or jump straight into questions relevant to calculating your personal commuter profile.</p>
+                        <a href="Survey.html" class="btn btn-lg btn-success" role="button">Start Survey</a>
+                        <a href="Options.html" class="btn btn-lg btn-info" role="button">Skip Survey</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
+        
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
