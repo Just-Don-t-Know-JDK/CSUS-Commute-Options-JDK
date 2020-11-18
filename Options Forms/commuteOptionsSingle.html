@@ -1,4 +1,7 @@
-<!--  -->
+<!--to do as of 11/18/2020:
+    -add more options (electric,hybrid,etc)
+    -error handling(cant go to next page without valid info) 
+    -data transfering(how to pass it to next page)-->
 <!doctype html>
 <html lang="en">
     <head>
@@ -52,16 +55,15 @@
         </div>
         <div class = container>
             <!-- Year the car was made 
-              hard coded year for max need to change to sys date-->
+              hard coded year for max need to change to sys date
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">What year was your car made?</label>
                     <input type="number" class = "form-control" id ="makeYear" placeholder="Enter vehicle year" name = "year" min = "1900" max = "2025" required>
                     <div class = "invalid-feedback">Please enter a valid year</div>
-                    <!-- <input type="submit"> -->
                 </div>
             </form>
-            <!-- make of car  -->
+           //make of car 
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">Who makes your vehicle?</label>
@@ -73,16 +75,24 @@
                     </select>
                 </div>
             </form>
-            <!-- model of car -->
+             //model of car 
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">What is your vehicle model?</label>
                     <input type="text" class = "form-control" id ="vehicleModel" placeholder="Enter vehicle model" name = "model" required>
                     <div class = "invalid-feedback">Please select model</div>
-                    <!-- <input type="submit"> -->
-                </div>
+                    
+                </div> -->
                 <!-- insurance cost 
                  hard coded in max and min amounts-->
+                <form action="/action_page.php" class = "was-validated">
+                  <div class = "form-group">
+                      <label for="usr">What is your MPG</label>
+                      <input type="number" class = "form-control" id ="mpg" placeholder="Enter your mpg" name = "cost" min = "1" max = "100" required>
+                      <div class = "invalid-feedback">Please enter a valid amount</div>
+                      <!-- <input type="submit"> -->
+                  </div>
+                </form>                 
                 <form action="/action_page.php" class = "was-validated">
                   <div class = "form-group">
                       <label for="usr">How much do you pay for insurance (monthly)?</label>
