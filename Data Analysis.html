@@ -54,32 +54,19 @@
 
         <nav class="navbar-expand-lg navbar-dark" style="background-color: gold; padding: 10px;">
             <div class="container">
-                <form id="type">
+                <form id="option" class="form">
+
                     <div class="form-group">
-                        <label style="padding-right: 5px;">Cost Comparison type</label>
+                        <label>Cost Comparison type</label>
                         <select id="parent" class="form-control">
                             <option value="sustainability">Sustainability</option>
                             <option value="time">Time</option>
                             <option value="money">Money</option>
                         </select>
                     </div>
-                </form>
-                <form id="option" class="form-inline">
-                    <div class="form-group">
-                        <label style="padding-right: 5px;">First Bar</label>
-                        <select id="first" class="form-control">
-                            <option value="userInput">Your Values</option>
-                            <option value="SOV">Single Occupant Vehicle</option>
-                            <option value="MOV">Multi-Occupant Vehicle</option>
-                            <option value="Motorcycle">Motorcycle</option>
-                            <option value="Transit">Transit</option>
-                            <option value="Bicycle">Bicycle</option>
-                            <option value="Walking">Walking</option>
-                        </select>
-                    </div>
 
                     <div class="form-group ml-auto">
-                        <label style="padding-right: 5px;">Second Bar</label>
+                        <label>Second Bar</label>
                         <select id="second" class="form-control">
                             <option value="SOV">Single Occupant Vehicle</option>
                             <option value="MOV">Multi-Occupant Vehicle</option>
@@ -89,11 +76,12 @@
                             <option value="Walking">Walking</option>
                         </select>
                     </div>
+
                 </form>
             </div>
         </nav>
         
-        <main class="col bg-faded py-3">
+        <main class="col bg-faded py-3 mx-auto" style="width: 1200px;">
             <canvas class="my-4 chartjs-render-monitor" id="myChart" width="554" height="233" style="display: block; width: 554px; height: 233px;">
         </main>
         
@@ -175,7 +163,7 @@
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: [$('#first option:selected').text(), $('#second option:selected').text()],
+                    labels: ["Your Values", $('#second option:selected').text()],
                     datasets: [{
                         data: [graphInfo.sustainVals[0], graphInfo.sustainVals[1]],
                         backgroundColor: ["#dad9u","#3e95cd"],
@@ -192,19 +180,17 @@
                         text: 'Carbon Consumption (tons/yr)'
                     },
                     scales: {
-                        offset: true
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
                     }
                 }
             });
 
-            function firstOptionSwitch() {
-                myChart.data.labels = [$('#first option:selected').text(), $('#second option:selected').text()];
-                changeCompare($('#first option:selected').text(), 0, getType($('#parent option:selected').text()));
-                myChart.update();
-            }
-
             function secondOptionSwitch() {
-                myChart.data.labels = [$('#first option:selected').text(), $('#second option:selected').text()];
+                myChart.data.labels = ['Your Values', $('#second option:selected').text()];
                 changeCompare($('#second option:selected').text(), 1, getType($('#parent option:selected').text()));
                 myChart.update();
             }
@@ -217,7 +203,7 @@
                 else if ($('#parent option:selected').text() == 'Money')
                     myChart.options.title.text = 'Travel Cost in Dollars per Year';
 
-                firstOptionSwitch();
+                changeCompare('Your Values', 0, getType($('#parent option:selected').text()));
                 secondOptionSwitch();
                 myChart.update();
             });
@@ -248,9 +234,6 @@
                     myChart.data.datasets[0].data[index] = array[6];
             }
 
-            $('#first').change(function(){
-                firstOptionSwitch();
-            });
             $('#second').change(function(){
                 secondOptionSwitch();
             });
