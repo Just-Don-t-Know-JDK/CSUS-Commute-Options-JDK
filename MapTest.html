@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Add Map</title>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <style type="text/css">
-      /* Set the size of the div element that contains the map */
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Map</title>
+
+    <style>
+      /*Setting the size of the div element that contains the map */
       #map {
+        /*Height of map */
         height: 400px;
-        /* The height is 400 pixels */
+        /*Width of map */
         width: 100%;
-        /* The width is the width of the web page */
       }
     </style>
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
+
+  <script>
+    let map, infoWindow;
+    function initMap() {
+      // The location of Sacramento State
+      const sacState = { lat: 38.56131, lng: -121.42412 };
+      // The map, centered at sacState
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: sacState,
+      });
+    };
+</script>
+
   </head>
+
   <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
+
+    <h1>My Google Map</h1>
+  
     <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0snFsj6zf8NZ1vXHyQidrIqwHEG_a10c&callback=initMap&libraries=&v=weekly" defer></script>
+
+
   </body>
+
 </html>
