@@ -1,4 +1,7 @@
-<!--  -->
+<!--to do as of 11/18/2020:
+    -add more options (electric,hybrid,etc)
+    -error handling(cant go to next page without valid info) 
+    -data transfering(how to pass it to next page)-->
 <!doctype html>
 <html lang="en">
     <head>
@@ -74,16 +77,15 @@
         </div>
         <div class = container>
             <!-- Year the car was made 
-              hard coded year for max need to change to sys date-->
+              hard coded year for max need to change to sys date
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">What year was your car made?</label>
                     <input type="number" class = "form-control" id ="makeYear" placeholder="Enter vehicle year" name = "year" min = "1900" max = "2025" required>
                     <div class = "invalid-feedback">Please enter a valid year</div>
-                    <!-- <input type="submit"> -->
                 </div>
             </form>
-            <!-- make of car  -->
+           //make of car 
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">Who makes your vehicle?</label>
@@ -95,52 +97,59 @@
                     </select>
                 </div>
             </form>
-            <!-- model of car -->
+             //model of car 
             <form action="/action_page.php" class = "was-validated">
                 <div class = "form-group">
                     <label for="usr">What is your vehicle model?</label>
                     <input type="text" class = "form-control" id ="vehicleModel" placeholder="Enter vehicle model" name = "model" required>
                     <div class = "invalid-feedback">Please select model</div>
-                    <!-- <input type="submit"> -->
-                </div>
+                    
+                </div> -->
                 <!-- insurance cost 
                  hard coded in max and min amounts-->
-                <form action="/action_page.php" class = "was-validated">
+                 <!-- /action_page.php -->
+                <form>
                   <div class = "form-group">
-                      <label for="usr">How much do you pay for insurance (monthly)?</label>
-                      <input type="number" class = "form-control" id ="insuranceCost" placeholder="Enter monthly insurance cost" name = "cost" min = "0" max = "100000" required>
-                      <div class = "invalid-feedback">Please enter a valid amount</div>
-                      <!-- <input type="submit"> -->
+                    <label for="usr">What is your MPG</label>
+                    <input type="number" class = "form-control" id ="mpg" placeholder="Enter your mpg" name = "cost" min = "1" max = "100" required>
+                    <div class = "invalid-feedback">Please enter a valid amount</div>
                   </div>
-              </form>
-              <!-- amount spent on parking. need to anticipate types of parking: daily parking pass,
-                semester parking pass, off campus parking, or free
-               -->
-               <div class="form-check-inline">
-                <label class="form-check-label" required>
-                  <input type="radio" class="form-check-input" name="optradio">Semester parking pass
-                </label>
-              </div>
-              <div class="form-check-inline">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Daily parking pass
-                </label>
-              </div>
-              <div class="form-check-inline disabled">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio" >off campus parking
-                </label>
-              </div>
-              <a href="../Data Analysis.html" class="btn btn-primary btn-lg btn-block">See Results</a>
+                  <div class = "form-group"> 
+                    <label for="usr">How much do you pay for insurance (monthly)?</label>
+                    <input type="number" class = "form-control" id ="insuranceCost" placeholder="Enter monthly insurance cost" name = "cost" min = "0" max = "100000" required>
+                    <div class = "invalid-feedback">Please enter a valid amount</div>
+                  </div>
+                    <!-- amount spent on parking. need to anticipate types of parking: daily parking pass,
+                    semester parking pass, off campus parking, or free-->
+                    <div class="custom-control-inline c custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation" name="custom-radio" required>
+                        <label class="custom-control-label" for="customControlValidation" required>Semester parking pass</label>
+                      </div>
+                      <div class="custom-control-inline custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation1" name="custom-radio" required>
+                        <label class="custom-control-label" for="customControlValidation1" required>Daily Parking Pass</label>
+                      </div>
+                      <div class="custom-control-inline custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="custom-radio" required>
+                        <label class="custom-control-label" for="customControlValidation2" required>Off Campus Parking</label>
+                      </div> 
+                      <!-- <div class = "invalid-feedback">Please enter a valid amount</div> -->
+                    </div>
+                    <!-- <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> -->
+                    <!-- <a href="../Data Analysis.html" id="submit" class="btn btn-primary btn-lg btn-block">See Results</a> -->
+                     <!-- <a href="../Data Analysis.html"> -->
+                       <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    <!-- </a> -->
+                  </div> 
+                </form>
               <br><br>
               <!-- Map goes here -->
               <div id="map"></div>
               <br><br>
         </div>
 
-
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="commuteOptionsSingle.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0snFsj6zf8NZ1vXHyQidrIqwHEG_a10c&callback=initMap&libraries=&v=weekly" defer></script>
     </body>
