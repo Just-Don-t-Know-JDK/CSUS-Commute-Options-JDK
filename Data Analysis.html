@@ -121,6 +121,11 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script>
             let userData = JSON.parse(window.localStorage.getItem('userData')); // Fetching the user data from previous page
+            let mpg = window.localStorage.getItem('mpg');
+            let insurance = window.localStorage.getItem('insurance');
+
+            console.log(mpg + ' ');
+            console.log(insurance);
             
             // TODO - Compress
             function sustainabilityCalc(mpg, distance, freq) {

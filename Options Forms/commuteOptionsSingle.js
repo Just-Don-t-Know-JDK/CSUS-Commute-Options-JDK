@@ -60,8 +60,8 @@ $(document).ready(function(){
 function greetings() {
   var milesPerGallon = document.getElementById("mpg").value;
   var insuranceCost = document.getElementById("insuranceCost").value;
-  window.localStorage.setItem(milesPerGallon);
-  window.localStorage.setItem(insuranceCost);
+  window.localStorage.setItem('mpg', milesPerGallon);
+  window.localStorage.setItem('insurance', insuranceCost);
   console.log(milesPerGallon);
   console.log(insuranceCost);
   //document.write("Hello" + milesPerGallon +insuranceCost);
