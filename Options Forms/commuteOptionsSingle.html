@@ -96,7 +96,7 @@
                 <!-- insurance cost 
                  hard coded in max and min amounts-->
                  <!-- /action_page.php -->
-                <form action="../Data Analysis.html" class="needs-validation" novalidate>
+                <form action="../Data Analysis.html" id="SOVdata" class="needs-validation" novalidate>
                   <div class = "form-group">
                     <label for="mpg">What is your MPG</label>
                     <input type="number" class = "form-control" id ="mpg" placeholder="Enter your mpg" name = "cost" min = "1" max = "100" required>
@@ -113,28 +113,15 @@
                     <input type="radio" class="custom-control-input" id="customControlValidation" name="custom-radio" required>
                     <label class="custom-control-label" for="customControlValidation" required>Semester parking pass</label>
                   </div>
-                  <div class="custom-control-inline custom-control custom-radio">
+                  <div class="custom-control-inline custom-control custom-radio form-group">
                     <input type="radio" class="custom-control-input" id="customControlValidation1" name="custom-radio" required>
                     <label class="custom-control-label" for="customControlValidation1" required>Daily Parking Pass</label>
                   </div>
-                  <div class="custom-control-inline custom-control custom-radio">
+                  <div class="custom-control-inline custom-control custom-radio form-group">
                     <input type="radio" class="custom-control-input" id="customControlValidation2" name="custom-radio" required>
                     <label class="custom-control-label" for="customControlValidation2" required>Off Campus Parking</label>
                   </div> 
-                      <!-- <div class = "invalid-feedback">Please enter a valid amount</div> -->
-                  <!-- </disv> -->
-                    <!-- <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> -->
-                    <!-- <a href="../Data Analysis.html" id="submit" class="btn btn-primary btn-lg btn-block">See Results</a> -->
-                     <!-- <a href="../Data Analysis.html"> -->
-                      <!-- <a href="../Data Analysis.html">  -->
-                      <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub">submit</button>
-                      <!-- <a href="../Data Analysis.html" type="submit" id="submit" class="btn btn-primary btn-lg btn-block">See Results</a> -->
-                      <!-- <a href="../Data Analysis.html"> -->
-                      <!-- <button> Press me</button> -->
-                      <!-- </a> -->
-                      
-                      <!-- <a href="../Data Analysis.html" class="btn btn-primary btn-lg" id="sub">Primary link</a> -->
-                      <!-- </a> -->
+                      <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub" onclick="greetings()">submit</button>
                   </div> 
                 </form>
         
