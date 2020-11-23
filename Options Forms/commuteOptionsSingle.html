@@ -23,18 +23,6 @@
             width: 100%;
           }
         </style>
-        <script>
-          // Initialize map
-          function initMap() {
-            // Location for sac state
-            const sacState = { lat: 38.56131, lng: -121.42412};
-            // The map, centered at sacState
-            const map = new google.maps.Map(document.getElementById("map"), {
-              zoom: 15,
-              center: sacState,
-            });
-          }
-        </script>
     </head>
     <body>
         <!-- Navbar -->
@@ -149,15 +137,11 @@
                       <!-- </a> -->
                   </div> 
                 </form>
-              <br><br>
-              <!-- Map goes here -->
-              <div id="map"></div>
-              <br><br>
+        
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="commuteOptionsSingle.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0snFsj6zf8NZ1vXHyQidrIqwHEG_a10c&callback=initMap&libraries=&v=weekly" defer></script>
     </body>
 </html>
