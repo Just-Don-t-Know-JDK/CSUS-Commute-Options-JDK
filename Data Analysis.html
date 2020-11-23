@@ -288,16 +288,29 @@
                     myChart.data.datasets[0].data[index] = array[6];
             }
 
+            // Initializing the second text box
+            let temp = 'better';
+            if (myChart.data.datasets[0].data[1] < myChart.data.datasets[0].data[0])
+                temp = 'worse';
+            else if (myChart.data.datasets[0].data[1] == myChart.data.datasets[0].data[0])
+                temp = 'equivalent';
+
+            $('#p2').html('In terms of ' + $('#parent option:selected').text().toLowerCase() + ' your current commute mode is ' + temp + ' than '
+                + $('#second option:selected').text().toLowerCase() + 's on average.');
+
             $('#second').change(function(){
                 $('#head2').html($('#second option:selected').text());
 
-                $('#p2').html(
-                    `
-                    
-                    `
-                );
-
                 secondOptionSwitch();
+
+                let temp = 'better';
+                if (myChart.data.datasets[0].data[1] < myChart.data.datasets[0].data[0])
+                    temp = 'worse';
+                else if (myChart.data.datasets[0].data[1] == myChart.data.datasets[0].data[0])
+                    temp = 'equivalent';
+
+                $('#p2').html('In terms of ' + $('#parent option:selected').text().toLowerCase() + ' your current commute mode is ' + temp + ' than '
+                 + $('#second option:selected').text().toLowerCase() + 's on average.');
             });
         </script>
     </body>
