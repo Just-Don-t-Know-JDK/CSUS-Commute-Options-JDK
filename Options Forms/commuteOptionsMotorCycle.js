@@ -22,12 +22,12 @@
     var mode = 'Motorcycle';
     var milesPerGallon = document.getElementById("mpg").value;
     var insuranceCost = document.getElementById("insuranceCost").value;
-    var address = document.getElementById("addy").value;
+    // var address = document.getElementById("addy").value;
     window.localStorage.setItem('mpg', milesPerGallon);
     window.localStorage.setItem('insurance', insuranceCost);
-    window.localStorage.setItem('addy', address);
+    // window.localStorage.setItem('addy', address);
     window.localStorage.setItem('mode',mode);
-    console.log(milesPerGallon);
-    console.log(insuranceCost);
+    // console.log(milesPerGallon);
+    // console.log(insuranceCost);
     //document.write("Hello" + milesPerGallon +insuranceCost);
   }
