@@ -120,36 +120,69 @@
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script>
-            let userData = JSON.parse(window.localStorage.getItem('userData')); // Fetching the user data from previous page
             let mpg = window.localStorage.getItem('mpg');
             let insurance = window.localStorage.getItem('insurance');
+            let travelInfo = window.localStorage.getItem('travelInfo');
+            let frequency = window.localStorage.getItem('frequency');
+            let userType = window.localStorage.getItem('mode');
+            processType();
 
             console.log(mpg + ' ');
             console.log(insurance);
 
             let money = (insurance*12);                             // How much the user pays yearly in insurance & parking
-            
+
+            function processType() {
+                if (userType == 'SOV')
+                    userType = 0;
+                else if (userType == 'MOV')
+                    userType = 0;
+                else if (userType == 'Motorcycle')
+                    userType = 0;
+                else if (userType == 'Transit')
+                    userType = 3;
+                else if (userType == 'Bike')
+                    userType = 2;
+                else
+                    userType = 1;
+            }
+
             // TODO - Compress
             function sustainabilityCalc(mpg, distance, freq) {
-                let emissionPerMile = (8887/mpg)*distance*2.0;  // times 2 becasue you have to come back home :)
+                let emissionPerMile = (8887/mpg)*distance*2.0;      // times 2 becasue you have to come back home :)
                 let wkConsumtion = emissionPerMile * freq;
                 let yrConsumption = wkConsumtion * 52.0;
                 
-                return ((yrConsumption/1000)*2.205)/1000;       // Yearly carbon emissions in tons per year
+                return ((yrConsumption/1000)*2.205)/1000;           // Yearly carbon emissions in tons per year
+            }
+            
+            function meterToMile(meters) {
+                return meters*0.000621371192;
             }
 
-            /*
+            function timeCalc(seconds, freq) {
+                return (seconds/3600)*freq*52.0;
+            }
+
             let graphInfo = {
                 sustainVals: [
-                    sustainabilityCalc(mpg, userData.distance, userData.freq),          // Users consumption
-                    sustainabilityCalc(24.2, userData.distance, userData.freq),         // SOV
-                    sustainabilityCalc(25.50, userData.distance, userData.freq),        // MOV
-                    sustainabilityCalc(44, userData.distance, userData.freq),           // Motorcycle
-                    sustainabilityCalc(5.18, userData.distance, userData.freq),         // Transit (Have to consider individual responsibility)
-                    0,                                                                  // Bike
-                    0                                                                   // Walking
+                    sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency),   // Users consumption
+                    sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency),         // SOV
+                    sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency),        // MOV
+                    sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency),           // Motorcycle
+                    sustainabilityCalc(5.18, meterToMile(travelInfo[3][0]), frequency),         // Transit (Have to consider individual responsibility)
+                    0,                                                                          // Bike
+                    0                                                                           // Walking
                     ],
-                timeVals: userData.time,                                                // Could be hard to get all these
+                timeVals: [
+                    timeCalc(travelInfo[userType][1], frequency),
+                    timeCalc(travelInfo[0][1], frequency),
+                    timeCalc(travelInfo[0][1], frequency),
+                    timeCalc(travelInfo[0][1], frequency),
+                    timeCalc(travelInfo[3][1], frequency),
+                    timeCalc(travelInfo[2][1], frequency),
+                    timeCalc(travelInfo[1][1], frequency)
+                ],
                 moneyVals: [            // All is yearly
                     money,
                     6201.0,             // SOV (sources in google drive)
@@ -159,10 +192,10 @@
                     350.0,              // Bike (from https://www.treehugger.com/how-much-does-it-cost-to-commute-by-bike-4858452#:~:text=Based%20on%20an%20annual%20average,or%203.84%20minutes%20a%20day.)
                     0                   // Walking (costs shoes but w/e)
                 ]
-            } */
+            }
 
             // Testing array
-            let graphInfo = {
+            /*let graphInfo = {
                 sustainVals: [
                     4.7,
                     5.1,
@@ -190,7 +223,7 @@
                     350.0,
                     0
                 ]
-            }
+            }*/
 
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {

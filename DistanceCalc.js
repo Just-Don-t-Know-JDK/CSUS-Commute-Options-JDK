@@ -52,8 +52,8 @@ function calcRoute(theMode, count) {
             //Get distance and time
             distance = result.routes[0].legs[0].distance;
             duration = result.routes[0].legs[0].duration;
-            dataStore[count][0] = distance.text;
-            dataStore[count][1] = duration.text;
+            dataStore[count][0] = distance.value;
+            dataStore[count][1] = duration.value;
             // $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             // document.getElementById("output").style.display = "block";
             if (count == userType)
