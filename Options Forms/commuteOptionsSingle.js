@@ -21,8 +21,10 @@
 function sendInfo() {
   var milesPerGallon = document.getElementById("mpg").value;
   var insuranceCost = document.getElementById("insuranceCost").value;
+  var frequency = document.getElementById("frequency").value;
   window.localStorage.setItem('mpg', milesPerGallon);
   window.localStorage.setItem('insurance', insuranceCost);
+  window.localStorage.setItem('frequency', frequency);
   console.log(milesPerGallon);
   console.log(insuranceCost);
   //document.write("Hello" + milesPerGallon +insuranceCost);
