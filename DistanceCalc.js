@@ -75,7 +75,7 @@ function clearRoute(){
 // Create autocomplete objects for all inputs
 
 var options = {
-    types: ['(cities)']
+    types: ['address']
 }
 
 
