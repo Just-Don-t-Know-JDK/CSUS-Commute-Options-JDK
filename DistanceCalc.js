@@ -24,7 +24,7 @@ var directionsDisplay = new google.maps.DirectionsRenderer();
 // Bind the DirectionsRenderer to the map
 directionsDisplay.setMap(map);
 
-var dataStore = [
+let dataStore = [
     [0, 0],         // DRIVE
     [0, 0],         // WALK
     [0, 0],         // BIKE
@@ -52,8 +52,8 @@ function calcRoute(theMode, count) {
             //Get distance and time
             distance = result.routes[0].legs[0].distance;
             duration = result.routes[0].legs[0].duration;
-            dataStore[count][0] = distance.text;
-            dataStore[count][1] = duration.text;
+            dataStore[count][0] = distance.value;
+            dataStore[count][1] = duration.value;
             // $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             // document.getElementById("output").style.display = "block";
             if (count == userType)
@@ -98,7 +98,7 @@ function calcAll() {
     calcRoute(google.maps.TravelMode.BICYCLING, 2);
     calcRoute(google.maps.TravelMode.TRANSIT, 3);
     console.log(dataStore);
-    window.localStorage.setItem('travelInfo', dataStore);
+    window.localStorage.setItem('travelInfo', JSON.stringify(dataStore));
 }
 
 // Clear results
@@ -119,3 +119,12 @@ var options = {
 
 var input1 = document.getElementById("addy");
 var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
+
+$('#form').submit(function(e){
+    e.preventDefault();
+    window.localStorage.setItem('travelInfo', JSON.stringify(dataStore));
+});
+
+$('#submit').click(function(){
+    window.location.replace('Data Analysis.html');
+});

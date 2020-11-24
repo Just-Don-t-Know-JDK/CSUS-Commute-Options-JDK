@@ -51,7 +51,7 @@
     </div>
 
     <div class="container">
-        <form>
+        <form id="form">
             <!-- Location 1 -->
             <div class="row">
                 <div class="location-label">
@@ -66,8 +66,8 @@
             <div class="row">
                 <button class="button" type="button" onclick="clearRoute();">Clear</button>
                 <button class="button" type="button" onclick="calcAll()">Submit</button>
-                <a href="Data Analysis.html" role="button" class="btn btn-primary">Next</a>
-            </div>      
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
             
             <!-- Stats table -->                
             <div id="output" class="result-table"></div>
