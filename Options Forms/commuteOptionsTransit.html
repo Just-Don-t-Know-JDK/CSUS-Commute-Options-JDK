@@ -50,19 +50,22 @@
             <a href="../Options.html" class="btn btn-primary btn-sm">Back</a>
         </div>
         <div class = container>
-            <label for="usr">Do you have the SacState transit pass?</label><br>
-            <div class="form-check-inline">
-                <label class="form-check-label" required>
-                <input type="radio" class="form-check-input" name="optradio">Yes
-                </label>
+          <form action="../RoutingInfo.html" class="needs-validation" novalidate>
+            <label for="insuranceCost">Do you have a Transit Pass?</label>
+            <!-- <br> -->
+            <div class="custom-control-inline custom-radio custom-control form-group">
+              <input type="radio" class="custom-control-input" id="customControlValidation" name="custom-radio" required>
+              <label class="custom-control-label" for="customControlValidation" required>Yes</label>
             </div>
-            <div class="form-check-inline">
-            <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optradio">No
-            </label>
-          </div>
-          <a href="../Data Analysis.html" class="btn btn-primary btn-lg btn-block">See Results</a>
+            <div class="custom-control-inline custom-control custom-radio form-group">
+              <input type="radio" class="custom-control-input" id="customControlValidation1" name="custom-radio" required>
+              <label class="custom-control-label" for="customControlValidation1" required>No</label>
+            </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub" onclick="sendInfo()">submit</button> 
+          </form>
         </div>
+
+        <script src="commuteOptionsTransit.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
