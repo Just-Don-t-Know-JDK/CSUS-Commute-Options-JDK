@@ -126,20 +126,22 @@
 
             console.log(mpg + ' ');
             console.log(insurance);
+
+            let money = (insurance*12);                             // How much the user pays yearly in insurance & parking
             
             // TODO - Compress
             function sustainabilityCalc(mpg, distance, freq) {
-                let emissionPerMile = (8887/mpg)*distance*2.0; // times 2 becasue you have to come back home :)
+                let emissionPerMile = (8887/mpg)*distance*2.0;  // times 2 becasue you have to come back home :)
                 let wkConsumtion = emissionPerMile * freq;
                 let yrConsumption = wkConsumtion * 52.0;
                 
-                return ((yrConsumption/1000)*2.205)/1000; // Yearly carbon emissions in tons per year
+                return ((yrConsumption/1000)*2.205)/1000;       // Yearly carbon emissions in tons per year
             }
 
             /*
             let graphInfo = {
                 sustainVals: [
-                    sustainabilityCalc(userData.mpg, userData.distance, userData.freq), // Users consumption
+                    sustainabilityCalc(mpg, userData.distance, userData.freq),          // Users consumption
                     sustainabilityCalc(24.2, userData.distance, userData.freq),         // SOV
                     sustainabilityCalc(25.50, userData.distance, userData.freq),        // MOV
                     sustainabilityCalc(44, userData.distance, userData.freq),           // Motorcycle
@@ -149,7 +151,7 @@
                     ],
                 timeVals: userData.time,                                                // Could be hard to get all these
                 moneyVals: [            // All is yearly
-                    userData.money,
+                    money,
                     6201.0,             // SOV (sources in google drive)
                     6201.0,             // MOV (can be split, sole, or no responsibility)
                     1500.0,             // Motorcycle (from https://www.nadaguides.com/Motorcycles/shopping-guides/how-much-does-it-cost-to-service-a-motorcycle#:~:text=Just%20as%20new%20and%20used,it%20in%2C%20and%20so%20on.)
