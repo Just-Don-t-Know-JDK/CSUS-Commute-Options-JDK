@@ -122,13 +122,10 @@
         <script>
             let mpg = window.localStorage.getItem('mpg');
             let insurance = window.localStorage.getItem('insurance');
-            let travelInfo = window.localStorage.getItem('travelInfo');
+            let travelInfo = JSON.parse(window.localStorage.getItem('travelInfo'));
             let frequency = window.localStorage.getItem('frequency');
             let userType = window.localStorage.getItem('mode');
             processType();
-
-            console.log(mpg + ' ');
-            console.log(insurance);
 
             let money = (insurance*12);                             // How much the user pays yearly in insurance & parking
 
@@ -160,6 +157,9 @@
                 return meters*0.000621371192;
             }
 
+            console.log(travelInfo);
+            console.log(meterToMile(travelInfo[userType][0]));
+
             function timeCalc(seconds, freq) {
                 return (seconds/3600)*freq*52.0;
             }
@@ -174,7 +174,7 @@
                     0,                                                                          // Bike
                     0                                                                           // Walking
                     ],
-                timeVals: [
+                timeVals: [                                                                     // LOGIC ERROR
                     timeCalc(travelInfo[userType][1], frequency),
                     timeCalc(travelInfo[0][1], frequency),
                     timeCalc(travelInfo[0][1], frequency),

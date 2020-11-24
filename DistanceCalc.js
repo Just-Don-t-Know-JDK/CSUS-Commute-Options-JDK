@@ -24,7 +24,7 @@ var directionsDisplay = new google.maps.DirectionsRenderer();
 // Bind the DirectionsRenderer to the map
 directionsDisplay.setMap(map);
 
-var dataStore = [
+let dataStore = [
     [0, 0],         // DRIVE
     [0, 0],         // WALK
     [0, 0],         // BIKE
@@ -98,7 +98,7 @@ function calcAll() {
     calcRoute(google.maps.TravelMode.BICYCLING, 2);
     calcRoute(google.maps.TravelMode.TRANSIT, 3);
     console.log(dataStore);
-    window.localStorage.setItem('travelInfo', dataStore);
+    window.localStorage.setItem('travelInfo', JSON.stringify(dataStore));
 }
 
 // Clear results
@@ -119,3 +119,12 @@ var options = {
 
 var input1 = document.getElementById("addy");
 var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
+
+$('#form').submit(function(e){
+    e.preventDefault();
+    window.localStorage.setItem('travelInfo', JSON.stringify(dataStore));
+});
+
+$('#submit').click(function(){
+    window.location.replace('Data Analysis.html');
+});
