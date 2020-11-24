@@ -1,9 +1,13 @@
+// Functions for calculating distance between sacstate and their address
+// Sacstate coords
 var sacState = { lat: 38.56122, lng: -121.42426 };
 var mapOptions = {
     center: sacState,
     zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 };
+
+let distance, duration;
 
 // Hide result box
 document.getElementById("output").style.display = "none";
@@ -35,8 +39,9 @@ function calcRoute() {
     directionsService.route(request, function (result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
 
-            //Get distance and time            
-            
+            //Get distance and time
+            distance = result.routes[0].legs[0].distance;
+            duration = result.routes[0].legs[0].duration;             
             $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             document.getElementById("output").style.display = "block";
 
