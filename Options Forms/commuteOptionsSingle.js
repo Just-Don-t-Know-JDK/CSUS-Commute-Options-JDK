@@ -1,14 +1,3 @@
-// $(document).ready(function(){
-//     $('#customControlValidation').click(function(){
-//         $('#customControlValidation').toggle();
-
-//     })
-
-// })
-
-// $('#submit').click(function(){
-//     window.location.href = '../Data Analysis.html';
-// });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
@@ -29,30 +18,12 @@
   }, false);
 })();
 
-// document.getElementById("sub").onclick = function () {
-//     location.href = "../Data Analysis.html";
-// };
-// $('submit#sub').submit(function() {
-//     window.location.href = "../Data Analysis.html"
-// })
-
-// let userData = { 
-//     mpg: $('input#mpg').val(),
-//     address: $('input#address').val(),
-//     insurance: $('input#insurance').val(),
-//     parking: $('input#park').val()
-// };
-// window.localStorage.setItem('userData', JSON.stringify(userData));
-
-// let temp = document.querySelector('#mpg').value
-// console.log(temp);
-// let form = document.querySelectorAll('.needs-validation')
-// {
-//     form.addEventListener('submit',function(event){
-//         if(form.checkValididty()===false){
-//             event.preventDefault();
-//             event.stopPropagation();
-//         }
-//         form.classList.add('was-validated');
-//     })
-// }
+function greetings() {
+  var milesPerGallon = document.getElementById("mpg").value;
+  var insuranceCost = document.getElementById("insuranceCost").value;
+  window.localStorage.setItem('mpg', milesPerGallon);
+  window.localStorage.setItem('insurance', insuranceCost);
+  console.log(milesPerGallon);
+  console.log(insuranceCost);
+  //document.write("Hello" + milesPerGallon +insuranceCost);
+}

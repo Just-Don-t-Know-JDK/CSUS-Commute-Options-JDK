@@ -88,25 +88,27 @@
         <div class="container" style="background-color: gold; width: 1000px;">
             <div class="row">
                 <div class="col-5 mx-auto" style="text-align: center;">
-                    <h2>Sustainability</h2>
+                    <h2 id="head1">Sustainability</h2>
                     <br>
                 </div>
                 <div class="col-5 mx-auto" style="text-align: center;">
-                    <h2>Single Occupant Vehicle</h2>
+                    <h2 id="head2">Single Occupant Vehicle</h2>
                 </div>
             </div>
             <div class="row justify-content-around">
                 <div class="col-5 mx-auto" style="text-align: center;">
-                    <p>The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
+                    <p id="p1">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
                         we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
                         impact the environment with the given mode.
                     </p>
                 </div>
                 <div class="col-5 mx-auto" style="text-align: center;">
-                    <p>The single occupant vehicle carbon consumption per year with your given inputs would be</p>
+                    <p id="p2">The single occupant vehicle carbon consumption per year with your given inputs would be </p>
                 </div>
             </div>
         </div>
+
+        <div style="height: 200px;"></div>
         
         
         
@@ -119,6 +121,11 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script>
             let userData = JSON.parse(window.localStorage.getItem('userData')); // Fetching the user data from previous page
+            let mpg = window.localStorage.getItem('mpg');
+            let insurance = window.localStorage.getItem('insurance');
+
+            console.log(mpg + ' ');
+            console.log(insurance);
             
             // TODO - Compress
             function sustainabilityCalc(mpg, distance, freq) {
@@ -140,7 +147,7 @@
                     0,                                                                  // Bike
                     0                                                                   // Walking
                     ],
-                timeVals: userData.time,
+                timeVals: userData.time,                                                // Could be hard to get all these
                 moneyVals: [            // All is yearly
                     userData.money,
                     6201.0,             // SOV (sources in google drive)
@@ -220,16 +227,39 @@
             }
 
             $('#parent').change(function(){
-                if ($('#parent option:selected').text() == 'Sustainability')
+                if ($('#parent option:selected').text() == 'Sustainability') {
                     myChart.options.title.text = 'Carbon Consumption (tons/yr)';
-                else if ($('#parent option:selected').text() == 'Time')
+                    $("#p1").html(
+                        `
+                        The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
+                        we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
+                        impact the environment with the given mode.
+                        `
+                    );
+                }
+                else if ($('#parent option:selected').text() == 'Time') {
                     myChart.options.title.text = 'Time Traveled Yearly';
-                else if ($('#parent option:selected').text() == 'Money')
+                    $("#p1").html(
+                        `
+                        The time concerns of a commute mode are the amount of time that we predict this commute mode to take in your situation.
+                        To calculate this, we used an algorithm to determine the fastest route you would take to get to Sacramento State and how many times
+                        you would commute a week and then upscaled the data to a yearly scale.
+                        `
+                    );
+                }
+                else if ($('#parent option:selected').text() == 'Money') {
                     myChart.options.title.text = 'Travel Cost in Dollars per Year';
+                    $("#p1").html(
+                        `
+                        The money concerns of a commute mode is just how much it will cost you to pay for your typical commute on a yearly scale.
+                        `
+                    );
+                }
 
                 changeCompare('Your Values', 0, getType($('#parent option:selected').text()));
                 secondOptionSwitch();
                 myChart.update();
+                $("#head1").html($('#parent option:selected').text());
             });
 
             function getType(value) {
@@ -258,8 +288,29 @@
                     myChart.data.datasets[0].data[index] = array[6];
             }
 
+            // Initializing the second text box
+            let temp = 'better';
+            if (myChart.data.datasets[0].data[1] < myChart.data.datasets[0].data[0])
+                temp = 'worse';
+            else if (myChart.data.datasets[0].data[1] == myChart.data.datasets[0].data[0])
+                temp = 'equivalent';
+
+            $('#p2').html('In terms of ' + $('#parent option:selected').text().toLowerCase() + ' your current commute mode is ' + temp + ' than '
+                + $('#second option:selected').text().toLowerCase() + 's on average.');
+
             $('#second').change(function(){
+                $('#head2').html($('#second option:selected').text());
+
                 secondOptionSwitch();
+
+                let temp = 'better';
+                if (myChart.data.datasets[0].data[1] < myChart.data.datasets[0].data[0])
+                    temp = 'worse';
+                else if (myChart.data.datasets[0].data[1] == myChart.data.datasets[0].data[0])
+                    temp = 'equivalent';
+
+                $('#p2').html('In terms of ' + $('#parent option:selected').text().toLowerCase() + ' your current commute mode is ' + temp + ' than '
+                 + $('#second option:selected').text().toLowerCase() + 's on average.');
             });
         </script>
     </body>
