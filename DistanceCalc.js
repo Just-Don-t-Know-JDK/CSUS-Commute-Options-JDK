@@ -26,12 +26,13 @@ directionsDisplay.setMap(map);
 
 
 // Define calcRoute function
-function calcRoute() {
+function calcRoute(theMode) {
     //create request
     var request = {
         origin: document.getElementById("addy").value,
         destination: sacState,
-        travelMode: google.maps.TravelMode.DRIVING,
+        travelMode: theMode,
+        //travelMode: google.maps.TravelMode.DRIVING,
         unitSystem: google.maps.UnitSystem.IMPERIAL
     }
 
