@@ -28,8 +28,6 @@
         <title>Sac State Commute Options</title>
     </head>
 
-    
-
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #043927;">
@@ -54,7 +52,19 @@
             </div>
         </nav>
 
-        <div>
+        <div class="container">
+            <h1 style="color: #00573d;">Click a button below to get more information on the commute mode:</h1>
+        </div>
+
+        <div class="container">
+            <button class="btn btn-primary" id="transitB">Public Transit</button>
+            <button class="btn btn-primary" id="bikeB">Bikes/Scooters</button>
+            <button class="btn btn-primary" id="rideShareB">Ridesharing/Carpooling</button>
+        </div>
+
+        <hr>
+
+        <div id="info">
             <!-- This is where everything will go; make visual separations (divs/containers???) for each section; maybe try to do something like Discord's homepage (https://discord.com/)
                     Bikes/scooters
                     - JUMP bikes (https://www.uber.com/us/en/ride/uber-bike/)
@@ -76,8 +86,67 @@
             -->
         </div>
 
+        <div id="transit" class="container" style="display: none;">
+            <p>
+                Public transit<br>
+                    - bus/shuttle/light rail times/routes (um...)<br>
+                    - RESOURCES (too many; need to filter through https://www.csus.edu/parking-transportation/alternative-transportation/transit-resources.html)<br>
+                    - bus pass info (https://www.csus.edu/parking-transportation/alternative-transportation/commuter-sleeve.html)<br>
+            </p>
+        </div>
+
+        <div id="bike" class="container" style="display: none;">
+            <p>
+                Bikes/scooters<br>
+                    - JUMP bikes (https://www.uber.com/us/en/ride/uber-bike/)<br>
+                    - Lime (https://www.li.me/en-us/home)<br>
+                    - bike store (https://www.peakadventures.org/bike-shop)<br>
+                    - bike info on Sac State (https://www.csus.edu/parking-transportation/alternative-transportation/bicycles.html)<br>
+            </p>
+        </div>
+
+        <div id="rideShare" class="container" style="display: none;">
+            <p>
+                Ridesharing/carpooling<br>
+                    - Uber (https://www.uber.com/)<br>
+                    - Lyft (https://www.lyft.com/)<br>
+                    - Waze (https://www.waze.com/)<br>
+                    - Parking info (permits/commuter club) (https://www.csus.edu/parking-transportation/alternative-transportation/carpooling.html)<br>
+                    - EVs...????<br>
+            </p>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#transitB").click(function(){
+                    if($("#bike").is(':visible'))
+                        $("#bike").slideUp();
+                    if($("#rideShare").is(':visible'))
+                        $("#rideShare").slideUp();
+                    $("#transit").slideToggle();
+                });
+
+                $("#bikeB").click(function(){
+                    if($("#transit").is(':visible'))
+                        $("#transit").slideUp();
+                    if($("#rideShare").is(':visible'))
+                        $("#rideShare").slideUp();
+                    $("#bike").slideToggle();
+                });
+
+                $("#rideShareB").click(function(){
+                    if($("#bike").is(':visible'))
+                        $("#bike").slideUp();
+                    if($("#transit").is(':visible'))
+                        $("#transit").slideUp();
+                    $("#rideShare").slideToggle();
+                });
+            });
+            
+        </script>
     </body>
 </html>
