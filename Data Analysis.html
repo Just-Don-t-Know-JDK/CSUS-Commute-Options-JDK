@@ -33,19 +33,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="/Landing Page.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Resources & Info
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Transit</a>
-                    <a class="dropdown-item" href="#">RideShare</a>
-                  </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Resources.html">Resources & Info</a>
                 </li>
               </ul>
             </div>
@@ -144,44 +138,36 @@
                     userType = 1;
             }
 
-            // TODO - Compress
             function sustainabilityCalc(mpg, distance, freq) {
-                let emissionPerMile = (8887/mpg)*distance*2.0;      // times 2 becasue you have to come back home :)
-                let wkConsumtion = emissionPerMile * freq;
-                let yrConsumption = wkConsumtion * 52.0;
-                
-                return ((yrConsumption/1000)*2.205)/1000;           // Yearly carbon emissions in tons per year
+                return ((((8887/mpg)*distance*2.0*freq*52.0)/1000)*2.205)/1000  // CO2 emissions in kg converted to lbs then to tons
             }
             
             function meterToMile(meters) {
                 return meters*0.000621371192;
             }
 
-            console.log(travelInfo);
-            console.log(meterToMile(travelInfo[userType][0]));
-
             function timeCalc(seconds, freq) {
-                return (seconds/3600)*freq*52.0;
+                return (seconds/3600.0)*freq*52.0*2.0;
             }
 
             let graphInfo = {
                 sustainVals: [
-                    sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency),   // Users consumption
-                    sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency),         // SOV
-                    sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency),        // MOV
-                    sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency),           // Motorcycle
-                    sustainabilityCalc(5.18, meterToMile(travelInfo[3][0]), frequency),         // Transit (Have to consider individual responsibility)
+                    Math.round((mpg, meterToMile(travelInfo[userType][0]), frequency) * 100)/100,                     // Users consumption
+                    Math.round(sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency) * 10)/10,         // SOV
+                    Math.round(sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency) * 10)/10,        // MOV
+                    Math.round(sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency) * 10)/10,           // Motorcycle
+                    Math.round(sustainabilityCalc(5.18, meterToMile(travelInfo[3][0]), frequency) * 10)/10,         // Transit (Have to consider individual responsibility)
                     0,                                                                          // Bike
                     0                                                                           // Walking
                     ],
                 timeVals: [                                                                     // LOGIC ERROR
-                    timeCalc(travelInfo[userType][1], frequency),
-                    timeCalc(travelInfo[0][1], frequency),
-                    timeCalc(travelInfo[0][1], frequency),
-                    timeCalc(travelInfo[0][1], frequency),
-                    timeCalc(travelInfo[3][1], frequency),
-                    timeCalc(travelInfo[2][1], frequency),
-                    timeCalc(travelInfo[1][1], frequency)
+                    Math.round(timeCalc(travelInfo[userType][1], frequency)),
+                    Math.round(timeCalc(travelInfo[0][1], frequency)),
+                    Math.round(timeCalc(travelInfo[0][1], frequency)),
+                    Math.round(timeCalc(travelInfo[0][1], frequency)),
+                    Math.round(timeCalc(travelInfo[3][1], frequency)),
+                    Math.round(timeCalc(travelInfo[2][1], frequency)),
+                    Math.round(timeCalc(travelInfo[1][1], frequency))
                 ],
                 moneyVals: [            // All is yearly
                     money,
@@ -193,37 +179,6 @@
                     0                   // Walking (costs shoes but w/e)
                 ]
             }
-
-            // Testing array
-            /*let graphInfo = {
-                sustainVals: [
-                    4.7,
-                    5.1,
-                    4.8,
-                    2.8,
-                    24.0,
-                    0,
-                    0
-                ],
-                timeVals: [
-                    131.7,
-                    131.7,
-                    131.7,
-                    131.7,
-                    526.9,
-                    644.8,
-                    2260.3
-                ],
-                moneyVals: [
-                    6201.0,
-                    6201.0,
-                    6201.0,
-                    1500.0,
-                    700.0,
-                    350.0,
-                    0
-                ]
-            }*/
 
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {
@@ -243,7 +198,7 @@
                     legend: {   display: false  },
                     title: {
                         display: true,
-                        text: 'Carbon Consumption (tons/yr)'
+                        text: 'Carbon Emissions (tons/yr)'
                     },
                     scales: {
                         yAxes: [{
@@ -263,7 +218,7 @@
 
             $('#parent').change(function(){
                 if ($('#parent option:selected').text() == 'Sustainability') {
-                    myChart.options.title.text = 'Carbon Consumption (tons/yr)';
+                    myChart.options.title.text = 'Carbon Emissions (tons/yr)';
                     $("#p1").html(
                         `
                         The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
@@ -273,7 +228,7 @@
                     );
                 }
                 else if ($('#parent option:selected').text() == 'Time') {
-                    myChart.options.title.text = 'Time Traveled Yearly';
+                    myChart.options.title.text = 'Time Traveled (hrs/yr)';
                     $("#p1").html(
                         `
                         The time concerns of a commute mode are the amount of time that we predict this commute mode to take in your situation.
@@ -283,7 +238,7 @@
                     );
                 }
                 else if ($('#parent option:selected').text() == 'Money') {
-                    myChart.options.title.text = 'Travel Cost in Dollars per Year';
+                    myChart.options.title.text = 'Travel Cost (dollars/yr)';
                     $("#p1").html(
                         `
                         The money concerns of a commute mode is just how much it will cost you to pay for your typical commute on a yearly scale.

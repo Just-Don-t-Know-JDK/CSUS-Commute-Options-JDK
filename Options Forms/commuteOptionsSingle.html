@@ -40,14 +40,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Resources & Info
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Transit</a>
-                  <a class="dropdown-item" href="#">RideShare</a>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="../Resources.html">Resources & Info</a>
               </li>
             </ul>
           </div>
@@ -121,16 +115,16 @@
                     <!-- amount spent on parking. need to anticipate types of parking: daily parking pass,
                     semester parking pass, off campus parking, or free-->
                   <div class="custom-control-inline custom-radio custom-control form-group">
-                    <input type="radio" class="custom-control-input" id="customControlValidation" name="custom-radio" required>
-                    <label class="custom-control-label" for="customControlValidation" required>Semester parking pass</label>
+                    <input type="radio" class="custom-control-input" id="semesterParkingPass" name="custom-radio" required>
+                    <label class="custom-control-label" for="semesterParkingPass" required>Semester parking pass</label>
                   </div>
                   <div class="custom-control-inline custom-control custom-radio form-group">
-                    <input type="radio" class="custom-control-input" id="customControlValidation1" name="custom-radio" required>
-                    <label class="custom-control-label" for="customControlValidation1" required>Daily Parking Pass</label>
+                    <input type="radio" class="custom-control-input" id="dailyParkingPass" name="custom-radio" required>
+                    <label class="custom-control-label" for="dailyParkingPass" required>Daily Parking Pass</label>
                   </div>
                   <div class="custom-control-inline custom-control custom-radio form-group">
-                    <input type="radio" class="custom-control-input" id="customControlValidation2" name="custom-radio" required>
-                    <label class="custom-control-label" for="customControlValidation2" required>Off Campus Parking</label>
+                    <input type="radio" class="custom-control-input" id="offCampusParkingPass" name="custom-radio" required>
+                    <label class="custom-control-label" for="offCampusParkingPass" required>Off Campus Parking</label>
                   </div> 
                       <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub" onclick="sendInfo()">submit</button>
                   </div> 
