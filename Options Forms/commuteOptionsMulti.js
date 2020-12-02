@@ -21,13 +21,19 @@
   function sendInfo() {
     var milesPerGallon = document.getElementById("mpg").value;
     var insuranceCost = document.getElementById("insuranceCost").value;
-    //var address = document.getElementById("addy").value;
     var occupants = document.getElementById("vehicleOccupants").value;
+    var parking;
     window.localStorage.setItem('mpg', milesPerGallon);
     window.localStorage.setItem('insurance', insuranceCost);
-    //window.localStorage.setItem('addy', address);
     window.localStorage.setItem('vehicleOccupants', occupants);
-    console.log(milesPerGallon);
-    console.log(insuranceCost);
-    //document.write("Hello" + milesPerGallon +insuranceCost);
+    for(i = 0; i < ele.length; i++) 
+    {              
+      if(ele[i].checked) 
+      {
+        parking = document.getElementById("sub").innerHTML = ele[i].id; 
+        // document.write(parking);
+      }
+    }
+    window.localStorage.setItem('prkingType', parking);
+  
   }
