@@ -25,9 +25,20 @@ function sendInfo() {
   window.localStorage.setItem('mpg', milesPerGallon);
   window.localStorage.setItem('insurance', insuranceCost);
   window.localStorage.setItem('frequency', frequency);
-  console.log(milesPerGallon);
-  console.log(insuranceCost);
-  //document.write("Hello" + milesPerGallon +insuranceCost);
+  // console.log(milesPerGallon);
+  // console.log(insuranceCost);
+  var ele = document.getElementsByName('custom-radio'); 
+  var parking;
+  for(i = 0; i < ele.length; i++) 
+  {              
+    if(ele[i].checked) 
+    {
+      parking = document.getElementById("sub").innerHTML = ele[i].id; 
+      // document.write(parking);
+    }
+  }
+  window.localStorage.setItem('prkingType', parking);
+
 }
 
 var mode = 'SOV';
