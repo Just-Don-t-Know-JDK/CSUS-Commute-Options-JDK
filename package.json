@@ -1,0 +1,26 @@
+{
+  "name": "csus-commute-options-jdk",
+  "version": "1.0.0",
+  "description": "Commute Options App by JDK",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Just-Don-t-Know-JDK/CSUS-Commute-Options-JDK.git"
+  },
+  "keywords": [
+    "commute",
+    "sustainability"
+  ],
+  "author": "Just Don't Know (JDK)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Just-Don-t-Know-JDK/CSUS-Commute-Options-JDK/issues"
+  },
+  "homepage": "https://github.com/Just-Don-t-Know-JDK/CSUS-Commute-Options-JDK#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
