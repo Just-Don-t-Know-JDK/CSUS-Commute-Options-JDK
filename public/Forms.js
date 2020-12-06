@@ -10,9 +10,14 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "none";
   } else {
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("nextBtn").className = "btn btn-info";
   }
-  if (n == (x.length - 1)) {
+  if (n == (x.length-1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").className = "btn btn-primary";
+    if (n == x.length) {
+      document.getElementById("nextBtn").type = "submit";
+    }
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }

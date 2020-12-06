@@ -1,10 +1,12 @@
  /* Style the form */
  #regForm {
-    background-color: #ffffff;
+    background-color: #C5B783;
+    background: rgba(196,182,129,0.9);
     margin: 100px auto;
     padding: 40px;
     width: 70%;
     min-width: 300px;
+    min-height: 415px;
   }
   
   /* Style the input fields */ /*
@@ -31,7 +33,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbbbbb;
+    background-color: #043927;
     border: none;
     border-radius: 50%;
     display: inline-block;
