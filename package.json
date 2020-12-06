@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Just-Don-t-Know-JDK/CSUS-Commute-Options-JDK#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
   }
 }
