@@ -436,6 +436,7 @@ h4 {
     border: 3px solid #e6b711;
     border-radius: 4px;
     min-height: 44px;
+    min-width: 234px;
         flex: 0 0 100%;
 }
 #csus-global-navbar.navbar-static-top .modal-body form input:focus {
