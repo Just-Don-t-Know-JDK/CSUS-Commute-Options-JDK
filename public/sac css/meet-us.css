@@ -1,0 +1,456 @@
+/** ===== meet-us.css and t5 ===== **/
+
+.t5.meet-us .container {
+    width: 80%;
+    max-width: 1140px;
+}
+
+.t5.meet-us article {
+    background-image: url("../images/background-accent-double-ss.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+.meet-us-section {
+    padding-top: 2.5em;
+    padding-bottom: 1em;
+}
+
+.meet-us-section ul {
+    padding: 0;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.meet-us-section ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    list-style-type: none;
+}
+
+.meetus-feed .meet-us-section ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 48%;
+    flex: 1 0 48%;
+    margin-right: 4%;
+}
+
+.meetus-feed .meet-us-section ul {
+    margin-top: .5em;
+}
+
+.meetus-feed .meet-us-section ul li:nth-of-type(even) {
+    margin-right: 0;
+}
+
+.meet-us-section .group {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.meet-us-section .group:nth-of-type(n+2) {
+    padding: 2em 0 1em;
+    border-top: 1px solid #e6b711;
+}
+
+.meet-us-section .group.row .members.row,
+.meet-us-section .group-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+}
+
+.meet-us-section .group.row .row.members .group-member,
+.meet-us-section .group .group-member {
+    padding: 1em 0;
+    margin-bottom: 0;
+    /*border-right: 1px solid #f0e1b0;*/
+    border-top: 1px solid #f0e1b0;
+    padding: 1em 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.meet-us-section .group-feed .row.members .group-member:first-of-type,
+.meet-us-section .group .group-member:first-of-type {
+    border-top: 0;
+    /*1px solid #f0e1b0;*/
+}
+
+.meet-us-section .group-feed .row.members .group-member:only-of-type,
+.meet-us-section .group .group-member:only-of-type,
+.meet-us-section .group-feed .row.members .group-member:last-of-type,
+.meet-us-section .group .group-member:last-of-type {
+    border-right: 0;
+}
+
+
+/*========= info block contents =======================*/
+
+/*.meet-us-section .group-member h2 {*/
+/*    margin-bottom: .5em;*/
+/*}*/
+
+.meet-us-section .group-member h3,
+.meet-us-section .group.row .row.members .group-member h3,
+.meet-us-section .group.row .row.members .group-member .job-title,
+.meet-us-section .group-member .job-title {
+    font-weight: 600;
+    margin-bottom: .125em;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+}
+
+.meet-us-section p {
+    /*margin-bottom: 1rem;*/
+}
+
+/*.group-member p span{*/
+.group-member p span:first-child {
+    font-weight: 600;
+    display: block;
+}
+
+.meet-us-section ul li.specialty {
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+.meet-us-section ul li.specialty p {
+    font-size: 14px;
+    max-height: 5.25em;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+/*========= inline-links =======================*/
+
+.meet-us-section a:hover,
+.meet-us-section a:focus {
+    background: rgba(255, 255, 255, .3);
+    /* transparent white fill */
+    color: #004e38;
+    /* ssgreen */
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+    box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+}
+
+.meet-us-section a:active {
+    color: #000;
+    background: rgba(255, 255, 255, .5);
+    /* transparent white fill */
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 0 0;
+    box-shadow: rgba(218, 212, 144, .6) 0 0 0;
+}
+
+/*========= button =======================*/
+
+.meet-us-section li.btn-contact {
+    margin-top: 0;
+}
+
+.meet-us-section li.btn-contact ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.meet-us-section li.btn-contact ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    margin: 0 0 .5em 0;
+}
+
+.meet-us-section li.btn-contact ul li:only-child,
+.meet-us-section li.btn-contact ul li:nth-child(2n) {
+    margin-right: 0;
+}
+
+/*.t5-meetus-manual.meetus-feed .meet-us-section li.btn-contact ul li {*/
+/*    width: 50%;*/
+/*}*/
+.meet-us-section li.btn-contact li a {
+    color: #008554;
+    border: #004e38 2px solid;
+    display: block;
+}
+
+.meet-us-section a.btn:link,
+.meet-us-section a.btn:visited {
+    background: rgba(255, 255, 255, .15);
+    /* transparent white fill */
+    color: #004e38;
+    /* stinger */
+    text-decoration: none;
+}
+
+/*Add CV option thus make li display inline evenly: MH*/
+.meet-us-section li.btn-contact ul li {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+}
+
+.meet-us-section li.btn-contact a.btn:link {
+    margin: 2px;
+}
+
+/*========= image =======================*/
+
+.meet-us-section .group.row .row.members .group-member .img-wrapper,
+.meet-us-section .group-member .img-wrapper {
+    /*height: 100px;*/
+    /*width: 40%;*/
+    /*float: left;*/
+    margin: 1rem 0;
+}
+
+.meet-us-section .group.row .row.members .group-member .img-wrapper img,
+.meet-us-section .group-member .img-wrapper img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-height: 120px;
+}
+
+/*.t5-meetus-manual.meetus-feed .meet-us-section .group .group-member:nth-child(4n+1){*/
+/*    border-right: none;*/
+/*}*/
+
+/*========= breadcrumb =======================*/
+
+.t5.meet-us .meet-us-section h1 {
+    width: 80%;
+    margin: auto;
+}
+
+.t5.meetus-feed .meet-us-section h1,
+main.t5.t5-meetus-manual h1#meet-us-header {
+    padding: 1em 15px;
+    width: 100%;
+}
+
+.meet-us-section ul.link-anchor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: 1em auto 2em;
+}
+
+.meet-us-section ul.link-anchor li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1;
+    flex: 0 1;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin: 0 2ch 0 0;
+    padding-right: 2ch;
+    padding-top: 0;
+}
+
+.meet-us-section ul.link-anchor li:last-of-type {
+    border-right: none;
+}
+
+.meet-us-section ul.link-anchor li a {
+    font-size: 14px;
+}
+
+@media (min-width: 540px) {
+
+    .meet-us-section ul.link-anchor li {
+        border-right: 1px solid #f0e1b0;
+    }
+
+    .meet-us-section .group.row .members.row {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .meet-us-section > .group {
+        width: 80%;
+    }
+
+    .meet-us-section .group.row,
+    .meet-us-section .group-row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .meet-us-section .group.row .row.members .group-member,
+    .meet-us-section .group .group-member {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+        border-right: 1px solid #f0e1b0;
+    }
+
+    .meet-us-section .group.row .row.members .group-member:nth-child(2),
+    .meet-us-section .group .group-member:nth-child(2) {
+        border-top: 0;
+        /*1px solid #f0e1b0;*/
+    }
+
+    .meet-us-section .group-member h3,
+    .meet-us-section .group.row .row.members .group-member h3,
+    .meet-us-section .group.row .row.members .group-member .job-title,
+    .meet-us-section .group-member .job-title {
+        -webkit-box-flex: unset;
+        -ms-flex: unset;
+        flex: unset;
+    }
+
+    .meet-us-section .group.row .row.members .group-member .job-title,
+    .meet-us-section .group-member .job-title {
+        /*min-height: 4em;*/
+    }
+
+    .meet-us-section ul li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+    }
+
+    .meet-us-section .group-member:nth-child(even),
+    .meet-us-section .group.row .row.members .group-member:nth-child(even) {
+        border-right: none;
+    }
+
+    .meet-us-section .group.row .row.members .group-member:nth-child(n+3),
+    .meet-us-section .group-member:nth-child(n+3) {
+        padding-top: 2em;
+    }
+}
+
+
+
+@media (min-width: 800px) {
+
+    .meet-us-section .group.row .row.members .group-member,
+    .meet-us-section .group .group-member {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 33%;
+        flex: 0 1 33%;
+    }
+
+    .meet-us-section .group.row .row.members .group-member:nth-child(even),
+    .meet-us-section .group .group-member:nth-child(even),
+    .meet-us-section .group.row .row.members .group-member:nth-child(n) .meet-us-section .group .group-member:nth-child(n) {
+        border-right: 1px solid #f0e1b0;
+    }
+
+    .meet-us-section .group.row .row.members .group-member:nth-child(3),
+    .meet-us-section .group .group-member:nth-child(3) {
+        border-top: 0;
+        padding-top: 1em;
+        /*1px solid #f0e1b0;*/
+    }
+
+    .meet-us-section .group.row .row.members .group-member:nth-child(3n),
+    .meet-us-section .group .group-member:nth-child(3n),
+    .meet-us-section .group .group-member:last-child,
+    .meet-us-section .group.row .row.members .group-member:last-child {
+        border-right: none;
+    }
+}
+
+
+
+
+
+/* ======================= Loader Icon ============================== */
+/*Specifics for Meet Us page with directory feed*/
+.meet-us-section .loadersmall {
+    border: 5px solid #f3f3f3;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top: 5px solid #555;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* Meet Us Manual Tweaks */
+@media(max-width:540px){
+    main.t5.t5-meetus-manual .container {
+        width:90%;
+    }    
+}
+main.t5.t5-meetus-manual h1#meet-us-header {
+    padding: 1em 0px;
+}
+main.t5.t5-meetus-manual .meet-us-section ul.link-anchor {
+    margin: 1em auto 2em 0px;    
+    padding-left:0;
+    /* Need to handle width which is 80% */
+}
+main.t5.t5-meetus-manual .meet-us-section > .group {
+    width:100%;
+}

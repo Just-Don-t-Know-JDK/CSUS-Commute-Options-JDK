@@ -1,0 +1,173 @@
+.t3.colleges-majors #department-grid-header {
+    text-indent: -10000px;
+    height: 0;
+}
+
+.paral {
+    position: relative;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+.paralsec {
+    background-image: url(../images/bythenumber-financialbg.jpg);
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.t3.colleges-majors .sidebar {
+    display: none;
+}
+
+/*.t3.page-student-health-counseling-services:before,*/
+.alert-link {
+    /*display: block;*/
+    /*content: "President\2019s Update: Coronavirus";*/
+    top: 0;
+    text-align: center;
+    box-shadow: rgba(0,0,0,.6) 0 .5rem 8px;
+    /*display: none;*/
+}
+.alert-link a{
+    display: block;
+    background: #ffe9a8;
+    padding: 1rem 10%;
+    color: #555;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: #e6b711 solid 2px;
+}
+.alert-link a:hover,.alert-link a:focus {
+    background: #e4c668;
+    border-bottom: #66582d solid 2px;
+}
+.alert-link a span.alert-label{
+    font-size: 1.3rem;
+    color: #00573d;
+    font-weight: 700;
+    position: relative;
+}
+.alert-link a span.alert-label:hover  {
+     color: #333;
+     text-decoration: underline;
+    
+}
+.alert-link a span.alert-date:hover  {
+     text-decoration: none;
+}
+
+@media screen and (max-width:600px) {
+    .alert-link a span.alert-date {
+        display: block;   
+    }
+}
+@media screen and (min-width:600px) {
+/*
+.t3.page-student-health-counseling-services .alert-bar a span.alert-label:before {
+    display: inline-block;
+    content: "⚠";
+    position: absolute;
+    top: -19px;
+    left: -60px;
+    font-size: 48px;
+    text-shadow: rgba(0,0,0,.1) 0 0 8px;
+}
+*/
+.alert-link a span.alert-date:hover  {
+        display: inline;   
+    }
+}
+
+
+
+/* IRT hypeNav Exception */
+
+.t3.page-information-resources-technology #hypenav:after {display: none;}
+.t3.page-information-resources-technology #spotlight.jumbotron h2 {    
+    margin: 0;
+    padding: 0;
+    text-indent: -999px;
+    height: 1px;
+    overflow: hidden;}
+.t3.page-information-resources-technology .jumbotron,
+.t3.page-information-resources-technology #hypenav {
+    /*background: #f0e1b0;*/
+    background-image: linear-gradient(90deg, rgb(0,78,56) 20%, rgb(0, 132, 83) 100%);
+    padding: 2rem;
+}
+.t3.page-information-resources-technology #hypenav {padding-bottom:1rem;}
+.t3.page-information-resources-technology #spotlight.jumbotron {padding-top:1rem;}
+
+
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes-top,
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes {
+    margin-bottom: 1rem;
+    /*padding-bottom: 1rem;*/
+    /*border-bottom: 1px solid #008554;*/
+}
+.t3.page-information-resources-technology #hypenav div[class*='hypeNav-boxes'] > div {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+.t3.page-information-resources-technology #hypenav div[class*='hypeNav-boxes'] a {
+    display: flex;
+    border-radius: 8px;
+    /*margin-bottom: 4px;*/
+    border-bottom: #043927 solid 2px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    background: #00573d;
+    color: #fff;
+    margin: 0 2%;
+    min-height: 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.t3.page-information-resources-technology  #hypenav div.hypeNav-boxes-top a {
+    /*same as spotlight social box css from type-base line 174 */
+    border-bottom: #043927 solid 4px;
+    background: linear-gradient(-20deg, rgb(230,234,133) 0%, rgb(230,234,133) 35%, rgb(232,185,14) 100%);
+    box-shadow: rgba(0, 78, 56,.75) 0 3px 3px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: #004e38;
+ }
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes-top a[href*='service-now']{
+    background: #f7fb92;
+}
+
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes a:hover,
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes a:focus {
+    background-color: #008554;
+    border-bottom: #000 solid 2px;
+}
+.t3.page-information-resources-technology  #hypenav div.hypeNav-boxes-top a:hover,
+.t3.page-information-resources-technology   #hypenav div.hypeNav-boxes-top a:focus {
+    background: linear-gradient(-20deg, rgb(230,234,133) 0%, rgb(232,185,14) 75%, rgb(232,185,14) 100%);
+    box-shadow: rgba(0, 78, 56,.75) 0 1px 1px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+ }
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes-top a[href*='service-now']:hover,
+.t3.page-information-resources-technology #hypenav div.hypeNav-boxes-top a[href*='service-now']:focus {
+      background: #fff;
+ }
+
+
+@media screen and (min-width: 640px) {
+.t3.page-information-resources-technology #hypenav div[class*='hypeNav-boxes'] /* both boxes */ {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.t3.page-information-resources-technology  #hypenav div.hypeNav-boxes-top {
+    margin-bottom: 1rem; 
+ }
+.t3.page-information-resources-technology   #hypenav div.hypeNav-boxes div {
+    margin-bottom: 0; 
+ }
+}

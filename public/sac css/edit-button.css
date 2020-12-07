@@ -1,0 +1,27 @@
+/**************** Edit Dot Style ****************/
+
+.dot {
+    height: 0.65rem;
+    width: 0.65rem;
+    background-color: #00573d;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-left: 1em;
+    margin-top:0.5em;
+    float:left;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: ease 0.5s; /* Safari prior 6.1 */
+    transition:ease 0.5s;
+}
+.dot:hover {
+    height:14px;
+    width:14px;  
+    background-color:#cccccc;
+}
+@media screen and (max-width:576px) {
+    .dot { 
+        display:none;         
+    }
+}

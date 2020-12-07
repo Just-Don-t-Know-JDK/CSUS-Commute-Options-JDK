@@ -1,0 +1,1034 @@
+.skip-nav {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+h1[aria-hidden="true"] {
+    display: none;
+}
+
+#csus-global-navbar {
+    padding-bottom: 15px;
+}
+
+#csus-global-navbar,
+#csus-global-footer {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+#csus-global-navbar.navbar {
+    padding: 30px 0;
+}
+
+#csus-global-navbar .navbar-brand img {
+    width: 45%;
+    min-width: 180px;
+    max-width: 100%;
+}
+
+#csus-global-navbar.navbar-light .navbar-toggler {
+    color: #004e38;
+    /* margin-top: 12px; */
+    border: none;
+}
+
+#csus-global-navbar.navbar-default ul.nav a:visited {
+    color: #004e38;
+}
+
+#csus-global-navbar ul[role="menubar"] a,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+#csus-global-navbar #form-search-simplified {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    min-height: unset;
+    position: relative;
+    margin-top: 1em;
+    width: 100%;
+}
+
+#csus-global-navbar #form-search-simplified .form-control {
+    border: 2px solid #cbb778;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#csus-global-navbar #form-search-simplified button {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 20px;
+    background-color: unset;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#csus-global-navbar #form-search-simplified button span {
+    display: none;
+    padding-left: 1em;
+}
+
+#csus-global-navbar.navbar-static-top .container {
+    padding: 0;
+}
+
+#csus-global-navbar.navbar-static-top .navbar-brand {
+    padding: 0;
+    margin: 0 0 0 5%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 55%;
+    flex: 0 0 55%;
+}
+
+
+/* ============ */
+/* Main Nav Bar (outside modal) */
+/* ============ */
+
+#csus-global-navbar.navbar-static-top ul[role="menubar"] {
+    display: none;
+}
+
+#csus-global-navbar button.navbar-toggler.navbar-toggler-icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 35%;
+    flex: 0 0 35%;
+    text-align: center;
+    background-image:
+        url("../svg/search.svg"),
+        url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(4,57,39, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-position: 80% 50%, 25% 50%;
+    background-size: contain, contain;
+    font-weight: 600;
+    padding-right: 3.5em;
+    text-indent: -9999px;
+}
+
+@media screen and (min-width: 420px) {
+    #csus-global-navbar button.navbar-toggler.navbar-toggler-icon {
+        background-position: 90% 50%, 65% 50%;
+        text-indent:0;
+        flex: 0 0 40%;
+}
+}
+
+@media screen and (min-width: 640px) {
+    #csus-global-navbar.navbar-static-top .navbar-brand {
+        margin: 0;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+    }
+     #csus-global-navbar.navbar-static-top.splitter .navbar-brand {
+         -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+     }
+    #csus-global-navbar button.navbar-toggler.navbar-toggler-icon {
+        background-position: 100% 50%, 50%% 50%;
+        flex: 0 0 45%
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #csus-global-navbar.navbar-static-top .navbar-brand {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35%;
+    }
+
+    /*#csus-global-navbar button.navbar-toggler.navbar-toggler-icon {*/
+    /*    background-position: 80% 50%, 60% 50%;*/
+    /*    margin-left: 0;*/
+    /*}*/
+}
+
+@media screen and (min-width: 960px) {
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        margin-right: 0;
+    }
+    #csus-global-navbar.navbar-static-top.splitter ul[role="menubar"] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    #csus-global-navbar.navbar-static-top .navbar-brand {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 22%;
+        flex: 0 0 22%;
+    }
+    #csus-global-navbar.navbar-static-top.splitter .navbar-brand {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35%;
+    }
+
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li {}
+
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li a {
+        font-size: 1.25rem;
+        display: block;
+        padding: .5rem 1rem;
+        color: #000;
+    }
+
+    #csus-global-navbar.navbar-static-top ul[role="menubar"]#social-quick-links li a{
+        padding:0.25rem 0;
+    }
+    
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li a:focus,
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li a:hover {
+        text-decoration: none;
+        color: #948144;
+    }
+    #csus-global-navbar button.navbar-toggler.navbar-toggler-icon {
+        background-position: 100% 50%, 65% 50%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        text-align: left;
+        margin-right: 0;
+    }
+    #csus-global-navbar.splitter button.navbar-toggler.navbar-toggler-icon {
+        background-position: 100% 50%, 0 50%;
+        -ms-flex: 0 0 12%;
+        flex: 0 0 12%;
+    }
+    #csus-global-navbar #form-search-simplified {
+        margin-top: unset;
+        width: unset;
+    }
+    #csus-global-navbar #form-search-simplified .form-control {
+        margin-right: initial;
+    }
+    #csus-global-navbar #form-search-simplified button {
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] {
+        -ms-flex: 0 0 55%;
+        flex: 0 0 55%;
+    }
+     #csus-global-navbar.navbar-static-top.splitter ul[role="menubar"] {
+        -ms-flex: 0 0 53%;
+        flex: 0 0 53%;
+    }
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li a,
+    #csus-global-navbar.navbar-static-top.splitter ul[role="menubar"] li a {
+    /*font-size: 20px;*/
+    padding-top: .6em;
+    }
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li a:focus,
+    #csus-global-navbar.navbar-static-top ul[role="menubar"] li a:hover {}
+
+    /*#csus-global-navbar button.navbar-toggler.navbar-toggler-icon {*/
+    /*    text-align: right;*/
+    /*    background-position: 100% 50%, 75% 50%;*/
+    /*}*/
+}
+@media screen and (min-width: 960px) {
+    #csus-global-navbar button.navbar-toggler.navbar-toggler-icon {
+        background-position: 100% 50%, 65% 50%;
+         -ms-flex: 0 0 17%;
+        flex: 0 0 17%;
+    }
+    #csus-global-navbar.splitter button.navbar-toggler.navbar-toggler-icon {
+        text-indent: -9999px;
+        background-position: 100% 50%, 0 50%;
+        padding-right: 0;
+        -ms-flex: 0 0 9%;
+        flex: 0 0 9%;
+}
+}
+
+
+/* ============ */
+/* Modal SlideOut */
+/* ============ */
+
+#csus-global-navbar .modal-dialog-slideout {
+    min-height: 100%;
+    /*Remove for auto height*/
+    margin: 0 0 0 auto;
+    background: transparent;
+}
+
+#csus-global-navbar .modal.fade .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(100%, 0)scale(1);
+    transform: translate(100%, 0)scale(1);
+}
+
+#csus-global-navbar .modal.fade.show .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+    -ms-flex-align: flex-start;
+    -webkit-box-align: flex-start;
+    align-items: flex-start;
+}
+
+/* ===================================== */
+/* Inner Modal */
+/* ===================================== */
+
+#csus-global-navbar .modal.fade.show .modal-dialog.modal-dialog-slideout .modal-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: rgba(50,50,50,.5) 112px 24px 36px;
+}
+
+#csus-global-navbar .modal-dialog-slideout .modal-content {
+    width: 88%;
+    border: 0;
+    margin: 0 6%;
+    background: transparent;
+}
+
+
+
+
+
+
+
+/* ============ */
+/* Modal General */
+/* ============ */
+
+#csus-global-navbar.navbar-static-top .modal a {
+    color: #000;
+}
+
+#csus-global-navbar.navbar-static-top .modal a:hover,
+#csus-global-navbar.navbar-static-top .modal button:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+/* ============ */
+/* Modal Header */
+/* ============ */
+
+#csus-global-navbar.navbar-static-top .modal-header {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    min-height: 36px;
+    border-bottom: 0;
+    position: relative;
+}
+
+#csus-global-navbar .modal-header h3 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 90%;
+    flex: 1 1 90%;
+    color: #004e38;
+    font-size: 24px;
+    font-weight: 500;
+    visibility: hidden;
+    padding: 0;
+}
+
+#csus-global-navbar .modal-header .close {
+    margin: 0;
+}
+
+#csus-global-navbar .modal-header button.close {
+    background: #000;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 10%;
+    flex: 1 1 10%;
+    height: 100%;
+    min-height: 36px;
+    opacity: 1;
+    margin: 0 5% 0 0;
+    color: #fff;
+    text-shadow: none;
+	font-size: 14px;
+	padding: .5em 1em;
+	position: absolute;
+    top: 1em;
+    right: 88%;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: rgba(0,0,0,.3) 0 3px 6px;
+}
+
+
+/*#csus-global-navbar.navbar-static-top .modal-header .close span[aria-hidden="true"]:last-of-type {*/
+/*    font-size: 14px;*/
+/*}*/
+
+@media screen and (min-width: 800px) {
+    #csus-global-navbar .modal-header h3 {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 80%;
+        flex: 1 1 80%;
+    }
+
+    #csus-global-navbar .modal-header button.close {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 20%;
+        flex: 1 1 20%;
+    }
+}
+
+
+
+
+/* ============ */
+/*  Search  */
+/* ============ */
+
+#csus-global-navbar.navbar-static-top form {
+    padding: 1em 5%;
+    /*min-height: 11.8vh;*/
+    background-color: #00573d;
+    display: flex;
+    align-items: center;
+}
+#csus-global-navbar.navbar-static-top form#form-search-simplified {
+    background-color: #fff;
+}
+#csus-global-navbar.navbar-static-top fieldset {
+    width: 100%;
+    position: relative;
+}
+#csus-global-navbar.navbar-static-top legend {
+    font-size: 16px;
+    color: #f5de95;
+/* hide search label */
+    text-indent: -9999px;
+    max-height: 1px;
+    margin: 0;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body form input {
+    border: 3px solid #e6b711;
+    border-radius: 4px;
+    min-height: 44px;
+        flex: 0 0 100%;
+}
+#csus-global-navbar.navbar-static-top .modal-body form input:focus {
+        box-shadow: 0 0 0 0.2rem #e6b711;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body form button {
+    padding: 0;
+    position: absolute;
+    top: 35px;
+    right: 4px;
+    background: #fff;
+    border: 0;
+/* hide search label */
+    top: 4px;
+    right: 6px;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body form button:hover {
+    background-color: rgba(0,0,0,.5);
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul li {
+    list-style: none;
+}
+
+
+
+
+/* ============ */
+/* BIG ICON Blocks */
+/* ============ */
+
+#csus-global-navbar.navbar-static-top #top-quick-links {
+    background-color: #ECE1B0;
+    min-height: 25.8vh;
+}
+
+#csus-global-navbar.navbar-static-top #top-quick-links.ql-stacker {
+    min-height: unset;
+    background-color: #f5de95;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    list-style: none;
+    border-bottom: 2px solid #fff;
+    min-height: 90px;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links.ql-stacker li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    border-bottom: 2px solid #f1cc4d;
+    min-height: unset;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links.ql-stacker li:last-child {
+    border-bottom: 0;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li:nth-child(odd) {
+    border-right: 2px solid #fff;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links.ql-stacker li:nth-child(odd) {
+    border-right: 0;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li a,
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li a:link,
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li a:visited {
+    padding: 14vh 5% 1vh;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 70%;
+    display: block;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links.ql-stacker li a {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    background-image: none !important;
+    border-left: 8px solid #e6b711;
+    padding: .75em 8%;
+}
+
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li a:hover,
+#csus-global-navbar.navbar-static-top .modal-body ul#top-quick-links li a:focus {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+
+
+
+/* ============ */
+/*  Accordion  */
+/* ============ */
+
+/*Accordion*/
+
+@media screen and (max-height: 420px) {
+    #csus-global-navbar .card {
+        display: none;
+    }
+}
+
+#csus-global-navbar .card {
+    border: none;
+    min-width: 320px;
+    /*justify-content: space-around;*/
+    border-radius: 0;
+}
+
+@media screen and (min-width: 960px) {
+#csus-global-navbar .card.mobile-nav-only {
+    display: none;
+}
+}
+
+#csus-global-navbar .card .card-header {
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+#csus-global-navbar .card .card-header:hover {
+    background-color: #f0e1b0;
+    /*lt tan*/
+    background-color: #e1c57a;
+    /*lt ylw*/
+    /*background-color:rgba(207,182,104,.6);*/
+}
+
+#csus-global-navbar .card .card-header  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* if we add section button */
+    margin: 0;
+}
+
+#csus-global-navbar .card .card-header > a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    /*  flex: 0 0 80%; if we add section button */
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+    border-radius: 0;
+    padding: .75em 10%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #004e38;
+}
+
+#csus-global-navbar .card .card-header a[aria-expanded="true"] {
+    border: none;
+    border-top: 2px solid #E6B711;
+    background-color: rgba(230, 180, 20, .5);
+}
+
+#csus-global-navbar .card .card-body {
+    background-color: rgba(207, 182, 104, .2);
+    padding: 0;
+}
+
+#csus-global-navbar .card .card-body ul,
+#csus-global-navbar .card .card-body ul li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+#csus-global-navbar .card .card-body ul li {
+    border-bottom: 1px solid #f0e1b0;
+}
+
+#csus-global-navbar .card .card-body ul li a {
+    display: block;
+    padding: 1vh 10%;
+    background: rgba(0, 0, 0, 0);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#csus-global-navbar .card .card-body ul li a:hover {
+    padding: 1vh 10%;
+    background: rgba(225,197,122, .3);
+}
+
+#csus-global-navbar .card .card-body li:last-of-type,
+#csus-global-navbar .card:last-of-type {
+    border-bottom: 0;
+}
+
+
+
+
+
+/* ============ */
+/* modal social  */
+/* ============ */
+
+#csus-global-navbar .modal-body ul[id="social-quick-links"] {
+    background-color: #004e38;
+    padding: 0 5%;
+    margin: 0;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border-top: 2px solid #004540;
+    bottom: 0;
+}
+
+#csus-global-navbar .modal-body ul[id="social-quick-links"] li {
+    width: 20%;
+    position: relative;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 420px) {
+   #csus-global-navbar .modal-body ul[id="social-quick-links"] li {
+    max-height: 80px;
+} 
+}
+@media screen and (min-width: 576px) {
+   #csus-global-navbar .modal-body ul[id="social-quick-links"] li {
+    max-height: 60px;
+} 
+}
+
+/* ============ */
+
+#csus-global-navbar .modal-dialog-slideout .modal-footer {
+    display: none;
+}
+
+/* ====== end header ====== */
+
+
+
+
+
+/* ============ */
+/* ============ */
+/* ============ */
+/* Global Footer Section */
+/* ============ */
+
+#csus-global-footer a {
+   text-decoration: underline; 
+}
+#csus-global-footer a:hover {
+    text-decoration: none;
+}
+#csus-global-footer a,
+#csus-global-footer a:hover {
+    color: #f0e1b0;
+}
+
+#csus-global-footer .container-fluid {
+    padding: 0;
+}
+
+#csus-global-footer .container-fluid .row {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 2em;
+}
+
+#csus-global-footer[aria-labelledby="footer-extras"] {
+    background-color: #000000;
+    padding-top: 2rem;
+}
+
+#csus-global-footer ul[aria-labelledby="campus-social-links"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1em 0;
+    margin: 0 auto;
+    max-width: 460px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+#csus-global-footer a[title*="Sac State Home Page"] {
+    display: block;
+    width: 90%;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+}
+
+#csus-global-footer a[title*="Sac State Home Page"] img {
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+    width: 100%;
+    max-width: 320px;
+}
+
+#csus-global-footer ul[aria-labelledby="campus-social-links"] li {
+    height: 51px;
+    width: 62px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 15%;
+    flex: 0 1 15%;
+    justify-items: center;
+    margin: 0;
+    position: relative;
+}
+
+#csus-global-footer.footer address,
+#csus-global-footer .bottombar ul {
+    font-size: .9em;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#csus-global-footer .bottombar ul li {
+    padding: 0 3ch 0 0;
+    white-space: nowrap;
+    -webkit-hyphens: none;
+    -moz-hyhens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+#csus-global-footer .country-name {
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .adr span.locality:before,
+    .adr a.phone:before {
+    content: "";
+    display: block;
+    }
+    #csus-global-footer .bottombar ul li {
+    padding: 3ch;
+}
+}
+
+
+
+
+
+@media screen and (min-width: 560px) {}
+
+@media screen and (min-width: 660px) {
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        padding: 0 0 2em 0;
+    }
+
+    #csus-global-footer[aria-labelledby="footer-extras"] {
+        padding-top: 1rem;
+    }
+
+    #csus-global-footer a[title*="Sac State Home Page"],
+    #csus-global-footer.footer address {
+        width: 50%;
+        text-align: left;
+    }
+
+    #csus-global-footer.footer address {
+        font-size: .75em;
+        padding: 1.5rem 5%;
+    }
+
+    #csus-global-footer .bottombar ul {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #csus-global-footer .container-fluid .row {
+        padding-bottom: 2rem;
+    }
+
+    #csus-global-footer a[title*="Sac State Home Page"],
+    #csus-global-footer.footer address,
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        /*order: 3;*/
+    }
+
+    #csus-global-footer a[title*="Sac State Home Page"] {
+        margin: 0;
+        /*order: 1;*/
+    }
+
+    #csus-global-footer.footer address {
+        margin: 0 0 0 50%;
+        padding: 0;
+        font-size: .9em;
+        /*order: 2;*/
+    }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    #csus-global-footer .container-fluid .row {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        max-width: 1200px;
+    }
+
+    #csus-global-footer a[title*="Sac State Home Page"] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    #csus-global-footer a[title*="Sac State Home Page"],
+    #csus-global-footer.footer address {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        padding: 0 0 0 3%;
+        margin: 0 auto;
+    }
+
+    #csus-global-footer.footer address {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    #csus-global-footer ul[aria-labelledby="campus-social-links"] {
+        padding: 0 3%;
+    }
+}
+
+
+/* ============ */
+/* Social -- combines with modal */
+/* ============ */
+
+#csus-global-footer ul[aria-labelledby="campus-social-links"] li a,
+#csus-global-navbar .modal .modal-body ul[aria-labelledby="campus-social-links"] li a {
+    /*display: block;*/
+    /*overflow: hidden;*/
+    color: #FFF;
+    font-size: 0;
+    text-align: center;
+    text-decoration:none;
+}
+
+#csus-global-footer ul[aria-labelledby="campus-social-links"] li a:before {
+    position: relative;
+    /*top: -.3rem;*/
+    text-decoration:none;
+}
+
+#csus-global-navbar .modal-body ul[aria-labelledby="campus-social-links"] li a:hover {
+    opacity: .6;
+}
+
+/* ============ */
+
+#csus-global-footer a[href*="twitter.com"]:before,
+#csus-global-navbar .modal-body a[href*="twitter.com"]:before {
+    content: url(social-links/5.svg);
+    /*font-size:inherit;*/
+}
+
+#csus-global-footer a[href*="facebook.com"]:before,
+#csus-global-navbar .modal-body a[href*="facebook.com"]:before {
+    content: url(social-links/1.svg);
+}
+
+#csus-global-footer a[href*="instagram.com"]:before,
+#csus-global-navbar .modal-body a[href*="instagram.com"]:before {
+    content: url(social-links/3.svg);
+}
+
+#csus-global-footer a[href*="flickr.com"]:before,
+#csus-global-navbar .modal-body a[href*="flickr.com"]:before {
+    content: url(social-links/2.svg);
+}
+
+#csus-global-footer a[href*="youtube.com"]:before,
+#csus-global-navbar .modal-body a[href*="youtube.com"]:before {
+    content: url(social-links/6.svg);
+}
+
+#csus-global-footer a[href*="linkedin.com"]:before,
+#csus-global-navbar .modal-body a[href*="linkedin.com"]:before {
+    content: url(social-links/4.svg);
+}
+
+
+/* ===========================================Global: Bottom Bar ====================*/
+
+
+#csus-global-footer .bottombar {
+    background-color: #022e22;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media screen and (max-width:1000px){
+#csus-global-footer .bottombar {
+    padding-bottom: 5em;
+}
+}
+
+#csus-global-footer .bottombar p,
+#csus-global-footer .bottombar a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#csus-global-footer .bottombar h1,
+#csus-global-footer .bottombar h2,
+#csus-global-footer .bottombar h3,
+#csus-global-footer .bottombar h4,
+#csus-global-footer .bottombar a {
+    font-weight: 600;
+}
+
+#csus-global-footer .bottombar li {
+    color: #ffffff;
+    list-style: none;
+    display: inline;
+}
+
+@media screen and (max-height:620px) {
+    .modal-content {
+        /*padding-right: 15px;*/
+    }
+}
+
+
+
+#csus-global-footer abbr {
+        text-decoration: none;
+    }

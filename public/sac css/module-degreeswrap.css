@@ -1,0 +1,174 @@
+.quicklinks-section,
+section.degrees-majors-section {
+    background-color: rgb(194, 253, 219);
+    background-image: linear-gradient(15deg,
+        rgb(194, 253, 219) 0%,
+        rgb(234, 253, 246) 50%,
+        rgb(194, 253, 219) 100%);
+    background-size: cover;
+    background-position: center;
+    padding: 2em 10% 3.5em;
+}
+
+.quicklinks-section,
+section.degrees-majors-section {
+    position: relative;
+}
+
+#department-grid-header {
+    font-weight: 300;
+    /*background: #fff;*/
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 0 .5em;
+}
+
+ul.degreeswrap {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+    list-style: none;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+ul.degreeswrap ul.degrees {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    max-width: 1140px;
+    padding-left: 0;
+    margin: 0 auto;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+ul.degrees li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+#department-grid .degrees li a {
+    font-size: 16px;
+    text-align: center;
+}
+
+.degrees > li > a {
+    display: block;
+    padding: 2rem 5%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: #043927;
+    background: rgba(255, 255, 255, .3);
+    /*text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;*/
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+.degrees li a:visited {
+    color: #333;
+}
+
+.degrees li a:hover {
+    color: #008554;
+    background: rgba(0, 0, 0, .1);
+    /*text-shadow: 1px 1px 0 #ffffc9, -1px -1px 0 #ffffc9, -1px 1px 0 #ffffc9, 1px -1px 0 #ffffc9;*/
+}
+
+#spotlight-boxes div.socialbox a {
+    /* in type-base.css */
+    padding: 2rem 40% 2rem 2rem;
+    text-decoration: none;
+    height: 100%;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 90% 25%;
+}
+
+@media screen and (min-width:600px) {
+    ul.degrees li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+        flex: 1 0 50%;
+    }
+}
+
+@media screen and (min-width:850px) {
+    #department-grid .degrees li a {
+        /*text-align: left;*/
+    }
+}
+
+@media screen and (min-width:900px) {
+
+    .quicklinks-section,
+    section.degrees-majors-section {
+        background-color: rgb(194, 253, 219);
+        background-image: url('../svg/nav-dots.svg'),
+            linear-gradient(15deg,
+            rgb(194, 253, 219) 0%,
+            rgb(234, 253, 246) 50%,
+            rgb(194, 253, 219) 100%);
+    }
+
+    ul.degrees li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 25%;
+        flex: 1 0 25%;
+        min-width: -webkit-min-content;
+        min-width: -moz-min-content;
+        min-width: min-content;
+    }
+
+    .t3.page-class-schedules ul.degrees li,
+    .t3.page-housing ul.degrees li,
+    .t3.page-arts-letters ul.degrees li,
+    .t3.page-social-sciences-interdisciplinary-studies ul.degrees li,
+    .t3.page-administration-business-affairs ul.degrees li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+        flex: 1 0 20%;
+    }
+
+    .t3.page-health-human-services ul.degrees li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 25%;
+        flex: 1 0 25%;
+    }
+
+    .t3.page-engineering-computer-science ul.degrees li,
+    .t3.page-natural-sciences-mathematics ul.degrees li,
+    .t3.page-business-administration ul.degrees li,
+    .t3.page-information-resources-technology ul.degrees li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 33.3333%;
+        flex: 1 0 33.3333%;
+    }
+
+    .t3.page-education ul.degrees li {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+    }
+
+    #department-grid .degrees li a {
+        font-size: 16px;
+    }
+}

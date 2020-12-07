@@ -1,0 +1,496 @@
+/**ENS**/
+.t1 #sacens,
+.t1 .emergencynotice-section + .bg-image-full {
+    display:none;
+}
+
+
+.t1 .emergencynotice-section h1,
+.t1 .emergencynotice-section .emergencynotice-msg {
+    /*max-width: 75ch;*/
+    max-width: 80ch;
+    padding-bottom: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+.t1 .emergencynotice-section h1 {
+    font-size: 18px;
+    text-align: left !important;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+
+/** Can be deleted **/
+.gradient-left {
+    /* http://colorzilla.com/gradient-editor/#f9c606+0,58b947+36,008453+72,481c63+100 */
+    background: #E6B711;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#f9c606), color-stop(36%, #58b947), color-stop(72%, #008453), to(#481c63));
+    background: linear-gradient(to right, #f9c606 0%, #58b947 36%, #008453 72%, #481c63 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9c606', endColorstr='#481c63', GradientType=1);
+    /* IE6-9 */
+}
+
+.gradient-border {
+    height: 10px;bg
+    /*margin-top:-5px;
+    z-index:1000;*/
+}
+
+.gradient-right {
+    /* http://colorzilla.com/gradient-editor/#481c63+0,008453+28,58b947+64,f9c606+100 */
+    background: #481c63;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#481c63), color-stop(28%, #008453), color-stop(64%, #58b947), to(#f9c606));
+    background: linear-gradient(to right, #481c63 0%, #008453 28%, #58b947 64%, #f9c606 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#481c63', endColorstr='#f9c606', GradientType=1);
+    /* IE6-9 */
+}
+
+
+/*.t1 .section1 {
+    background-image:none;
+    background-color:#004e38;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top:inherit;
+}
+
+.t1 .section1, .t1 .quicklinks-section{ 
+	border-image: linear-gradient(to right, #f9c606 0%,#58b947 36%,#008453 72%,#481c63 100%) 5;
+    border-top: 10px solid;
+}
+*/
+/** end Can be deleted **/
+
+.t1 .bg-image-full {
+    height: 75vh;
+    padding:0;
+    overflow: hidden;
+}
+@media screen and (min-width:900px) {
+.t1 .bg-image-full {
+    height: unset;
+}
+}
+
+.t1 .bg-image-full .container {
+    padding: 20vh 10%;
+    margin: 0;
+    /*background: rgba(255, 255, 255, .85);*/
+    max-width: 1140px;
+}
+
+@media screen and (min-width:400px) and (min-width:500px) {
+    .t1 .bg-image-full .container {
+        /*padding: 30vh 10%;*/
+        padding: 10vh 10%;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .t1 .bg-image-full .container {
+        /*background: rgba(255, 255, 255, .65);*/
+        max-width: 1140px;
+    }
+}
+
+.t1 .bg-image-full .container span,
+.t1 .bg-image-full .container h2 {
+    text-shadow: #333 1px 1px 1px;
+    color: #d8c78e;
+    /* ss gold shifted light */ 
+}
+
+
+.t1 .sac-state-news .news-box .news-box-content:hover {
+    background-color: rgb(0, 46, 35);
+    -webkit-box-shadow: rgb(97, 84, 34) 0 6px 12px;
+    box-shadow: rgb(97, 84, 34) 0 6px 12px;
+}
+
+.t1 .sac-state-news .news-box *:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width:400px) and (max-width:600px) and (max-height: 800px) {
+    #navbar-primary {
+        height: 25vh;
+    }
+
+    .t1 .bg-image-full {
+        height: 75vh;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:900px) and (min-height:649px) and (max-height: 1000px) {
+    #navbar-primary {
+        height: 15vh;
+    }
+
+    .t1.page-homepage .bg-image-full {
+        height: 42vh;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .t1 .bg-image-full .container {
+        background: rgba(255, 255, 255, 0);
+        padding: 7%;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+    .t1 .bg-image-full .container span,
+.t1 .bg-image-full .container h2 {
+    text-shadow: #333 1px 1px 1px;
+    color: #e2bc37;
+    /* hornet yellow shifted light */
+}
+}
+
+@media screen and (min-width:1200px) {
+    .t1 .bg-image-full .container {
+        max-width: 1140px;
+        padding: 7% 0;
+    }
+}
+
+
+
+.t1.page-homepage {
+    position: relative;
+}
+
+.emergencynotice-section{
+    padding: 2rem 0;
+    border-radius: 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: #C6401D;
+    background-image: linear-gradient(60deg,#C6401D 20%, #C6671D 100%);
+    background-blend-mode: color-dodge;
+    background-position-y: 80%;
+    background-size: 300%;
+    background-size:cover;
+    background-blend-mode:normal;
+}
+
+.emergencynotice-section h1{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.t1.page-california-state-university-sacramento div[id="sacens"] {
+    background: #900;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 3em 0 0 0;
+    -webkit-box-shadow: #ccc 3px 8px 10px;
+    box-shadow: #ccc 3px 8px 10px;
+    border-bottom: 9px solid #cbb668;
+    margin-bottom: 2em;
+}
+
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"], .emergencynotice-section .emergencynotice-msg{
+    padding-bottom: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"] h1,
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"] h2,
+.emergencynotice-section h1,
+.emergencynotice-section h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    text-shadow: rgba(0, 0, 0, .3) 3px 3px 3px;
+}
+
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"] p,
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"] span,
+.emergencynotice-section p, .emergencynotice-section li {
+    color: #fff !important;
+    font-size: 16px;
+}
+
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"] a, .emergencynotice-section a{
+    color: #f0e1b0;
+    /* Web 5 */
+    text-decoration: underline;
+}
+
+.t1.page-california-state-university-sacramento div[id="sacens"] div[id="sac_ens_msg"] a:hover, .emergencynotice-section a:hover {
+    color: #cbb668;
+    /* Web 3 */
+    text-decoration: none;
+}
+
+
+/*--Advisory Section--*/
+/*.advisory-section + header.bg-image-full {*/ /* For Use with big banner */
+/*    display: none !important;*/
+/*}*/
+.advisory-section + header.bg-image-full .row { /* no text overlay */
+    display: none !important;
+}
+.t1 .advisory-section + header.bg-image-full {
+    background-color: #f0e1b0;
+    background-size:cover;
+    height: 40vh;
+    }
+    
+.advisory-section {
+    background-color: #ffc107;
+}
+.advisory-section h1 {display:none;}
+.advisory-section div.emergencynotice-msg {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    }
+.advisory-section h3 {
+    padding: 1rem;
+    margin: 0 1rem 0 0;
+    }
+.advisory-section p {
+  color: #fff;
+	font-size: 1rem;
+	max-width: unset;
+	    margin-bottom: 0;
+	    padding: 1rem;
+	    background: #043927;
+}
+.advisory-section a, .advisory-section a:link, .advisory-section a:visited {
+	color: #f0e1b0;
+}
+.advisory-section a:hover, .advisory-section a:focus {
+	color: #c4b581;
+}
+@media screen and (min-width: 600px) {
+    .advisory-section {background: #043927}
+    .advisory-section h3 {
+        background: #ffc107;
+    }
+}
+
+
+@media screen and (min-width: 1120px) {
+    .t1.page-homepage div[id="sacens"] {
+        background: #900 url(../images/background-accent-double-ss-full.png) 90% 50% no-repeat;
+        background-size: contain;
+    }
+
+    .t1.page-homepage div[id="sacens"] div[id="sac_ens_msg"] {
+        padding-bottom: 2em;
+        max-width: 920px;
+    }
+}
+
+
+/*********** Updates to covid19 info *********************/
+
+/*.advisory-section .emergencynotice-msg div p span{*/
+/*    display:inline-block;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-evenly;*/
+/*    margin-top:0.3em;*/
+/*  }*/
+/*.advisory-section .emergencynotice-msg div p span a  {*/
+/*    background-color: #F0E1AB;*/
+/*    color: #005734;*/
+/*    padding: .2em .8em;*/
+/*    text-align: center;*/
+/*    border-radius: 3px;*/
+/*    width: min-content;*/
+/*    flex-basis: content;*/
+/*    margin-right: 0.4em;*/
+/*    display: inline-flex;*/
+/*    flex: 1 0;*/
+/*    white-space: nowrap;*/
+/*    justify-content: center;*/
+/*    text-decoration: none;*/
+/*    -moz-transition: none;*/
+/*    -webkit-transition: none;*/
+/*    -o-transition: color 0 ease-in;*/
+/*    transition: none;*/
+/*    font-weight:400;*/
+/*     background-color: #F0E1AB;*/
+/*    color: #005734;*/
+/*    padding: .2em .8em;*/
+/*    border:2px solid #fff;*/
+    
+/*    width: min-content;*/
+/*    flex-basis: content;*/
+/*    white-space: nowrap;*/
+/*    justify-content: center;*/
+/*  }*/
+/*.advisory-section .emergencynotice-msg div p span a:link,*/
+/*.advisory-section .emergencynotice-msg div p span a:active,*/
+/*.advisory-section .emergencynotice-msg div p span a:visited {*/
+/*    color: #005734;*/
+/*}*/
+/*.advisory-section .emergencynotice-msg div p span a:hover {*/
+/*    background-color: rgba(255,193,7, 0.9);*/
+/*}*/
+/*@media screen and (max-width:866px){*/
+/*    .advisory-section .emergencynotice-msg div p span a {*/
+/*      font-size: .83em;*/
+      
+/*    }*/
+/*}*/
+/*@media screen and (min-width:600px) and (max-width:748px)  {*/
+/*  .advisory-section .emergencynotice-msg div p span a {*/
+/*    margin-top:0.2em;*/
+/*  }*/
+/*}*/
+
+/*@media screen and (max-width:599px){*/
+/*.advisory-section .emergencynotice-msg div p span {*/
+/*      display:flex;*/
+/*      flex-flow: row wrap;*/
+/*    }*/
+/*    .advisory-section .emergencynotice-msg div p span a {*/
+/*      font-size: .95em;*/
+/*      margin-bottom:0.4em;*/
+/*      padding:0.6em;       */
+/*    }*/
+/*}*/
+/* End MSG with Span Styles */
+
+
+
+
+
+  
+  
+.advisory-section div {
+      width: 100%;
+      margin: unset;
+      flex-direction: column;
+  }
+  .advisory-section p {
+      width: 100%;
+      }
+.advisory-section p + p {
+    display: flex;
+    flex-direction: column;
+    /*padding: 0 1rem .25rem 1rem;*/
+    border-bottom: 4px solid #ffc107;
+    }
+.advisory-section p a, 
+.advisory-section p a:link, 
+.advisory-section p a:visited {
+    display: inline-flex;
+    flex: 1;
+    padding: 1rem;
+    margin: 1ch;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: #F0E1AB;
+    color: #005734;
+    border:2px solid #fff;
+    /*width: min-content;*/
+    flex-basis: content;
+    /*white-space: nowrap;*/
+    justify-content: center;
+    text-decoration: none;
+    }
+.advisory-section p a:hover,
+.advisory-section p a:focus {
+    background-color: #c4b581;
+}
+
+
+.advisory-section .emergencynotice-msg div p:first-child > a {
+        border-color: #ffc107;
+    }
+.advisory-section .emergencynotice-msg div p:first-child > a:first-child,
+.advisory-section .emergencynotice-msg div p:first-child > a:first-child:link,
+.advisory-section .emergencynotice-msg div p:first-child > a:first-child:visited {
+        background-color: #fff;
+    }
+.advisory-section .emergencynotice-msg div p:first-child > a:first-child:hover,
+.advisory-section .emergencynotice-msg div p:first-child > a:first-child:focus {
+        background-color: rgba(255,255,255.9);
+    }
+    
+@media screen and (max-width:599px){
+    .advisory-section div.emergencynotice-msg div {
+      flex-flow:column;  
+    }    
+    .advisory-section .emergencynotice-msg h3,
+    .advisory-section .emergencynotice-msg div p {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    } 
+    
+    /* when button was part of plain-text line above buttons
+    /*
+    /*.advisory-section .emergencynotice-msg div p:first-child > a:first-child {*/
+    /*  display:inline-block;*/
+    /*  margin-top:0.3em;*/
+    /*  margin-bottom:0.3em*/
+    /*}*/
+    
+  }
+  
+  
+@media screen and (min-width:600px){
+    .advisory-section h3 {
+    align-self: stretch;
+    margin-right: 0;
+    padding: 2rem;
+    padding-top: calc(5% + 1ch);
+    /*padding-top: 1rem;*/
+    /*padding-bottom: .75rem;*/
+    background: #e6b711;
+}
+.advisory-section div > p:first-child {
+    padding: calc(1rem + 1ch);
+    padding-bottom: 0;
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+}
+.advisory-section p + p {
+    flex-direction: row;
+    padding: calc(1rem + 1ch);
+    padding-top: 0;
+}
+.advisory-section div > p a:first-child {
+    margin-left: 0;
+}
+.advisory-section div > p a:last-child {
+    margin-right: 0;
+}
+}
+
+
+@media screen and (min-width:800px){
+.advisory-section div.emergencynotice-msg {
+      flex-direction: row;
+  }
+    .advisory-section p + p {
+        border-bottom: 0;
+    }
+.advisory-section h3 {
+    padding-bottom: .75rem;
+    background: #e6b711;
+    border-bottom: .75rem solid #ffc107;
+}
+}

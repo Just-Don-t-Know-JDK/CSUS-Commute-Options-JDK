@@ -1,0 +1,23 @@
+	.jumbotron {
+	    margin-bottom: 0;
+	}
+
+	.jumbotron,
+	.paral,
+	.paralsec {}
+
+	.jumbotron.bottom + .jumbotron {
+	    background-blend-mode: unset;
+	}
+.jumbotron + .jumbotron {
+    background: #043927;
+}
+section.emergencynotification-section {
+    background: rgb(240,225,176) !important;
+    display: none;
+}
+section.emergencynotification-section p {
+    width: 70%;
+    margin: 1em auto 0;
+    font-size: 16px;
+}

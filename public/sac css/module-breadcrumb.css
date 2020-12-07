@@ -1,0 +1,84 @@
+/*** START: For breadcrumb sidebar ***/
+
+.sidebar  {
+    background-color: #000;
+}
+
+.t4 .sidebar .navbar {
+    display: block;
+    padding: 0 10%;
+}
+.t5 .sidebar .navbar {
+    padding:.5em 0;
+    width: 80%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.sidebar .navbar a {
+    font-weight: normal;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    /*padding: .5em 0;*/
+    line-height: 1;
+}
+
+
+
+
+.sidebar .navbar a:hover {
+    color: #ccc;
+}
+.sidebar .navbar a:after {
+    /*content: '◂';*/
+    /*content: '⤶';*/
+    content: '⤷';
+    content: '➤';
+    display: inline;
+    color: #aaa;
+    margin: 0 1ch;
+    font-size: 1.5em;
+}
+.sidebar .navbar a:last-child:after{
+    /*content: " ";*/
+    color: #000;
+}
+.sidebar .navbar a:first-child {
+    color: #d6dc34;
+}
+.sidebar .navbar a:nth-child(2) {
+    color: #e7ea8a;
+}
+
+@media screen and (min-width: 576px) {
+    .sidebar .navbar {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+.sidebar .navbar a:first-child {
+    padding-bottom: 0;   
+}
+.sidebar .navbar a:last-child {
+    padding-top: 0;   
+}
+}
+
+@media screen and (min-width: 640px) {
+    .t4 .sidebar .navbar,
+    .t5 .sidebar .navbar {
+       display: flex; 
+       justify-content: left;
+       margin: 0 auto;
+       padding: .5em 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .t5 .sidebar .navbar {
+        width: auto;
+    }
+}
