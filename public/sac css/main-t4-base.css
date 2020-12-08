@@ -1,0 +1,1151 @@
+u { text-decoration: none !important; }
+
+/* =============================================== Browser Hacks ====================*/
+
+/* IE10+ and Edge hack for sidebar. Position: "sticky" is not supported */
+_:-ms-lang(x),
+.sidebar {
+    position: absolute;
+    top: auto;
+}
+
+/*Hack for other browsers other than IE 11 and below*/
+@supports not (old: ie) {
+.ie-browser-msg{ display:none;}
+}
+
+/*Safari (7.1+)*/
+_::-webkit-full-page-media, _:future, :root .ie-browser-msg {
+    display: none;
+}
+
+/*Safari (from 6.1 to 10.0)*/
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { 
+    @media {
+        .ie-browser-msg { 
+            display:none;
+        }
+    }
+}
+/*Safari (10.1+)*/
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+        .ie-browser-msg { 
+            display:none;
+        }
+    }
+}
+
+.ie-browser-msg { 
+    padding: 1em;
+    width: 100%;
+    max-width: 100%;
+}
+.ie-browser-msg a {
+    color: #00573D;   
+}
+
+/* ========================================== General ====================*/
+
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    min-width: 400px;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+    -webkit-font-feature-settings: "clig",
+        /* ligature */
+        "salt";
+    font-feature-settings: "clig", "salt"
+        /* ligature */
+    ;
+    font-weight: 600;
+}
+
+abbr {
+    -webkit-font-feature-settings: "cpsp";
+    font-feature-settings: "cpsp";
+    /* applies proper spacing to all caps */
+}
+
+
+/* =============================================== Nav ====================*/
+
+.navbar-toggler {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+/*.dropdownnav{*/
+/*    background-color:#E4E4E4;*/
+/*}*/
+.navbar-light .navbar-toggler {
+    color: #004e38;
+    /*margin-top: 12px;*/
+    border: none;
+}
+
+
+/* =============================================== Main Nav ====================*/
+
+.navbar-brand img {
+    width: 45%;
+    min-width: 240px;
+    max-width: 100%;
+}
+
+.navbar {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nav-link {
+    color: #000000;
+}
+
+a svg {
+    /**overwrite gray toggle icon**/
+    color: #9C9C9C;
+}
+
+.navbar-default ul.nav a:hover,
+.navbar-default ul.nav a:focus,
+.navbar-default ul.nav a:visited {
+    /* overwrites nav.scss l19 */
+    color: #008554;
+}
+
+/* =============================================== Breadcrumb ====================*/
+.sidebarheader {
+    color: #fff;
+}
+
+.sidebar .navbar span.sidebarheader a {
+    font-family: inherit;
+    font-weight: normal;
+    color: #fff;
+}
+
+.sidebar .navbar span.sidebarheader a:hover {
+    color: #fff;
+}
+
+.sidebar a.nav-link {
+    background-color: #022e22;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+.lightgreen {
+    margin-bottom: 0px;
+}
+
+.sidebar.navbar-dark button {
+    background: rgba(0, 0, 0, .7);
+    padding: .5em 1.25rem;
+    border-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 100%;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.sidebar.navbar-dark button *:first-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    /* overwrites main.css l91 */
+    color: #ddd;
+    font-size: 14px;
+    padding: .5rem 0 .5rem 2.25rem;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar a.nav-link-return {
+    padding-top: 1em;
+}
+
+.sidebar a.nav-link:hover,
+.sidebar a.nav-link:focus {
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+/* =============================================== Header ====================*/
+
+section.bg-image-full {
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.bg-image-full .herotitle {
+    background: #008554;
+    color: #fff;
+    margin-bottom: 0;
+    padding: .5rem .25rem;
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+.bg-image-full h2.herotitle {
+    /* overwrites main.css l134 */
+    color: #333;
+    background: #E6B711;
+    margin-left: 20%;
+}
+
+h1.herotitlegreen span {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+
+h2.herotitleyellow span {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+    font-size: 2.5rem;
+}
+
+h2.herotitleyellow {
+    margin-top: -10px;
+}
+
+header {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+h2.herosubtitle {
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+h2.herotitlegreen span {
+    color: #fff;
+    padding-bottom: .5em;
+    font-weight: 400;
+}
+
+/* =============================================== Quad Boxes ====================*/
+
+#quadrants {
+    position: relative;
+}
+
+.box1,
+.box3,
+.box2,
+.box4 {
+    position: relative;
+    min-height: 100%;
+    padding: 2em 10%;
+}
+
+.box1 {
+    padding-top: 4em;
+}
+
+.box2.image {
+    padding: 0;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+.box2.image.bg-logo {
+    padding: 2em 10%;
+}
+@media screen and (max-width:768px) {
+    .box2.image.bg-logo {
+   min-height: 320px;
+}
+}
+
+@media screen and (min-width:768px) {
+
+    .box1,
+    .box2.general {
+        padding: 5rem 10% 2em 10%;
+    }
+}
+
+@media screen and (min-width:1140px) {
+
+    .box2,
+    .box3,
+    .box4 {
+        max-height: 640px;
+        overflow: hidden;
+    }
+
+    .box2.button,
+    .box4.general {
+        padding: 2em 10%;
+    }
+
+    .box2.image {
+        margin: 0 5%;
+    }
+    .box2.image.bg-logo {
+        margin: 0;
+        background-color: #fff;
+    }
+
+    .box1,
+    .box3.image,
+    .box3.general {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .box2.button,
+    .box4.general {
+        padding-right: 15%;
+        padding-left: 10%;
+    }
+}
+
+/* =============================================== Q: inline links ====================*/
+.box1 a,
+.box2 div:not(.side-nav) a,
+.box3 .general a,
+.box4 .general a,
+.box4 div:not(.side-nav) a {
+    color: #fff;
+    text-decoration: underline;
+}
+.my-inside .box1 a,
+.my-inside .box2 div:not(.side-nav) a,
+.my-inside .box4 div.general a,
+.box3 div.table a,
+.box4 div.table a {
+    color: #00573d;
+    text-decoration: underline;
+    /* stinger */
+}
+
+.t4 .box3.table td a,
+.t4 .box4.table td a {
+    color: #043927;
+    text-decoration: none;
+}
+
+.box1 a:hover,
+.box2 a:hover,
+.box4 a:hover {
+    color: #f0e1b0;
+    text-decoration: underline;
+}
+
+.contentbox a,
+#spotlight .socialbox a {
+    /*removed #connect a*/
+    color: #000;
+    text-decoration: underline;
+}
+
+.t4.page-units-functions .box3.table td a:hover,
+.t4.page-units-functions .box4.table td a:hover,
+.contentbox a:hover,
+#spotlight .socialbox a:hover,
+#connect a:hover,
+.box2.general a:hover,
+.box3 a:hover {
+    color: #004e38;
+    text-decoration: underline;
+}
+
+/* =============================================== Q: Text ====================*/
+.box1 p,
+.box2 p,
+.box3 p,
+.box4 p,
+.box.general p {
+    line-height: 1.6;
+}
+
+.box3 a,
+.box2.general a,
+.t4 table td a {
+    color: #00573D;
+    /* stinger */
+}
+
+.box4.general,
+.box4.general p,
+.box4.general li {
+    color: #fff;
+}
+
+
+/* =============================================== Q Box 1  ====================*/
+.box1 {
+
+    background: rgb(0, 78, 56);
+    /* ss green */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 52, 38, 1)), color-stop(3%, rgba(0, 52, 38, 1)), color-stop(60%, rgba(0, 78, 56, 1)), to(rgba(0, 78, 56, 1)));
+    background: linear-gradient(180deg, rgba(0, 52, 38, 1) 0, rgba(0, 52, 38, 1) 3%, rgba(0, 78, 56, 1) 60%, rgba(0, 78, 56, 1) 100%);
+}
+
+.box1,
+.box2.list-only {
+    background-color: #008554;
+    color: #ffffff;
+}
+
+.box1,
+.box1 p,
+.box1 ol,
+.box1 ul,
+.box2.list-only {
+    color: #fff;
+}
+
+.box1 h3,
+.box4.general h3 {
+    color: #f0e1b0;
+}
+
+.box1 h2:nth-of-type(n+2),
+.box2 h2:nth-of-type(n+2),
+.box2.showcase h2 {
+    font-size: 22px;
+}
+
+.box1 h3,
+.box2 h3 {
+    font-size: 20px;
+}
+
+.box1 h4,
+.box2 h4 {
+    font-size: 18px;
+}
+
+
+/* =============================================== Q Box 2  ====================*/
+.box2.list-only,
+.box2.showcase {
+    background-image: url('../images/level4box2bg.jpg');
+    background-color: #004e38;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    .box2.general > .box3.general {
+        background-color: #f0e1b0;
+        /* web only 5 */
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .box2.general,
+    .box3.general {
+        background-color: #fff;
+    }
+}
+.box2.button,
+.box2.showcase,
+.box2.events {
+        background-position: center center !important;
+    }
+
+.box2.showcase h2 {
+    /*font-size:22px;  dupe 322 ?*/
+    color: #fac606;
+}
+
+.box2.list-only h2 {
+    background: #d6dc34;
+    /* guava */
+    color: #004e38;
+    /*ssgreen*/
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    /*font-size: 22px; dupe 322 ?*/
+    font-weight: 600;
+    padding: .5em 0 .5em 5%;
+    margin-bottom: 0;
+}
+
+.box2.list-only h3 {
+    background: #e6ea85;
+    /* guava 60 - IDK testing for now */
+    color: #333;
+    /*dk grey */
+    padding: .5em 0 .5em 5%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:768px) {
+    .box2.button,
+    .box4.button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .box2.button .side-nav,
+    .box4.button .side-nav {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    .box3.image {
+        background-position: center;
+    }
+}
+
+/* =============================================== Q Box 3 ====================*/
+.box3 {
+    background-image: url('../images/background-accent-double-ss.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.box3.general h2,
+.box2.general h2 {
+    color: #004e38;
+}
+
+.box3 img {
+    width: 100%;
+    max-width: 100%;
+    /*-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    margin-bottom: 1em;
+}
+
+.box3.table {
+    padding: 2em 5%;
+    height: 100%;
+}
+
+.box3.image {
+    min-height: 300px;
+}
+
+@media screen and (min-width: 640px) {
+    .box3.image {
+        min-height: 480px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .box3.image {
+        /*min-height: 100%;*/
+    }
+}
+
+/* =============================================== Q Box 4 ====================*/
+.box4 {
+    /* outer block */
+
+    background: #043124;
+    background: linear-gradient(135deg, #043124 0%, #004e38 40%, #004e38 70%, #043124 100%);
+}
+
+@media screen and (min-width:1140px) {
+    .box4 {
+        padding-right: 15%;
+    }
+}
+
+
+.box4 h2 {
+    padding: 0;
+    /*font-size:22px; dupe 322?*/
+    color: #004e38;
+    /*margin-bottom: 0;*/
+}
+
+.box4 h3 {
+    padding: .5em 0;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #004e38;
+}
+
+.box4.general p a,
+.box4.general li a,
+.box4.general p a:link,
+.box4.general li a:link {
+    color: #f0e1b0;
+    text-decoration: underline;
+    /* web only 5 */
+}
+
+.box4.general p a:hover,
+.box4.general p a:focus,
+.box4.general li a:hover,
+.box4.general li a:focus {
+    color: #cfb668
+}
+
+main:not(.my-inside) .box4.general strong,
+main:not(.my-inside) .box4.general abbr {
+    color: #f0e1b0;
+}
+
+.box4.general p a:visited,
+.box4.general li a:visited {
+    color: #cfb668;
+    /* web only 3 */
+}
+
+.box4.general .b4-logo {
+    padding: 5% 1em;
+    background: #fff;
+    margin-top: 1em;
+}
+.box4.general .b4-logo img {
+    width: 100%;
+}
+
+
+
+
+
+/* =============================================== Misc ====================*/
+
+.box-bg-image {
+    min-height: 340px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section1 {
+    background-image: url(../images/section1-homebg.png);
+    background-size: cover;
+    background-position: top center;
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.news {
+    background-color: #000;
+}
+
+/* Tab */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: #E6B711;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #dd971a;
+}
+
+.tab-pane {
+    padding-top: 1em;
+}
+
+
+/* ======================================== Section 2 Events ====================*/
+
+
+
+.section2 {
+    background-color: #004e38;
+    background-image: url(../images/section2-admissionsrightbg2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    /*margin-top:-30px;*/
+    padding-top: 60px;
+    padding-bottom: 50px;
+    /*z-index:50;*/
+    position: relative;
+}
+@media screen and (max-width:1000px) {
+.section2 {
+    padding: 0 0 50px 0;
+}
+.section2 .container:first-child {
+    padding:0;
+}
+.sac-state-events-section .row:nth-child(n+2) {
+    padding: 0 15px;
+}
+}
+
+.t2 .section2,
+.t3 .section2 {
+    background-position: left;
+}
+
+.t4 .section2 {
+    background-size: cover;
+    background-position: bottom center !important;
+}
+
+.section2 h1,
+header.bg-image-full {
+    color: #f0e1b0;
+    font-weight: 400;
+}
+
+.section2 h1,
+.section2 h2 {
+    /*    Remove lightgreen as a class */
+    color: #fff6ce;
+    margin-bottom: 0;
+}
+
+/* ======================================== DegreeWrap ====================*/
+
+.degrees {
+    margin-bottom: 2px;
+}
+
+.degrees > div > div {
+    padding: 50px 20px;
+}
+
+.degrees > div > a > div {
+    padding: 50px 20px;
+}
+
+.not-underline {
+    text-decoration: none !important;
+}
+
+/* ======================================== Flex Content Home ====================*/
+
+.paral {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.paralsec {
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+
+
+/* ======================================== Footers ====================*/
+
+.hashtag {
+    position: absolute;
+    margin-top: -20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socialicons .social-icon {
+    display: table-cell;
+    color: #fff;
+    height: 48px;
+    width: 48px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: #55ba47;
+    vertical-align: middle;
+}
+
+.socialicons .social-icon:hover {
+    background-color: #004e38;
+}
+
+.socialicons span,
+#connect a span {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+}
+
+.socialbox {
+    height: 100%;
+    min-height: 200px;
+    padding: 1em;
+    background-color: #ccc;
+    /*margin: 1em .5em;*/
+    /*text-align: center;*/
+    /*text-transform: capitalize;*/
+    line-height: 1.1;
+}
+
+#spotlight .socialbox {
+    height: 100%;
+    min-height: 200px;
+    padding: 1em;
+    background-color: #ccc;
+    /* margin: 1em .5em; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/* ===================================================== Buttons ====================*/
+
+.btn-primary {
+    background-color: #E6B711;
+    color: #000;
+    border: none;
+    padding: 10px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-color: #e8a714 !important;
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+    border-radius: 0px;
+}
+
+
+/* ===================================================== Connect  ====================*/
+
+#connect h3 {
+    background-color: #E6B711;
+    color: #000;
+    padding: 3px 10px 5px;
+    font-size: 12px;
+    font-weight: 700;
+    display: initial;
+}
+
+#connect .container .row div {
+    text-align: center;
+    font-size: 14px;
+}
+
+#connect .container .row > div {
+    margin-top: 1em;
+}
+
+#connect ul.socialicons {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#connect ul.socialicons li {
+    list-style: none;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 560px) and (max-width: 991px) {
+
+    #spotlight .row .col-md-3,
+    #connect .container .row .col-md-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 100%;
+        min-height: 130px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #connect .container .row .col-lg-3 {
+        max-width: 33%;
+    }
+
+    #connect .container .row .col-lg-4 .contentbox {
+        min-width: 50%;
+        max-width: 400px;
+        min-height: 136px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #spotlight .row .col-md-3 {
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (min-width:1015px) and (max-width: 1199px) {
+    /*#connect ul.socialicons li {*/
+    /*    margin: 0 8%;*/
+    /*}*/
+}
+
+@media screen and (min-width:1200px) {
+    #connect ul.socialicons {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    #connect ul.socialicons li {
+        list-style: none;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    }
+}
+
+
+#connect .fa,
+#connect .fa:hover,
+#connect .fab,
+#connect .fab:hover {
+    text-decoration: none;
+}
+
+/***Start update connect socialicons ***/
+#connect ul.socialicons li {
+    /*display:inline-block;*/
+    /*line-height:1;*/
+}
+
+#connect ul.socialicons li a {
+    background-size: contain;
+    /*border-radius: 1em;*/
+    font-size: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px;
+    width: 60px;
+    /*Add 3/8/2019: To enlarge Hex - MH */
+}
+
+#connect ul.socialicons li a[href*="."]:before {
+    content: url(../svg/socials/black/web.svg);
+}
+
+#connect ul.socialicons li a[href*="twitter.com"]:before {
+    content: url(../svg/socials/black/tw.svg);
+}
+
+#connect ul.socialicons li a[href*="facebook.com"]:before {
+    content: url(../svg/socials/black/fb.svg);
+}
+
+#connect ul.socialicons li a[href*="instagram.com"]:before {
+    content: url(../svg/socials/black/ig.svg);
+}
+
+#connect ul.socialicons li a[href*="flickr.com"]:before {
+    content: url(../svg/socials/black/fk.svg);
+}
+
+#connect ul.socialicons li a[href*="youtube.com"]:before {
+    content: url(../svg/socials/black/yt.svg);
+}
+
+#connect ul.socialicons li a[href*="linkedin.com"]:before {
+    content: url(../svg/socials/black/li.svg);
+}
+
+#connect ul.socialicons li a[href*="behance.net"]:before {
+    /*content: "\f1b5";*/
+    content: url(../svg/socials/black/behance.svg);
+}
+
+/***End update connect socialicons ***/
+
+
+/* ===================================================== Content Box ====================*/
+
+.contentbox {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 40px 10px 0 10px;
+    margin-top: -10px;
+}
+#connect .contentbox {
+    padding: 2em 5% 1em;
+}
+.contentbox i {
+    color: #004e38;
+}
+
+.contentbox i:hover {
+    color: #55ba47;
+}
+
+.contentbox small {
+    line-height: 1.3em;
+}
+
+
+/* ===================================================== Buttons ====================*/
+
+table {
+    color: #000;
+}
+
+table thead,
+table th {
+    background-color: #E6B711;
+}
+
+table tbody {
+    background-color: #FFF;
+}
+
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+    border: 1px solid #E6B711;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+    font-weight: 600;
+}
+.t5 .table-bordered > tbody > tr > td {
+    vertical-align: top;
+}
+
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: #000;
+    color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F8F8F8;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .65);
+}
+
+/* ===================================================== blockquote ====================*/
+
+.blockquote {
+    border-left: 5px solid #E6B711;
+}
+
+.blockquote footer {
+    color: #fff;
+}
+
+
+@media screen and (max-width:991px) {
+    .navbar-brand {
+        /* overwrite navbar.css l43*/
+        /*text-align: center;*/
+        margin: 0 auto 1em 0;
+    }
+
+    .navbar-brand img {
+        width: 90%;
+    }
+
+    .box3,
+    .box4 {
+        /*padding-bottom: 50px;*/
+        height: auto;
+        min-height: auto;
+    }
+
+    .section2 {
+        background: #004e38 url(../img/section2-admissionsrightbg2.jpg) no-repeat 50% 100%;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:1140px) {
+    main:not(.t5) article {
+        background: rgb(0, 78, 56);
+        background: linear-gradient(-15deg, rgba(0, 78, 56, 1) 0%, rgba(4, 49, 36, 1) 45%, rgba(4, 49, 36, 1) 55%, rgba(0, 78, 56, 1) 100%);
+        min-height: 700px;
+    }
+
+    div[id="quadrants"] {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    /*.col-md-6 {*/
+    /*    max-width: 670px;*/
+    /*}*/
+}
+
+
+/* ==================================== Variant Overrides ==================== */
+
+.t4 .box2.list-only p,
+.paral h2.herotitlegreen,
+.t4 .box2.default .button-showcase,
+.t4 .box2.showcase h3,
+/*.t4 .box2.showcase p:not(.button-showcase),    removed as forces class to be on p not a like everywhere else */
+.t4 .box2.showcase ul,
+.t4 .box2.showcase ol,
+/*.t4 .box4.general .button-default,*/
+.t4 .box4.general .button-showcase {
+    display: none !important;
+}
+

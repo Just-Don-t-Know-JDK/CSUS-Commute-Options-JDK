@@ -1,0 +1,1030 @@
+#navbar-primary {
+    padding-bottom: 15px; /* main-t4-base.css xline 74 */
+}
+#navbar-primary .container {
+}
+
+/*nav#navbar-primary div:not([id="#quicklinks-modal"])  ul li a {*/
+/*    padding: .75em 1rem 0 1rem;  h-f.css line 5 */
+/*}*/
+nav#navbar-primary button.navbar-toggler.navbar-toggler-right.navbar-toggler-icon::before {
+    /* Menu Label on Meatstack */
+    margin-left: -6em; /* h-f.css line 19 */
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    padding: 0 7%;
+    min-height: 286px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.t5  header { 
+    min-height: 200px;
+}
+header .container {
+    -ms-flex-item-align: center;
+    align-self: center;   
+}
+@media screen and (min-width:500px) {
+    .t1 header .container {
+    -ms-flex-item-align: self-start;
+    align-self: self-start;   
+}
+}
+
+.bg-image-full { 
+    background-color: #021e14;
+    background-size: cover;
+    position: relative;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+.t1 .bg-image-full { 
+    background-color: #fff;
+    height: 60vh;
+    padding: 0;
+    overflow:hidden;
+    min-height: 360px;
+}
+.t5 .bg-image-full { 
+    background-position-y: 10%;
+}
+
+
+@media screen and (max-width: 800px) {
+.t1 .bg-image-full { 
+      background-size: 145%;
+      background-position-y: bottom;
+      background-position-x: right;
+}
+}
+@media screen and (max-width: 1000px) {
+.t1 .bg-image-full { 
+      background-size: 130%;
+      background-position-y: bottom;
+      background-position-x: 75%;
+}
+}
+@media screen and (min-width: 1000px) {
+.t1 header.bg-image-full {
+    height: 40vh;
+}
+}
+@media screen and (min-width: 1460px) {
+.t1 header.bg-image-full {
+    min-height: 400px;
+}
+}
+@media screen and (min-width: 1900px) {
+.t1 header.bg-image-full {
+   background-position-y: top;
+}
+}
+
+
+
+
+.t5.faculty-index .bg-image-full,
+.t5.faculty-one-column .bg-image-full,
+.t5.faculty-two-column .bg-image-full {
+     background-size: contain;
+    background-position-y: -5%;    
+}
+main.t5:after {
+      bottom: auto;
+ }
+.bg-image-full h1 {
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 0;
+ }
+main:not(.t1).bg-image-full h1 {
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+.bg-image-full h1 span {
+/* in type-base.css */
+}
+
+.t5 .bg-image-full h1 a:hover {
+    background-image: linear-gradient(to right, #fac606 75%, #fac606 75%);
+    background-position: 0 1.2em;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    text-decoration: none;
+}
+main:not(.t1) .bg-image-full h2 {
+/* in type-base.css */
+    padding: 0;
+    padding-top: .5em;
+    margin-left: 0;
+}
+
+
+@media screen and (min-width:992px) {
+.bg-image-full h1,
+.bg-image-full h2 {
+    max-width: 460px;
+}
+.page-faculty-senate .bg-image-full {
+    background-position-x: left;   
+}
+}
+
+
+
+/* ============================= */
+
+.jumbotron:not(.flex-section) {
+    padding: 2rem;
+    border-radius: 0;
+    position: relative;
+    background-repeat: no-repeat;
+/* rivers */
+    background-color: rgb(0,78,56);
+    background-image: url('../images/rivers-1600w.svg'), linear-gradient(60deg, rgb(0,78,56) 20%, rgb(0, 132, 83) 100%);
+    background-blend-mode: color-dodge;
+    background-position-y: 80%;
+    background-size: 300%;
+}
+.jumbotron + .jumbotron {
+    background: #043927;
+}
+@media screen and (max-width: 992px) {
+    .jumbotron:not(.flex-section) {
+        padding-top: 1rem;   
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+.jumbotron:not(.flex-section) {
+    background-position-y: 70%;
+    background-size: 150%;
+}
+}
+@media screen and (min-width: 1000px) {
+.jumbotron:not(.flex-section) {
+    background-position-y: 70%;
+    background-size: 100%;
+}
+}
+@media screen and (min-width: 1100px) {
+.jumbotron:not(.flex-section) {
+    background-position-y: 85%;
+    /*background-size: contain;*/
+}
+.jumbotron:not(.flex-section) div#spotlight-boxes {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+}
+
+.t1 .jumbotron:not(.flex-section) {
+    background-color: rgb(240,225,176);
+    background-size: cover;
+    background-blend-mode: normal;
+    /*background-image: from inline*/
+}
+
+.jumbotron #spotlight-boxes div.socialbox {
+    min-height: 176px;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    padding: 0;
+    -webkit-box-shadow: rgba(0, 78, 56,.75) 0 3px 3px;
+    box-shadow: rgba(0, 78, 56,.75) 0 3px 3px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+#spotlight-boxes div.socialbox a {
+   /* in type-base.css */
+    padding: 2rem 25% 2rem 2rem;
+    text-decoration: none;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 90% 25%;
+}
+
+
+
+
+#spotlight div.socialbox a {
+    background-color:rgb(250,198,6);
+    background: url(../images/comb-pattern-1.svg), 
+    linear-gradient(-20deg, rgb(230,234,133) 0%, rgb(230,234,133) 35%, rgb(232,185,14) 100%);
+    background-blend-mode: multiply;
+    
+}
+
+/*#spotlight div.socialbox:nth-of-type(2) a {*/
+/*    background-color:#CBB778;*/
+/*    background: url(../images/comb-pattern-2.svg), linear-gradient(0deg, rgba(203,183,120,1) 0%, rgba(203,183,120,1) 25%, rgba(250,198,6,1) 100%);*/
+/*    background-blend-mode: multiply;*/
+/*}*/
+
+/*#spotlight div.socialbox:nth-of-type(3) a {*/
+/*    background-color:#CFB668;*/
+/*    background: url(../images/comb-pattern-1.svg), linear-gradient(0deg, rgba(207,182,104,1) 0%, rgba(207,182,104,1) 25%, rgba(250,198,6,1) 100%);*/
+/*    background-blend-mode: multiply;*/
+/*}*/
+
+
+#spotlight div.socialbox:nth-of-type(odd) a:visited,
+#spotlight div.socialbox:nth-of-type(even) a:visited {
+    background-color: inherit;
+}
+#spotlight div.socialbox:nth-of-type(odd) a:hover,
+
+#spotlight div.socialbox:nth-of-type(even) a:hover {
+    background-color: #FAC606;
+}
+
+
+
+
+
+/* ============= honeycomb ================ */
+
+.section2 {
+    background-color: #043124;
+}
+
+/* ============= connect bar ================ */
+
+.paralsec {
+    margin-top: 0;
+}
+.paralsec div div .contentbox {
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 78, 56,.5) 0 3px 6px;
+    box-shadow: rgba(0, 78, 56,.5) 0 3px 6px;
+    height: auto;
+}
+@media screen and (max-width:1200px) {
+.paralsec div div .contentbox {
+     padding: 2em 1em;
+}
+}
+.paralsec div div .contentbox p {
+    margin: 0;
+    line-height: 1.5;
+}
+.paralsec div div .contentbox a {
+   color: #004e38;  
+}
+.paralsec div div .contentbox a:hover {
+   color: #AAA;  
+}
+.paralsec div div .contentbox p a.fa {
+    display: block;
+}
+.contentbox p a.fa-users {
+    background: url(../images/meetus-icon.svg) no-repeat center;   
+    padding: 33px 50%;
+}
+
+@media screen and (min-width:768px) {
+    .paralsec div div .contentbox {
+        min-height: 130px;
+}
+}
+/* ============= subfooter ================ */
+
+
+footer ul[aria-labelledby="campus-social-links"] li:hover {
+    opacity: .7;
+}
+footer .logo {
+    max-height: 48px;
+}
+
+
+
+
+
+/* ============================= */
+/* ============================= */
+
+abbr {
+    -webkit-font-feature-settings: "cpsp";
+    font-feature-settings: "cpsp";
+    /* applies proper spacing to all caps */
+}
+
+.section2 h1, 
+.section2 h2 {
+    /*    Meng: Remove lightgreen as a class */
+    color: #fff6ce; /* light cream */
+    margin-bottom: 0;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    font-size: 28px;
+}
+
+.navbar-default ul.nav a:hover,
+.navbar-default ul.nav a:focus,
+.navbar-default ul.nav a:visited {
+    color: #00573d; /* stinger green */
+}
+
+
+
+
+.t4 .box1 ul:not(.ul-button-stack),
+.t4 .box1 ul:not(.ul-button-2wide) {
+    padding-left: 1em;
+}
+/* Remove icon befores in main-t4-base line 468, 1044 */
+
+.t4 #quadrants li:before, 
+ul.ul-iconlist li:before {
+    /* overwrites main.css l504 */
+    /*content: "";*/
+    /*margin: 0;*/
+}
+#quadrants li a:after, 
+.button li a:after,
+.t5 section li a:only-child:after,
+.t5 section p a:after {
+    content: " ";
+    color: #DAD490;
+    font-size: 11px;
+}
+
+.my-inside #quadrants li a:after,
+#quadrants .box3 li a:after, 
+.box3.buttons li a:after,
+#quadrants .box2.general li a:after, 
+.box2.general li a:after,
+.my-inside #quadrants .button li a:after,
+.t5.my-inside li a:after {
+    color: #0fa153;
+}
+
+.t4[class*="page-inside-"] section li a:only-child:after,
+.t5[class*="page-inside-"] p a:after,
+.t5 section li a:only-child:after,
+.t5 section p a:after {
+    color: #043927;
+}
+
+/*External Links*/
+
+.t4 #quadrants li a[href*="http"]:after,
+.t5 section li a:only-child:after {
+    /* empty but we may want later */
+}
+main:not(.my-inside) #quadrants .box1 li a[href*="mailto:"]:after,
+#quadrants li a[href*="mailto:"]:after,
+.t5 section li a[href*="mailto:"]:only-child:after,
+.t5 section p a[href*="mailto:"]:after {
+    content: ' email';
+}
+.my-inside .box1 a:after {
+    content: '' !important;
+}
+#quadrants li a[href*="qualtrics"]:after,
+#quadrants li a[href*="jotform"]:after,
+#quadrants li a[href*="signup"]:after,
+#quadrants li a[href*="wufoo"]:after,
+#quadrants li a[href*="google.com/forms"]:after,
+#quadrants li a[href*="forms.office"]:after,
+#quadrants li a[href*="=GIVEGiving"]:only-child:after,
+.t5 section li a[href*="forms.office"]:only-child:after,
+.t5 section li a[href*="google.com/forms"]:only-child:after,
+.t5 section li a[href*="wufoo"]:only-child:after,
+.t5 section li a[href*="qualtrics"]:only-child:after,
+.t5 section li a[href*="jotform"]:only-child:after,
+.t5 section li a[href*="=GIVEGiving"]:only-child:after,
+.t5 section li a[href*="signup"]:after {
+    content: ' Form';
+}
+
+/*Video*/
+
+#quadrants li a[href^="vimeo"]:after,
+#quadrants  li a[href^="youtube"]:after,
+#quadrants  li a[href^="mediasite"]:after,
+.t5 section li a[href^="vimeo"]:only-child:after,
+.t5 section li a[href^="youtube"]:only-child:after,
+.t5 section li a[href^="mediasite"]:only-child:after {
+    content: ' Watch';
+}
+
+/*Download*/
+
+#quadrants li a[href*=".mp4"]:after {content: ' mp4';}
+
+#quadrants li a[href*=".pdf"]:after {content: ' PDF';}
+
+
+.t5 section li a[href*=".mp4"]:only-child:after {content: ' mp4';}
+.t5 section li a[href*=".doc"]:only-child:after {content: ' DOC';}
+.t5 section li a[href*=".pdf"]:only-child:after,
+.t5 section p a[href*=".pdf"]:not(.button-default):after {content: ' PDF';}
+
+
+.t5 section li a[href*=".ppt"]:only-child:after,
+.t5 section li a[href*=".xls"]:only-child:after,
+.t4 #quadrants li a[class*="button-"]:after,
+.t5 section li a[class*="button-"]:after,
+.t5 section li a[class="btn"]:after {content:'' !important;}
+
+.t5.page-administer-a-building-emergency-action-plan .table-bordered > tbody > tr > td a[href*=".doc"]:only-child:after,
+.t5.page-administer-a-building-emergency-action-plan .table-bordered > tbody > tr > td a[href*=".docx"]:only-child:after,
+.t5.page-develop-your-grant-proposal- section li a[href*=".doc"]:only-child:after,
+.t5.page-develop-your-grant-proposal- section li a[href*=".docx"]:only-child:after,
+.t5.page-research-creative-activity- section li a[href*=".doc"]:only-child:after,
+.t5.page-research-creative-activity- section li a[href*=".docx"]:only-child:after,
+.t5.page-forms- section li a[href*=".doc"]:only-child:after,
+.t5.page-forms- section li a[href*=".docx"]:only-child:after,
+.t5.make-a-gift section li a[href*=".doc"]:only-child:after,
+.t5.make-a-gift section li a[href*=".docx"]:only-child:after {
+    content: ' DOC'; color: #043927;
+}
+.t5.page-administer-a-building-emergency-action-plan .table-bordered > tbody > tr > td a[href*=".xls"]:only-child:after,
+.t5.page-administer-a-building-emergency-action-plan .table-bordered > tbody > tr > td a[href*=".xlsx"]:only-child:after,
+.t5.page-develop-your-grant-proposal- section li:not(.btn-contact) a[href*=".xls"]:only-child:after,
+.t5.page-develop-your-grant-proposal- section li:not(.btn-contact) a[href*=".xlsx"]:only-child:after,
+.t5.page-research-creative-activity- section li:not(.btn-contact) a[href*=".xls"]:only-child:after,
+.t5.page-research-creative-activity- section li:not(.btn-contact) a[href*=".xlsx"]:only-child:after,
+.t5.page-forms- section li:not(.btn-contact) a[href*=".xls"]:only-child:after,
+.t5.page-forms- section li:not(.btn-contact) a[href*=".xlsx"]:only-child:after,
+.t5.make-a-gift section li:not(.btn-contact) a[href*=".xls"]:only-child:after,
+.t5.make-a-gift section li:not(.btn-contact) a[href*=".xlsx"]:only-child:after {
+    content: ' XLS'; color: #043927;
+}
+
+@media screen and (max-width:960px) {
+	/*** START: Aaron's CSS Mods cont'***/
+    .navbar-brand {
+        /* overwrite navbar.css l43*/
+        /*text-align: center;*/
+        max-width: 600px;
+        margin: 0 auto 1em 0;
+    }
+    .navbar-brand img {
+        width: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+    .box3,
+    .box4 {
+        /* overwrites layout.css l76 */
+        /*padding-bottom: 50px;*/
+        height: 100%;
+        min-height: auto;
+    }
+    .section2 {
+        /*        overwrite to fix background position and size layout l4*/
+        background: #004e38 url(../images/section2-admissionsrightbg2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+    }
+    /* swap out green/white in hexagons.css l36 */
+    .hex-row a:nth-child(3) .hex .middle {
+        background: #b49e38;
+        color: #000;
+    }
+    .hexwrapper .hex-row a .hex .middle {
+        border-radius: 4px;
+    }
+	/***END: Aaron's CSS Mods cont'***/
+}
+
+
+
+/* ================ Utility ======================= */
+div a,
+li a,
+p a,
+.button li a,
+.collapse,
+.collapse.show,
+.hex-row .hex,
+li.item,
+#spotlight div.socialbox a,
+.hex-row  li.nav-item svg,
+ul.sac-state-events li,
+ul.sac-state-events-section li,
+.btn-green-white,
+.side-nav li a,
+nav#navbar-primary .modal .modal-body ul[aria-labelledby="campus-social-links"] li,
+footer ul[aria-labelledby="campus-social-links"] li,
+.covid-cards a,
+.covid-cards a img {
+    -moz-transition: background 1s ease, background-color 1s ease, fill 1s ease, color 1s ease, box-shadow 1s ease, text-shadowdow 1s ease, background-image 1s ease, border-color 1s ease;
+    -webkit-transition: background 1s ease, background-color 1s ease, fill 1s ease, color 1s ease, box-shadow 1s ease, text-shadowdow 1s ease, background-image 1s ease,border-color 1s ease;
+    transition: background 1s ease, background-color 1s ease, fill 1s ease, color 1s ease, box-shadow 1s ease, text-shadowdow 1s ease, background-image 1s ease,border-color 1s ease;
+}
+
+
+*[title*="Anchor is: "] {
+    
+    /*position: relative;*/
+}
+*[title*="Anchor is: "] button {
+    display:none;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: -56px;*/
+    /*width: 48px;*/
+    /*height: 48px;*/
+    /*border-radius: 50%;*/
+    /*border-bottom-right-radius: 0;*/
+    /*text-transform: capitalize;*/
+    /*font-size: 12px;*/
+    /*font-weight: 600;*/
+    /*text-align: right;*/
+    /*transform: rotate(-15deg);*/
+    /*overflow: unset;*/
+}
+*[title*="Anchor is: "] button:hover {
+    /*background: #ccc;*/
+    /*color: #333;*/
+    
+}
+
+
+
+
+
+.fa-users:before {
+    content: none;
+}
+
+.t5-meetus-manual article a[href="#"],
+.t5:not(.t5-meetus-manual) article a[href*="csus.edu/umanual/"] {
+    border:/;
+    color:/;
+    text-decoration:/;
+}
+.t4 #quadrants li a:before,
+.hashtag,
+.t4.page-campaign .sac-breadcrumb,
+.t4.page-campaign  .bg-image-full .row,
+.t5-meetus-manual article a[href="#"]:after,
+article a[href*="https://www.csus.edu/indiv"]:after,
+article a[href*="https://www.csus.edu/faculty"]:after,
+.t5:not(.t5-meetus-manual) article a[href*="https://www.csus.edu/umanual/"]:after {
+    display: none !important;   
+}
+.table-bordered > tbody > tr > td.td-merge {
+    border-bottom: 1px solid #fff !important;
+}
+.td-no-break {
+    whitespace: nowrap;
+    white-space: nowrap;
+}
+
+a.button-default, .t5 section .side-nav ul, .t5 section .side-nav ol, .t5 div.col-md-6 .side-nav li {
+	border-color: #c4b581;
+}
+
+/* =============== COVID t5 Extras =================== */
+
+
+@media only screen and (min-width: 1px) {
+    .t5[class*="page-covid-19-"] header.bg-image-full,
+.t5.page-together-we-ll-get-through-this header.bg-image-full {
+    background-image: linear-gradient(270deg, rgba(196,182,129,0) 54%, rgba(0,78,56,1) 90%, rgba(0,78,56,1) 100%), url(https://www.csus.edu/information-resources-technology/_internal/_images/herkymask_flat.jpg) !important; 
+    mix-blend-mode: multiply, normal;
+    background-blend-mode: multiply, normal;
+} 
+.t5[class*="page-covid-19-"] header.bg-image-full h1,
+.t5.page-together-we-ll-get-through-this header.bg-image-full h1 {
+    padding-right: 30%;
+}
+}
+
+@media screen and (min-width: 992px) {
+    .t5[class*="page-covid-19-"] header.bg-image-full,
+    .t5.page-together-we-ll-get-through-this header.bg-image-full {
+        min-height: 400px;
+    }
+    .t5[class*="page-covid-19-"] header.bg-image-full h1,
+    .t5.page-together-we-ll-get-through-this header.bg-image-full h1 {
+        font-size: 250%;
+        padding-right: 5%;
+}
+}
+
+
+.t5.page-together-we-ll-get-through-this.two-column a.button-default,
+.t5.page-together-we-ll-get-through-this.two-column .side-nav ul,
+.t5.page-together-we-ll-get-through-this.two-column .side-nav ol,
+.t5.page-together-we-ll-get-through-this.two-column .side-nav li {
+    border-color: #28a745;
+}
+
+.t5[class=*='together-'] section div.col-md-6.image {
+    align-self: center;
+}
+.t5 section div.col-md-6 .side-nav li {font-size: 16px;}
+.t5 section div.col-md-6 .side-nav li a {font-weight: 400;}
+
+.t5 section+section[id="flex-section-append"],
+.t5 section+section[id="flex-section-append"] section.covid-cards {
+    padding-top: unset;
+    display: flex;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards {
+    width: unset;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards div {
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border-bottom: 2px solid #00573d;
+    overflow: hidden;
+    background: #58c247;
+    /*background: rgba(80,194,71,0.4);*/
+    /*background: linear-gradient(180deg, rgba(80,194,71,0) 0%,rgba(80,194,71,1) 100%);*/
+    text-align: center;
+    flex: 1 1 100%;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards h3 {
+    background: #00573d;
+    color: #fff;
+    padding: 1rem 1rem .5rem 2ch;
+}
+
+.t5 section+section[id="flex-section-append"] section.covid-cards h3,
+.t5 section+section[id="flex-section-append"] section.covid-cards p {
+    margin-bottom: 0;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards p a {
+    display: block;
+    padding: 1rem 2rem 2rem;
+    text-decoration: none;
+    /*background: rgb(40,167,69);*/
+    background: rgba(40,167,69,0.5);
+    /*background: linear-gradient(0deg, rgba(40,167,69,0) 0%, rgba(40,167,60,0.4) 35%, rgba(40,167,69,0.8) 100%);*/
+    background: linear-gradient(0deg, rgba(80,194,71,1) 60%, rgba(80,194,71,1) 100%);
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards p img {
+    width: 96px;
+    height: 96px;
+    margin: 1rem;
+    background: #c4b581;
+    border-radius: 50%;
+    border: solid transparent 3px;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards p a:hover img {
+     background: #f9ecc0;
+     border: solid #f9ecc0 3px;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards p span {
+    display: block;
+    font-weight: 400;
+    color: #000;
+}
+.t5 section+section[id="flex-section-append"] section.covid-cards p a:hover {
+    /*background: rgb(40,167,69);*/
+    /*background: rgba(40,167,69,0.5);*/
+    background: linear-gradient(0deg, rgba(80,194,71,1) 60%, rgba(196,222,194,.5) 100%);
+}
+
+
+@media screen and (min-width:640px) {
+.t5 section+section[id="flex-section-append"] div.col-md-12 {
+    padding-top: 0;
+}
+    .t5 section+section[id="flex-section-append"] div.col-md-12 h2 {
+        max-width: unset;
+        text-align:center;
+    }
+.t5 section+section[id="flex-section-append"] section.covid-cards div {
+    flex: 0 0 48%;
+}}
+@media screen and (min-width: 900px) {
+.t5 section+section[id="flex-section-append"] section.covid-cards div {
+    flex: 0 0 32%;
+}}
+
+
+
+
+/* =================== Laptop Image ======================= */
+
+.page-hornet-laptop-discount-program .box2.image.bg-logo {
+        background-position: bottom !important;
+}
+@media screen and (min-width: 875px) {
+.page-hornet-laptop-discount-program .box2.image.bg-logo {
+        background-size: cover !important;
+}
+}
+@media screen and (min-width: 875px) {
+.page-hornet-laptop-discount-program .box2.image.bg-logo {
+        min-height: 50vw; !important;
+        max-height: 820px;
+}
+}
+@media screen and (min-width: 1200px) {
+.page-hornet-laptop-discount-program .box2.image.bg-logo {
+        min-height: 42vw; !important;
+}
+}
+
+
+/* ===== COVID Update Banner =========== */
+
+/*.t4.page-bursar-s-office .alert-bar {*/
+/*    box-shadow: none;*/
+/*    text-align:left;*/
+/*}*/
+/*.t4.page-bursar-s-office .alert-flex {*/
+/*        background: linear-gradient(180deg,  rgb(127 210 198 / .5),  rgb(127 210 198 / 0));*/
+/*}*/
+
+/*Needs to be updated on block parent */
+/* class="covid-alert-bar c19lg"*/
+/* class="covid-alert-bar c19md"*/
+/* ====== COVID Only Alert Bar ======== */
+
+.covid-alert-bar .alert-flex {
+     border-bottom: 4px solid #c4b581;
+     background: #f1ead6;
+}
+.covid-general-strip {
+    background: #f0e1b0;
+    width: 100%;
+    /*text-align: center;*/
+    /*border-top: 4px solid #7fd2c6;*/
+    border-bottom: 4px solid #c4b581;
+}
+.covid-general-strip > h2,
+.covid-general-strip > div {
+    max-width: 1140px;
+    margin: 0 auto;
+    }
+    .covid-general-strip > h2 {
+        padding: 2rem 5% 0;
+        font-size: 1.2rem;
+        color: #5d4b3f;
+    }
+    .covid-general-strip > div {
+       padding: 1rem 5%; 
+    }
+.covid-general-strip p {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
+    /*justify-content: space-evenly;*/
+    /*align-items: center;*/
+    /*white-space:nowrap;*/
+}
+
+.covid-general-strip strong, 
+.covid-general-strip span,
+.covid-general-strip a {
+    display: block;
+    padding: 1rem 2%;
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+     font-size: 1rem;
+    line-height: 1.2;
+}
+.covid-general-strip strong {
+    color: #c4b581;
+    font-weight: 600;
+    /*border-left: #2e6b63 6px solid;*/
+}
+.covid-general-strip span {
+    color: #000;     
+    font-weight: 300;
+}
+.covid-general-strip a {
+     background: #fff;
+     border: 1px solid #5d4b3f;
+     border-radius: 4px;
+     color: #5d4b3f;
+     text-align: center;
+     margin: 0 0 1rem;
+     font-weight: 400;
+}
+.covid-general-strip a:hover,
+.covid-general-strip a:focus {
+    background: rgba(196,181,129,.3);
+     color: #777;
+}
+
+
+@media screen and (min-width: 720px){
+    .covid-general-strip > h2 {
+        font-size: 26px;
+    }
+    .covid-general-strip p {
+        flex-direction: row;
+        /*width: 90%;*/
+    }
+    .covid-general-strip a {
+     /*border: #7fd2c6 2px solid;*/
+     /*border-top: 0;*/
+     /*border-bottom: 0;*/
+     margin: 0 2% 1rem 0;
+    }
+    .covid-general-strip p > a:last-child {
+        margin-right: 0;
+    }
+    .covid-alert-block > div > h3 {
+        margin-top: 2rem;
+    }
+}
+@media screen and (min-width: 960px){
+    .covid-alert-bar.c19md .covid-alert-block,
+    .covid-alert-bar.c19lg .covid-alert-block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .covid-alert-bar.c19lg .covid-alert-block > div {
+        margin-right: 8%;
+    }
+    .covid-alert-bar.c19lg .covid-alert-block > div:nth-child(odd) {
+        margin-right: 0;
+    }
+    .covid-alert-block > div > h3 {
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 1100px){
+    .covid-general-strip strong, 
+    .covid-general-strip span,
+    .covid-general-strip a {
+        /*    font-size: 1rem;*/
+        /*padding: 1rem 5%;*/
+        /*font-size: 1.25rem;*/
+    }
+    }
+
+/* ======= Covid Text Content Blocks ================ */
+
+.covid-alert-block {
+    width: 80%;
+    margin: 2rem 10%;
+    padding: 2rem 0 1rem;
+}
+.covid-alert-block h2,
+.covid-alert-block div {
+    margin-bottom: 2rem;
+}
+.covid-alert-block h2,
+.covid-alert-block h3,
+.covid-alert-block strong,
+.covid-alert-block :not(side-nav) li a:hover,
+.covid-alert-block p a:hover {
+    color: #5d4b3f;
+}
+.covid-alert-block p,
+.covid-alert-block li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+}
+.covid-alert-block li {
+}
+.covid-alert-block ul {
+    /*list-style: none;*/
+    padding-left: 1.5rem;
+}
+.covid-alert-block a {
+    display: inline;
+    background: none;
+    padding: 0;
+    text-decoration: underline;
+}
+.covid-alert-block a.button-cta:hover, 
+.covid-alert-block a.button-cta:focus {
+    /*box-shadow:rgba(0, 0, 0, .3) 0 3px 6px;*/
+}
+.covid-alert-block a.button-cta {
+     display: block;
+     padding: 1rem;
+     /*background: #ffe9a8;*/
+     border-radius: 9px;
+     /*color: #004e38;*/
+     text-align: center;
+}
+
+@media screen and (min-width: 720px) {
+.covid-alert-block {
+    /*max-width: 1140px;*/
+    margin: 2rem auto;
+}
+.covid-alert-block .sub-cols {
+    display: flex;
+    /*max-width: 1140px;*/
+    margin: 2rem auto;
+}
+/* need to update block */
+.covid-alert-bar.c19lg .covid-alert-block div,
+.covid-alert-bar.c19md .covid-alert-block .sub-2cols {
+    flex: 1 0 46%;
+    margin-bottom: 0;
+}
+.covid-alert-bar.c19md .covid-alert-block .sub-2cols:first-of-type,
+.covid-alert-bar.c19lg .covid-alert-block div:first-child {
+    margin-right: 8%;
+}
+.covid-alert-bar.c19md .covid-alert-block div.sub-cols,
+.covid-alert-bar.c19lg .covid-alert-block div.sub-cols {
+    display: flex;
+    flex: 1;
+    margin-right: 0;
+}
+
+.covid-alert-block > p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 960px) {
+/*.covid-alert-block {*/
+/*    display: flex;*/
+/*    width: 90%;*/
+/*    margin: 2rem 5%;*/
+/*}*/
+/*.covid-alert-block .covid-cols > div {*/
+/*    flex: 1 1 50%;*/
+/*    margin-bottom: 0;*/
+/*}*/
+.covid-alert-bar.c19lg .covid-alert-block div.sub-2cols {
+    flex: 0 1 30%;
+}
+.covid-alert-bar.c19lg .covid-alert-block div.sub-2cols {
+    margin-bottom: 1rem;
+}
+}
+
+
+
+
+/* Alert Link Only */ 
+
+.alert-link {
+    /*display: block;*/
+    /*content: "President\2019s Update: Coronavirus";*/
+    top: 0;
+    text-align: center;
+    box-shadow: rgba(0,0,0,.6) 0 .5rem 8px;
+    /*display: none;*/
+}
+.alert-link a{
+    display: block;
+    background: #ffe9a8;
+    padding: 1rem 10%;
+    color: #555;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: #e6b711 solid 2px;
+}
+.alert-link a:hover,.alert-link a:focus {
+    background: #e4c668;
+    border-bottom: #66582d solid 2px;
+}
+.alert-link a span.alert-label{
+    font-size: 1.3rem;
+    color: #00573d;
+    font-weight: 700;
+    position: relative;
+}
+.alert-link a span.alert-label:hover  {
+     color: #333;
+     text-decoration: underline;
+    
+}
+.alert-link a span.alert-date:hover  {
+     text-decoration: none;
+}
+
+@media screen and (max-width:600px) {
+    .alert-link a span.alert-date {
+        display: block;   
+    }
+}
+@media screen and (min-width:600px) {
+.alert-link a span.alert-date:hover  {
+        display: inline;   
+    }
+}

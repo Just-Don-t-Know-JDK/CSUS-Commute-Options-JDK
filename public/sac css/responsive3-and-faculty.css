@@ -1,0 +1,476 @@
+main.page-faculty-index article,
+main.responsive3-one-column #one-column-wrapper,
+main.responsive3-two-column #two-column-wrapper {
+    padding: 4em 0;
+}
+
+header.responsive3-index h1 {
+    color: #fff;
+}
+
+header a.btn-green:link,
+header a.btn-green:visited {
+    display: block;
+    padding: .5em 5%;
+    border: 2px solid rgb(218, 212, 144);
+    border-radius: 4px;
+    background: rgb(0, 76, 56, .9);
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: .5em;
+}
+
+header a.btn.btn-green:hover,
+header a.btn.btn-green:focus {
+    background: rgb(0, 76, 56, .9);
+    /* transparent black fill */
+    color: #f0d470;
+    /* hyellow */
+    text-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+    -webkit-box-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+    box-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+
+}
+
+header a.btn-gold:link,
+header a.btn-gold:visited {
+    display: block;
+    padding: .5em 5%;
+    border: 2px solid rgb(218, 212, 144);
+    border-radius: 4px;
+    background: rgb(196, 182, 129, .9);
+    text-decoration: none;
+    font-size: 16px;
+    color: #004c38;
+    margin-bottom: .5em;
+}
+
+header a.btn.btn-gold:hover,
+header a.btn.btn-gold:focus {
+    background: rgb(196, 182, 129, .9);
+    /* transparent black fill */
+    /*color: #f0d470;*/
+    /* hyellow */
+    color: #000;
+    text-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+    -webkit-box-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+    box-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+}
+
+.bg-image-full.responsive3-index {
+    /* Set in aaron.css*/
+    /*background-color: #004e38;
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(196,182,129,0)), color-stop(50%, rgba(0,78,56,0.6)), to(rgba(0,78,56,1))), url(../images/hero/hero-placeholder.jpg);
+    background-image: linear-gradient(270deg, rgba(196,182,129,0) 50%, rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url(../images/hero/hero-placeholder.jpg);
+    background-size: cover;
+    -o-background-size: cover;
+    position: relative;*/
+    background-position-y: bottom;
+}
+
+main.page-faculty-index section .row:nth-child(2){
+    margin-top:2em;
+}
+
+/*Add italic INC0374225*/
+.t5 section em, .t5 section i {
+    font-style: italic;
+}
+
+
+/*
+Copied from Site://Common/archive/Responsive-3.0/assets/app/css/page.css
+*/
+
+.flexrow {
+    border-bottom-style: solid;
+    border-color: #c4b581;
+    border-width: 1px;
+    margin-bottom: 30px;
+}
+
+.greenCallout {
+    padding: 10px;
+}
+
+.greenCallout strong {
+    color: white;
+    font-weight: bold;
+}
+
+.greenCallout h3 {
+    text-align: center;
+    margin-top: 5px;
+    color: #c4b581;
+}
+
+.goldCallout {
+    padding: 10px;
+}
+
+.goldCallout h3 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* @group flexslider
+===================================== */
+
+
+/* (set max width) */
+.slideshow {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+    max-width: 1440px;
+}
+
+
+.slideshow .flex-viewport {}
+
+/* (position controls over slide) */
+.slideshow .flex-control-nav {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+/* (remove list styles, treat as indicators) */
+.slideshow .flex-control-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+/* (indicator spacing, align with pause) */
+.slideshow .flex-control-nav li {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
+    margin: 0 6px;
+}
+
+/* (default indicator) */
+.slideshow .flex-control-nav a {
+    height: 8px;
+    width: 8px;
+    margin: 2px;
+    background: #00573d;
+    opacity: .5;
+    display: block;
+    border-radius: 50%;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    line-height: 1em;
+}
+
+.slideshow .flex-control-nav a:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* (active indicator) */
+.slideshow .flex-control-nav a.flex-active {
+    height: 12px;
+    width: 12px;
+
+    margin: 0;
+
+    opacity: 1;
+}
+
+/* (container for pause/play) */
+.flex-pauseplay {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: -48px;
+    position: absolute;
+    z-index: 1000;
+    margin-left: -75px;
+    padding-top: 5px;
+}
+
+/* (pause/play button) */
+
+.flex-pauseplay a {
+    color: #00573d;
+    height: 13px;
+    width: 12px;
+    position: relative;
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1em;
+}
+
+/* (change opacity on hover) */
+.flex-pauseplay a:hover {
+    opacity: 1;
+}
+
+/* (globals for pause/play button) */
+.flex-pauseplay a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    height: 12px;
+    width: 12px;
+
+    text-indent: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* (font awesome - pause) */
+a.flex-pause::before {
+    content: '\f04c';
+    font-family: 'FontAwesome';
+}
+
+/* (font awesome - play) */
+a.flex-play::before {
+    content: '\f04b';
+    font-family: 'FontAwesome';
+}
+
+/* (cascade the height for positioning) */
+.flex-viewport .slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: inherit;
+}
+
+.flex-viewport .slides > li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* (slide contents set to width of breakpoint) */
+.flex-viewport .slides li .container {
+    position: relative;
+    height: inherit;
+}
+
+/* (styles for CURRENT slide) */
+.flex-viewport .slides li.current {}
+
+
+/* (image for the slide - treated like a background) */
+.flex-viewport .slides li .slide-visual {
+    height: inherit;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    height: 200px;
+}
+
+/* (image for the slide - treated like a background) */
+.flex-viewport.loaded .slides li .slide-visual {}
+
+.flex-viewport .slides li .slide-visual::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* (copy portion of the slide) */
+.flex-viewport .slide-copy {
+    padding-top: 220px;
+    z-index: 2;
+}
+
+/* (slide category) */
+.flex-viewport .tag {
+    background: #CBB677;
+    color: #333;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 0 1em;
+
+    font-size: 10px;
+    line-height: 1em;
+}
+
+/* (slide headline) */
+.flex-viewport h2 {
+    color: #fff;
+    font-size: 26px;
+    line-height: 1em;
+    font-weight: 700;
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    text-shadow:
+        3px 3px 0 rgba(0, 0, 0, 0.2),
+        /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+        -1px -1px 0 rgba(0, 0, 0, 0.2),
+        1px -1px 0 rgba(0, 0, 0, 0.2),
+        -1px 1px 0 rgba(0, 0, 0, 0.2),
+        1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* (slide text) */
+.flex-viewport p {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.flex-direction-nav ul {
+    display: none;
+}
+
+/* @end flexslider
+------------------------------------- */
+
+
+.mainContentArea ul {
+    list-style-type: none;
+}
+
+.mainContentArea li {
+    padding: 5px;
+}
+
+.mainContentArea .greenCallout {
+    padding: 5px;
+}
+
+.secondaryPage {
+    margin-top: 0;
+}
+
+.secondaryPage img {
+    margin: 12px;
+}
+
+
+.callout,
+.calloutbox {
+    float: right;
+    width: 250px;
+    background: #ECECEC;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #CFBA7C;
+    margin-left: 40px;
+    clear: right;
+}
+
+.callout h3 {
+    margin-top: 0;
+}
+
+.secondaryPage ul,
+.secondaryPage ol {
+    padding-left: 20px;
+    list-style-position: initial;
+}
+
+
+.secondaryPage ul {
+    list-style-type: disc;
+}
+
+.float_left {
+    float: left;
+    margin-right: 10px;
+}
+
+.float_right {
+    float: right;
+    margin-left: 10px;
+}
+
+.left-nav {
+    background: #ECECEC;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #CFBA7C;
+}
+
+.left-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.left-nav ul ul {
+    padding-left: 10px;
+
+}
+
+.left-nav li {
+    margin: 10px 0;
+}
+
+iframe {
+    content: "Your browser does not support iFrames";
+}
+
+
+
+/*Copied from Site://Common/archive/Responsive-3.0/_internal/transorms/Faculty-Index*/
+.contactText {
+    margin: 0 0 .5em;
+}
+
+.addresstext {
+    padding-left: 135px;
+    margin-top: -28px;
+}
+
+
+/*Copied from Site://Common/archive/Responsive-3.0/assets/app/bootstrap-3.3.5/css/bootstrap-theme.min.css-*/
+.well {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8e8e8), to(#f5f5f5));
+    background-image: linear-gradient(to bottom, #e8e8e8 0, #f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
+    background-repeat: repeat-x;
+    border-color: #dcdcdc;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+/* IE10+ CSS hack  */
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .flex-pauseplay {
+        margin-left: 500px;
+    }
+}

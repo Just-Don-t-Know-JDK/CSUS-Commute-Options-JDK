@@ -1,0 +1,96 @@
+/* ====== stripe bottom ====== */
+
+
+.bg-image-full:after,
+.quicklinks-section:after,
+.jumbotron:after,
+.section2:after,
+.t4 .paralsec:after,
+.t3 .section2:after,
+.t4 #quadrants:after,
+main.t5:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    padding: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/*stripe top */
+.t1 .quicklinks-section:before,
+.t3 .quicklinks-section:before,
+.section2 + .section2:before,
+.t3 .quicklinks-section:before,
+.t1 .quicklinks-section:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 6px;
+    padding: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (min-width:1140px) {
+.t4.my-inside #quadrants:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 6px;
+    padding: 3px;
+    position: absolute;
+    top: 0;   
+    left: 0;
+    z-index: 2;
+}
+}
+
+.t3.page-colleges-majors .quicklinks-section:before {
+    display: none;
+}
+
+
+
+
+/*stripe start purple */
+
+.bg-image-full:after,
+.jumbotron:after,
+.t4 .paralsec:after,
+.t4 #quadrants:after,
+main.t5:after,
+.t1 .jumbotron.top:after,
+.t1 .jumbotron.sac-state-news-section:after,
+.t1 .quicklinks-section:after,
+.t3 .quicklinks-section:after {
+    background: -webkit-gradient(linear, right top, left top, color-stop(25%, #008453), color-stop(40%, #ce7712), color-stop(60%, #fafa43), to(#380042));
+    background: linear-gradient(270deg, #008453 25%, #ce7712 40%, #fafa43 60%, #380042 100%);
+}
+
+
+
+/*start green */
+.t1 .bg-image-full:after,
+.quicklinks-section:after,
+.t3 .section2:after,
+.jumbotron.top:after,
+.jumbotron.sac-state-news-section:after,
+.t1 .jumbotron.flex-section:after,
+.t3 .quicklinks-section:before,
+.t1 .quicklinks-section:before,
+.t4.my-inside #quadrants:before {
+    background: -webkit-gradient(linear, left top, right top, color-stop(25%, #008453), color-stop(40%, #ce7712), color-stop(60%, #fafa43), to(#380042));
+    background: linear-gradient(90deg, #008453 25%, #ce7712 40%, #fafa43 60%, #380042 100%);
+    
+}
+
+.degreeswrap:after {
+    bottom: -12px;
+}
+.t3.page-admissions .bg-image-full:after,
+.t3.page-class-schedules .bg-image-full:after {
+    display: none;
+}

@@ -1,0 +1,680 @@
+a.skip-nav {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    display: block;
+}
+p.ie-browser-msg,
+h1 + p[role="navigation"] {
+    max-width: 100%;
+}
+a.skip-nav:focus {
+   position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    background: #f0e1b0;
+    padding: .5em 1em;
+    color: #043927;
+}
+
+/* Replace above */
+
+
+/* =================== PDDG Original Buttons ================================= */
+
+
+.btn-green-white {
+    padding: 6px;
+    background-color: #043927;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center
+}
+.sac-state-news-section a.btn-green-white,
+.sac-state-news-section a.btn-green-white:active,
+.sac-state-news-section a.btn-green-white:visited,
+.sac-state-events-section a.btn-green-white,
+.sac-state-events-section a.btn-green-white:active,
+.sac-state-events-section a.btn-green-white:visited,
+.box2.events a.btn-green-white,
+.box2.events a.btn-green-white:active,
+.box2.events a.btn-green-white:visited,
+.box4.calendar a.btn-green-white,
+.box4.calendar a.btn-green-white:active,
+.box4.calendar a.btn-green-white:visited {
+    background-color: #f0e1b0;
+    color: #004e38;
+    border: 2px solid #fff;
+    padding: .5rem 2ch;
+    text-decoration: none;
+    font-weight: 400;
+    /*text-transform: capitalize;*/
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .sac-state-news-section a.btn-green-white,
+    .sac-state-news-section a.btn-green-white:active,
+    .sac-state-news-section a.btn-green-white:visited,
+    .sac-state-events-section a.btn-green-white,
+    .sac-state-events-section a.btn-green-white:active,
+    .sac-state-events-section a.btn-green-white:visited,
+    .box2.events a.btn-green-white,
+    .box2.events a.btn-green-white:active,
+    .box2.events a.btn-green-white:visited,
+    .box4.calendar a.btn-green-white,
+    .box4.calendar a.btn-green-white:active,
+    .box4.calendar a.btn-green-white:visited {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .sac-state-news-section a.btn-green-white,
+    .sac-state-news-section a.btn-green-white:active,
+    .sac-state-news-section a.btn-green-white:visited,
+    .sac-state-events-section a.btn-green-white,
+    .sac-state-events-section a.btn-green-white:active,
+    .sac-state-events-section a.btn-green-white:visited {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .sac-state-news-section a.btn-green-white:active,
+    .sac-state-events-section a.btn-green-white:active,
+    .box2.events a.btn-green-white,
+    .box2.events a.btn-green-white:active,
+    .box2.events a.btn-green-white:visited,
+    .box4.calendar a.btn-green-white,
+    .box4.calendar a.btn-green-white:active,
+    .box4.calendar a.btn-green-white:visited {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        white-space: nowrap;
+        -webkit-hyphens: none;
+        -moz-hyhens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+    }
+
+    .sac-state-news-section a.btn-green-white,
+    .sac-state-news-section a.btn-green-white:visited,
+    .sac-state-events-section a.btn-green-white,
+    .sac-state-events-section a.btn-green-white:visited {
+        color: #000;
+    }
+
+    .t1 a.btn-green-white,
+    .t1 a.btn-green-white:active,
+    .t1 a.btn-green-white:visited,
+    .sac-state-events-section a.btn-green-white,
+    .sac-state-events-section a.btn-green-white:active,
+    .sac-state-events-section a.btn-green-white:visited {
+        margin: 0 0 0 auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .sac-state-news-section a.btn-green-white,
+    .sac-state-news-section a.btn-green-white:active,
+    .sac-state-news-section a.btn-green-white:visited {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    }
+
+    .sac-state-events-section a.btn-green-white,
+    .sac-state-events-section a.btn-green-white:active,
+    .sac-state-events-section a.btn-green-white:visited {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+    }
+}
+
+
+.box2.events a.btn-green-white:hover,
+.box4.calendar a.btn-green-white:hover,
+.box2.events a.btn-green-white:focus,
+.box4.calendar a.btn-green-white:focus,
+.sac-state-news-section a.btn-green-white:hover,
+.sac-state-events-section a.btn-green-white:hover,
+.sac-state-news-section a.btn-green-white:focus,
+.sac-state-events-section a.btn-green-white:focus {
+    color: rgb(0,78,56);
+background-color: #c4b581;
+}
+
+
+
+
+/* ========================= T4 Box 1 Call to Action Button ======================= */
+
+.t1 a.button-cta,
+.t1 a.button-cta:link,
+.t1 a.button-cta:visited,
+.box1 a.button-cta,
+.box1 a.button-cta:link,
+.box1 a.button-cta:visited,
+.box1 a.button-default,
+.box1 a.button-default:link,
+.box1 a.button-default:visited,
+.box4.general a.button-cta,
+.box4.general a.button-cta:link,
+.box4.general a.button-cta:visited,
+.box4.general a.button-default,
+.box4.general a.button-default:link,
+.box4.general a.button-default:visited,
+.t5.my-inside a.button-cta,
+.t5.my-inside a.button-cta:link,
+.t5.my-inside a.button-cta:visited,
+.t4.page-my-sac-state a.button-cta,
+.t4.page-my-sac-state a.button-cta:link,
+.t4.page-my-sac-state a.button-cta:visited,
+.page-coronavirus-information-for-students .box3 a.button-cta, 
+.page-coronavirus-information-for-students .box3 a.button-cta:link, 
+.page-coronavirus-information-for-students .box3 a.button-cta:visited
+{
+    display: block;
+    padding: 1em 5%;
+    border: 2px solid rgb(218, 212, 144);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .15);
+    /* transparent black fill */
+    min-width: 200px;
+    margin: 1em 0 1em auto;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    /*text-transform: capitalize;*/
+    overflow-x: hidden;
+}
+
+/** Exception for corona virus stuff https://www.csus.edu/student-affairs/emergency-student-information **/
+.page-coronavirus-information-for-students .box3 a.button-cta, .page-coronavirus-information-for-students .box3 a.button-cta:link, .page-coronavirus-information-for-students .box3 a.button-cta:visited{
+    background-color:#004e38;
+}
+
+
+.t5.one-column a.button-default {
+    width: 60%;
+    margin: 0 20%;
+    white-space: nowrap;
+    }
+.t5.two-column a.button-default {
+    width: 90%;
+    margin: 0 5%;
+    }
+.t5 ul.ul-button-2wide li {
+    width: 100%;
+    margin: 0;
+    }
+main.t5[class*="404"] ul.ul-button-stack.three-wide {
+        max-width: 100%;
+        margin: 0;
+    }
+main.t5[class*="404"] ul.ul-button-stack.three-wide  a.button-default {
+    width:100%;
+}    
+    
+    
+#flex-section-prepend p {
+    max-width: 100%;
+    text-align: center;
+}
+#flex-section-prepend a.button-default {
+    width: 80%;
+    margin: 2em 10%;
+    border-color: #00573d;
+    background-color: #e6b711;
+}
+
+@media screen and (min-width:992px) {
+#flex-section-prepend a.button-default {
+    width: 40%;
+}
+}
+@media screen and (max-width:992px) {
+#flex-section-prepend a.button-default {
+    white-space: unset;
+}
+#flex-section-prepend a.button-default span:after {
+    content: "";
+    display: block;
+}
+}
+
+a.button-cta:hover,
+a.button-cta:focus,
+.box1 a.button-cta:hover,
+.box1 a.button-cta:focus,
+.box1 a.button-default:hover,
+.box1 a.button-default:focus,
+.box4.general a.button-cta:hover,
+.box4.general a.button-cta:focus,
+.box4.general a.button-default:hover,
+.box4.general a.button-default:focus,
+.t4.page-my-sac-state a.button-cta:hover,
+.t4.page-my-sac-state a.button-cta:focus {
+    background: rgba(0, 0, 0, .3);
+    /* transparent black fill */
+    color: #f0d470;
+    /* hyellow */
+    -webkit-box-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+    box-shadow: rgba(0, 0, 0, .6) 0 3px 6px;
+}
+
+    
+
+.t4 .box2.general .button-cta:hover,
+.t4 .box2.general .button-cta:focus,
+.t4 .box3.general .button-cta:hover,
+.t4 .box3.general .button-cta:focus {
+    text-shadow: none;
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+    box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+}
+
+a.button-cta:active,
+.t4 .box2.showcase a:active,
+.t4.page-my-sac-state a.button-cta:active,
+.t5.my-inside a.button-cta:active {
+    background: rgba(255, 255, 255, .5);
+    /* transparent black fill */
+    -webkit-box-shadow: rgba(0, 0, 0, .6) 0 0 0;
+    box-shadow: rgba(0, 0, 0, .6) 0 0 0;
+}
+
+
+/* ========================= Box 2 Showcase Button  ======================= */
+
+.t4 .box2.showcase ul {
+    list-style: none;
+    padding: 0 5%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.t4 .box2.showcase li {
+    width: 60%;
+    margin: 0 auto 0 10%;
+}
+
+/*.t4 .box2.showcase a,*/
+/*.t4 .box2.showcase a:link,*/
+/*.t4 .box2.showcase a:visited {*/
+/*    font-size: 18px;*/
+/*    display: block;*/
+/*    padding: 1em 5%;*/
+/*    border: 2px solid #f0e1b0;*/
+/*    border-radius: 4px;*/
+/*    background: rgba(255,193,7,1);*/
+/*    min-width: 200px;*/
+/*    text-decoration: none;*/
+/*    text-align: center;*/
+/*    color: #004e38;*/
+/*    width: 55%;*/
+/*    margin: 0 35% 0 15%;*/
+/*  -webkit-box-shadow: rgba(0,0,0,.6) 0 6px 12px;*/
+/*    box-shadow: rgba(0,0,0,.6) 0 6px 12px;*/
+/*}*/
+/*.t4 .box2.showcase a:hover {*/
+/*    border: 2px solid #fff;*/
+/*    background: rgba(255,193,7,.7);*/
+/*    text-decoration: none;*/
+/*    color: #f0e1b0;*/
+/*}*/
+/*.t4 .box2.showcase a:active {*/
+/*    border: 2px solid #fff;*/
+/*    background: rgba(255,193,7,.75);*/
+/*    text-decoration: none;*/
+/*    color: #FFF;*/
+/*  -webkit-box-shadow: rgba(0,0,0,0) 0 0 0;*/
+/*    box-shadow: rgba(0,0,0,0) 0 0 0;*/
+/*}*/
+
+.t4 .box2.showcase a,
+.t4 .box2.showcase a:link,
+.t4 .box2.showcase a:visited {
+    font-size: 18px;
+    line-height: 1.25;
+    display: block;
+    padding: 1em 5%;
+    border: 2px solid #f0e1b0;
+    border-radius: 4px;
+    background: rgba(255, 193, 7, 1);
+    min-width: 200px;
+    text-decoration: none;
+    text-align: center;
+    color: #004e38;
+    min-width: 300px;
+    margin: 0 15% 0 10%;
+    -webkit-box-shadow: rgba(0, 0, 0, .6) 0 6px 12px;
+    box-shadow: rgba(0, 0, 0, .6) 0 6px 12px;
+    /*text-transform: capitalize;*/
+}
+.t4 .box2.showcase a:hover,
+.t4 .box2.showcase a:focus {
+    border: 2px solid #fff;
+    background: rgba(255, 193, 7, .7);
+    text-decoration: none;
+    color: #fff;
+}
+
+.t4 .box2.showcase a:active {
+    border: 2px solid #fff;
+    background: rgba(255, 193, 7, .75);
+    text-decoration: none;
+    color: #FFF;
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+}
+
+@media screen and (max-width:992px) {
+
+    .t4 .box2.showcase a,
+    .t4 .box2.showcase a:link,
+    .t4 .box2.showcase a:visited {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+/* ========================= Basic Button Default ======================= */
+
+
+/* block not flex */
+a.button-default,
+.page-net-price-calculator .link-button,
+.t4 .box2.general a.button-default,
+.t4 .box3.general a.button-default,
+.t4 .box2.general a.button-cta,
+.t4 .box3.general a.button-cta,
+.t4.my-inside .box4.general a.button-default {
+    display: inline-block;
+    padding: .7em 3%;
+    border: 2px solid #c4b681;
+    border-radius: 4px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    /*text-transform: capitalize;*/
+}
+.t4.my-inside ul.ul-button-stack {
+    margin: 1em 0;
+}
+.my-inside ul.ul-button-stack a.button-default {
+    margin-bottom: 0;
+}
+.t4.my-inside .box3.general a.button-default,
+.t4.my-inside .box4.general a.button-default {
+    margin: 0;
+    font-size: 14px;
+    margin: 0;
+    background: rgba(255, 255, 255, .5);
+}
+.b a.button-default {
+    border: 2px solid #004e38;
+}
+
+a.button-default:visited {
+    color: #000;
+    border-color: #CCC;
+}
+.t4 .box2.general a.button-default:visited,
+.t4 .box3.general a.button-default:visited,
+.t4 .box2.general a.button-cta:visited,
+.t4 .box3.general a.button-cta:visited,
+.t4 .box2.general a.button-default:link,
+.t4 .box3.general a.button-default:link,
+.t4 .box2.general a.button-cta:link,
+.t4 .box3.general a.button-cta:link,
+.t4.my-inside .box4.general a.button-default:link {
+    background: rgba(255, 255, 255, .15);
+    /* transparent white fill */
+    color: #004e38;
+    /* stinger */
+    text-decoration: none;
+}
+
+a.button-default:hover,
+a.button-default:focus,
+    .page-net-price-calculator .link-button:hover,
+    .page-net-price-calculator .link-button:focus,
+.t4 .box2.general a.button-default:hover,
+.t4 .box3.general a.button-default:hover,
+.t4 .box2.general a.button-cta:focus,
+.t4 .box3.general a.button-cta:focus,
+.t4.my-inside .box4.general a.button-default:focus {
+    background: rgba(255, 255, 255, .3);
+    /* transparent white fill */
+    color: #004e38;
+    /* ssgreen */
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+    box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+}
+
+a.button-default:active,
+.t4 .box2.general a.button-default:active,
+.t4 .box3.general a.button-default:active,
+.t4 .box2.general a.button-cta:active,
+.t4 .box3.general a.button-cta:active,
+.t4.my-inside .box4.general a.button-default:active {
+    background: rgba(255, 255, 255, .5);
+    /* transparent white fill */
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 0 0;
+    box-shadow: rgba(218, 212, 144, .6) 0 0 0;
+}
+
+
+.page-net-price-calculator .link-button:visited,
+.t5 a.button-default:visited {
+    background: #fff;
+    color: #555;
+    border-color: #ccc;
+}
+.t4.my-inside .box3.general a.button-cta:visited,
+.t4.my-inside .box4.general a.button-cta:visited,
+.t4.my-inside .box3.general a.button-default:visited,
+.t4.my-inside .box4.general a.button-default:visited {
+    color: #555;
+}
+
+.t5 a.button-default:hover,
+.t5 a.button-default:focus {
+    background: rgba(255, 255, 255, .6);
+    /* transparent white fill */
+    border-color: #004e38;
+    /* ssgreen */
+    -webkit-box-shadow: rgba(150, 150, 150, .4) 0 3px 6px;
+    box-shadow: rgba(150, 150, 150, .4) 0 3px 6px;
+    text-decoration: none;
+}
+
+.t5 a.button-default:active {
+    -webkit-box-shadow: rgba(150, 150, 150, .4) 0 0 0;
+    box-shadow: rgba(150, 150, 150, .4) 0 0 0;
+}
+    .page-net-price-calculator .link-button:link,
+    .page-net-price-calculator .link-button:visited,
+.t5.two-column.b a.button-default:link,
+.t5.two-column.b a.button-default:visited {
+    background: #008554;
+    color: #FFF;
+    /* stinger */
+    text-decoration: none;
+}
+
+.t5.two-column.b a.button-default:hover,
+.t5.two-column.b a.button-default:focus {
+    background: #004e38;
+    color: #f2f0d9;
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+    box-shadow: rgba(218, 212, 144, .6) 0 3px 6px;
+}
+
+.t5.two-column.b a.button-default:active {
+    color: #f4d157;
+    background: #004e38;
+    -webkit-box-shadow: rgba(218, 212, 144, .6) 0 0 0;
+    box-shadow: rgba(218, 212, 144, .6) 0 0 0;
+}
+
+
+
+
+/* ========================= T5 2col 2-wide Button Well ======================= */
+
+/* add class to dropdown */
+ul.wide-button-list,
+ul.ul-button-2wide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+ul.wide-button-list li,
+ul.ul-button-2wide li {
+    /*-webkit-box-flex: 1;*/
+    /*-ms-flex: 1;*/
+    /*flex: 1;*/
+    /*-webkit-box-pack: justify;*/
+    /*-ms-flex-pack: justify;*/
+    /*justify-content: space-between;*/
+    /*-webkit-box-align: end;*/
+    /*-ms-flex-align: end;*/
+    /*align-items: flex-end;*/
+    /*margin-bottom: 1em;*/
+}
+
+@media screen and (min-width: 519px) {
+
+    /*ul.wide-button-list li,*/
+    /*ul.ul-button-2wide li {*/
+    /*    -webkit-box-flex: 0;*/
+    /*    -ms-flex: 0 1 50%;*/
+    /*    flex: 0 1 50%;*/
+    /*}*/
+
+    /*ul.wide-button-list li:nth-child(2n),*/
+    /*ul.ul-button-2wide li:nth-child(2n) {*/
+    /*    margin-right: 0;*/
+    /*}*/
+}
+
+@media screen and (min-width:768px) {
+
+    /*ul.wide-button-list li,*/
+    /*ul.ul-button-2wide li {*/
+    /*    -webkit-box-flex: 1;*/
+    /*    -ms-flex: 1 1 50%;*/
+    /*    flex: 1 1 50%;*/
+    /*}*/
+}
+
+@media screen and (min-width:992px) {
+
+    /*ul.wide-button-list li,*/
+    /*ul.ul-button-2wide li {*/
+    /*    -webkit-box-flex: 0;*/
+    /*    -ms-flex: 0 1 48%;*/
+    /*    flex: 0 1 48%;*/
+    /*    margin-right: 4%;*/
+    /*}*/
+}
+
+
+/*@media screen and (min-width:768px) {*/
+/*ul.wide-button-list li:nth-child(even),*/
+/*ul.ul-button-2wide li:nth-child(even) {*/
+/*    margin-left: 2%;*/
+/*}*/
+/*}*/
+
+/* ========================= T5 2col Stack Button Well ======================= */
+
+/* add class to dropdown */
+ul.ul-button-stack,
+ul.ul-button-2wide {
+    padding: 0;
+    list-style: none;
+    margin: 1em 0;
+}
+ul.ul-button-stack li {
+    /*margin-bottom: 1em;*/
+}
+ul.ul-button-stack li a {
+    display: block;
+}
+
+.button-copy-anchor {
+    text-indent: -2px;
+    white-space: nowrap;
+    overflow: hidden;
+    /*
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    background: none;*/
+    border: none;
+    color: #00573d;
+}
+
+/* ========================= Button Back to Top ======================= */
+#button-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30%; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  background-color: #00573d; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Increase font size */
+  line-height: 1em;
+  width: 40%;
+  text-shadow: 0;
+}
+
+#button-top:hover {
+    background-color:#021e14;
+     box-shadow: rgba(0,0,0, .6) 0 3px 6px;
+      text-shadow: 0;
+}
+
+@media screen and (min-width:1000px) {
+    #button-top {
+        right: 20px;
+        max-width: 128px;
+    }
+}

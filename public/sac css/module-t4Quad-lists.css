@@ -1,0 +1,650 @@
+/* ============================== Q Box 2, 4: Side-Nav ====================*/
+
+.box2.button {
+    background: #0c3127;
+}
+
+.box4 .side-nav h2,
+.box2 .side-nav h2 {
+    background: #d6dc34;
+    /* guava */
+    color: #004e38;
+    /*ssgreen*/
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size: 22px;
+    font-weight: 600;
+    padding: .5em 0 .5em 5%;
+    margin-bottom: 0;
+}
+
+.box4 .side-nav h3,
+.box2 .side-nav h3,
+.t5 .side-nav h3 {
+    background: #e6ea85;
+    /* guava 60 - IDK testing for now */
+    color: #333;
+    /*dk grey */
+    padding: .5em 0 .5em 5%;
+    /*font-size: 18px;*/
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.box4.button h3 {
+    color: #e6ea85;
+    /* guava 60 - IDK testing for now */
+    padding: .5em 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #004e38;
+}
+.t5 .side-nav h3 {
+    background: transparent;
+    color: #333;
+    font-weight: 600;
+    /*font-size: 16px;*/
+    margin-top: 1em;
+}
+
+.button h3 {
+    padding-bottom: 0;
+}
+
+.button ol {
+    margin: 0;
+    padding-left: 5%;
+    list-style: initial;
+}
+
+.button li {
+    color: #fff;
+    font-size: 14px;
+    border: 0;
+}
+
+.button li a {
+    text-decoration: none;
+}
+
+.button li:first-child a {
+    padding-top: 1em;
+}
+
+.button .side-nav ul:last-of-type {
+    border-bottom: 2px solid #d6dc34;
+}
+
+.box4 .side-nav ul,
+.box2 .side-nav ul {
+    background: #004e38;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+    margin: 0 0 0 5%;
+}
+
+.box4.button .side-nav li,
+.box2.button .side-nav li {
+    border-bottom: 2px solid #008554;
+    padding: 1em 5% 1em 10%;
+    /*text-transform: capitalize;*/
+}
+
+.box4 .side-nav ul li:last-of-type,
+.box2 .side-nav ul li:last-of-type {
+    border-bottom: 0;
+}
+
+.box4.button ul li,
+.box4.button ol li,
+.box2.button ul li,
+.box2.button ol li {
+    font-size: 14px;
+    border: 0;
+}
+
+.box4.button .side-nav ul li,
+.box4.button .side-nav ol li,
+.box2.button .side-nav ul li,
+.box2.button .side-nav ol li {
+    font-size: 14px;
+}
+
+/* check again */
+:not(.page-my-sac-state) .box4 div:not(.side-nav) ul li a,
+:not(.page-my-sac-state) .box4.list-only div:not(.side-nav) ul a,
+:not(.page-my-sac-state) .box4 div:not(.side-nav) ul a
+
+/*remove*/
+/*
+.box2 div:not(.side-nav) ul li a,
+.box2.list-only div:not(.side-nav) ul a,
+.box2 div:not(.side-nav) ul a
+*/
+    {
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.box4.button ul li a:hover,
+.box4.button ul a:focus,
+.box2.button ul li a:hover,
+.box2.button ul a:focus
+/*.t4.page-my-sac-state .box3 .side-nav ul li a:hover,*/
+/*.t4.page-my-sac-state .box3 .side-nav ul li a:focus */
+{
+    color: #d6dc34;
+}
+
+.box2.list-only ul,
+.box4 .side-nav ul,
+.box2.list-only ol,
+.box4 .side-nav ol,
+.box2 .side-nav ul,
+.box2 .side-nav ol {
+    background: #000;
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    padding: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+}
+
+.box2.list-only li,
+.box4.button .side-nav li,
+.box2.button .side-nav li,
+.t4.page-my-sac-state .box3 .side-nav ul li {
+    border-bottom: 2px solid #004e38;
+    padding: 0;
+}
+
+.box4.button li,
+.box2.button li {
+    padding: .5rem 0;
+}
+
+.box2.list-only ul:last-of-type li:last-of-type,
+.box2.list-only ol:last-of-type li:last-of-type,
+.box4 .side-nav ul:last-of-type li:last-of-type,
+.box4 .side-nav ol:last-of-type li:last-of-type,
+.box2 .side-nav ul:last-of-type li:last-of-type,
+.box2 .side-nav ol:last-of-type li:last-of-type,
+.t4.page-my-sac-state .box3 .side-nav ul:last-of-type li:last-of-type {
+    border-bottom: 0;
+}
+
+.box2.list-only li a,
+.box2 .side-nav li a,
+.box2.list-only .side-nav li a,
+.box4 .side-nav li a,
+.box4.list-only .side-nav li a,
+.box4 .side-nav li a {
+    display: block;
+    padding: 1em 5% 1em 10%;
+    background: #333;
+    background: rgba(0, 0, 0, .2);
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.box2.list-only li a:hover,
+.box4 .side-nav li a:hover,
+.box2 .side-nav li a:hover,
+.box2.list-only li a:focus,
+.box4 .side-nav li a:focus,
+.box2 .side-nav li a:focus {
+    background: #000;
+    background: rgba(0, 0, 0, .3);
+    color: #f0d470;
+    /* hyellow */
+    text-decoration: none;
+}
+
+
+/* ============= List Only sidebar block  over dark photo background  (ex Bio Box 2) ================ */
+/* ============= Calendar sidebar block  over dark photo background  (ex Bio Box 2) ================ */
+
+
+.t4 .box2.events h2,
+.t4 .box4.calendar h2,
+.box2.list-only-quadrant h2,
+.box3.table h2,
+.box4.table h2 {
+    background: #dad490;
+    color: #004e38;
+    /*ssgreen*/
+    padding: .5em 0 .5em 5%;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.box3.table .table-responsive,
+.box4.table .table-responsive {
+    background: #E6B711;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-bottom: 8px;
+}
+
+.box3.table table,
+.box4.table table {
+    margin-bottom: 0;
+}
+
+.box3.table h2,
+.box4.table h2 {
+    background: #E6B711;
+    border-top: 1px solid #E6B711;
+}
+
+.box3.table table th,
+.box3.table table td,
+.box4.table table th,
+.box4.table table td {
+    padding: .5em 3%;
+    font-size: 14px;
+    text-align: left;
+}
+
+.t4.page-units-functions .box3.table td,
+.t4.page-units-functions .box4.table td {
+    padding: 1ch;
+}
+
+.box3.table table thead *,
+.box4.table table thead *,
+.t5 table thead > tr + tr,
+.t5 table thead + thead {
+    background: #dad490;
+    font-weight: 600;
+}
+
+.box2.list-only-quadrant ul,
+.box2.events ul,
+.box4.calendar ul.sac-state-events {
+    background: #fff;
+    background: rgba(255, 255, 255, .3);
+    color: #000;
+    padding: 0 0 1em 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 14px;
+    list-style: none;
+    border-bottom: 2px solid #dad490;
+    -webkit-box-shadow: rgba(0, 0, 0, .7) 0 3px 6px;
+    box-shadow: rgba(0, 0, 0, .7) 0 3px 6px;
+}
+
+.box2.events ul,
+.box4.calendar ul.sac-state-events {
+    padding: 0;
+    list-style: none;
+}
+
+.box2.list-only-quadrant ul li,
+.box4.calendar li.item {
+    border-bottom: 2px solid #004e38;
+}
+
+.box2.list-only-quadrant ul li:last-of-type,
+.box4.calendar li.item:last-of-type {
+    border-bottom: 0;
+}
+
+.box2.list-only-quadrant ul a {
+    display: block;
+    padding: 1em 5% 1em 10%;
+    /*background: #fff;*/
+    /*background: rgba(255,255,255,.7);*/
+    color: #000;
+    text-decoration: none;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.box2.list-only-quadrant ul li a:hover,
+.box2.list-only-quadrant ul a:focus,
+.box4.calendar li.item a:hover,
+.box4.calendar li.item a:focus {
+    background: rgba(218, 212, 144, .6);
+    color: #333;
+    text-decoration: none;
+}
+
+/* Random Calendar */
+
+.eventdate span {
+    /* Not in use? */
+    /*background-color:#E6B711;*/
+    /*color:#000000;*/
+    /*padding-left:10px;*/
+    /*padding-top:5px;*/
+    /*padding-bottom:5px;*/
+    /*padding-right:10px;*/
+    /*font-size:12px;*/
+}
+
+.eventtitle {
+    margin-bottom: 5px;
+}
+
+:not(.t4) .events li.item div.eventitem {
+    /*   background-color:#fff;*/
+    /*padding:20px 10px 10px 10px;*/
+    /*margin-top:-30px;*/
+    /*font-weight:700;*/
+    /*margin-right:5px;*/
+    /*margin-left:5px;*/
+}
+
+/* T4 Calendar */
+
+.box2.events {}
+
+.box2.events h2 {}
+
+.box4.calendar ul.sac-state-events,
+.box2.events ul.sac-state-events {
+    background-color: rgba(0, 78, 65, .5);
+}
+
+/*Black Background ================================= */
+
+/*.t1 ul.sac-state-events li,*/
+/*.t2 ul.sac-state-events li,*/
+/*.t3 ul.sac-state-events li,*/
+/*.box4.calendar li.item,*/
+/*.box2.events li.item {*/
+/*    padding: 1rem 5%;*/
+/*    border-top: 1px solid #dad490;*/
+/*    background: rgba(0,78,65,0);*/
+/*}*/
+
+/*.t1 ul.sac-state-events li,*/
+/*.t2 ul.sac-state-events li,*/
+/*.t3 ul.sac-state-events li {*/
+/*    background: rgba(0,0,0,.75);*/
+/*}*/
+
+/*.t1 ul.sac-state-events li:hover,*/
+/*.t2 ul.sac-state-events li:hover,*/
+/*.t3 ul.sac-state-events li:hover,*/
+/*.box4.calendar li.item:hover,*/
+/*.box2.events li.item:hover {*/
+/*    background: rgba(0,0,0,1);*/
+/*    color: #F0E1B0;*/
+/*}*/
+.t1 ul.sac-state-events li a,
+.t2 ul.sac-state-events li a,
+.t3 ul.sac-state-events li a,
+section.sac-state-events-section ul.sac-state-events li a,
+.box4.calendar li.item a,
+.box2.events li.item a {
+    text-decoration: none;
+}
+
+.t1 ul.sac-state-events li a:hover,
+.t2 ul.sac-state-events li a:hover,
+.t3 ul.sac-state-events li a:hover,
+section.sac-state-events-section ul.sac-state-events li a:hover,
+.box4.calendar li.item a:hover,
+.box2.events li.item a:hover {}
+
+/*.t1 ul.sac-state-events li div.eventdate,*/
+/*.t2 ul.sac-state-events li div.eventdate,*/
+/*.t3 ul.sac-state-events li div.eventdate,*/
+/*.box4.calendar li.item .eventdate,*/
+/*.box2.events li.item .eventdate {*/
+/*    color: #F0E1B0;*/
+/*    font-weight: 300;*/
+/*}*/
+.t1 ul.sac-state-events li div.eventitem,
+.t2 ul.sac-state-events li div.eventitem,
+.t3 ul.sac-state-events li div.eventitem,
+section.sac-state-events-section ul.sac-state-events li div.eventitem,
+.box4.calendar li.item div.eventitem,
+.box2.events li.item div.eventitem,
+.box4.calendar ul.sac-state-events li.item div.eventitem {
+    /* empty for t4: first 2 rules to override main-t2 ln 103 */
+    background: transparent;
+    border: 0;
+}
+
+/* check again */
+.box4.calendar li.item div.eventitem div.eventcontent,
+.box2.events li.item div.eventitem div.eventcontent {
+    font-size: 16px;
+    font-weight: 600;
+    /*color:#FFF;*/
+    margin-top: 0px;
+    min-height: 1px;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: flex-start;
+    align-content: flex-start;
+}
+
+.box4.calendar div.cal-event-link,
+.box2.events div.cal-event-link {
+    text-align: right;
+}
+
+.t4 .box4.calendar .text-center,
+.t4 .box2.events .text-center {
+    text-align: left !important;
+}
+
+.t4 .box4.general strong {
+    font-weight: 500;
+}
+.t4 .box3.general p img,
+.t4 .box4.general p img {
+    width: 100%;
+    object-fit: contain;
+    margin: 1em 5%;
+}
+
+/* white background ================================= */
+
+.t1 ul.sac-state-events li,
+.t2 ul.sac-state-events li,
+.t3 ul.sac-state-events li,
+section.sac-state-events-section ul.sac-state-events li,
+{
+    padding: 1rem 5%;
+    border: 4px solid #FFF;
+}
+
+.box4.calendar li.item,
+.box2.events li.item {
+    padding: 1rem 5%;
+}
+
+.t1 ul.sac-state-events li,
+.t2 ul.sac-state-events li,
+.t3 ul.sac-state-events li,
+section.sac-state-events-section ul.sac-state-events li{
+    background: rgba(255, 255, 255, .95);
+    overflow:hidden;
+}
+
+.t1 ul.sac-state-events li:hover,
+.t2 ul.sac-state-events li:hover,
+.t3 ul.sac-state-events li:hover,
+section.sac-state-events-section ul.sac-state-events li:hover{
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+}
+
+.box4.calendar li.item:hover,
+.box2.events li.item:hover {
+    background: rgba(0, 0, 0, 1);
+    color: #FFF;
+}
+
+.t1 ul.sac-state-events li a,
+.t2 ul.sac-state-events li a,
+.t3 ul.sac-state-events li a,
+section.sac-state-events-section ul.sac-state-events li a,
+.box4.calendar li.item a,
+.box2.events li.item a {
+    text-decoration: none;
+}
+
+.t1 ul.sac-state-events li a:hover,
+.t2 ul.sac-state-events li a:hover,
+.t3 ul.sac-state-events li a:hover,
+section.sac-state-events-section ul.sac-state-events li a:hover,
+.box4.calendar li.item a:hover,
+.box2.events li.item a:hover {}
+
+.t1 ul.sac-state-events li div.eventdate,
+.t2 ul.sac-state-events li div.eventdate,
+.t3 ul.sac-state-events li div.eventdate,
+section.sac-state-events-section ul.sac-state-events li div.eventdate{
+    color: #043927;
+    font-weight: 500;
+}
+
+.box4.calendar li.item .eventdate,
+.box2.events li.item .eventdate {
+    color: #F0E1B0;
+    font-weight: 500;
+}
+
+.t1 ul.sac-state-events li div.eventitem,
+.t2 ul.sac-state-events li div.eventitem,
+.t3 ul.sac-state-events li div.eventitem,
+section.sac-state-events-section ul.sac-state-events li div.eventitem,
+.box4.calendar li.item div.eventitem,
+.box2.events li.item div.eventitem,
+.box4.calendar ul.sac-state-events li.item div.eventitem {
+    background: transparent;
+    border: 0;
+}
+
+.box4.calendar li.item div.eventitem div.eventcontent,
+.box2.events li.item div.eventitem div.eventcontent {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    margin-top: 0px;
+    min-height: 1px;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: flex-start;
+    align-content: flex-start;
+}
+
+
+
+
+
+/* ============  generic / light background (ex: Bio box 3) ================= */
+
+
+.box3 ul:not(.ul-button-stack),
+.box3 ul:not(.ul-button-2wide),
+.box3 ol:not(.ul-button-stack),
+.box3 ol:not(.ul-button-2wide) {
+    padding-left: 1em;
+}
+.box4.general .ul-button-stack,
+.box3.general .ul-button-stack,
+.box1.general .ul-button-stack {
+    list-style: none;
+    padding-left: 0;
+    margin: 1em 0;
+}
+
+.box3 p a,
+.box3 li a {
+    /* up inherits */
+}
+
+.box3 p a:hover,
+.box3 li a:hover {
+    color: #008554;
+    /* stinger */
+}
+
+.box3 p a:visited,
+.box3 li a:visited {
+    color: #777;
+    /* stinger */
+}
+
+
+
+/* ========================= T4 Box 1 Ronaldo Colmanichi Pro Model ======================= */
+
+.t4 .box2.showcase {
+    /* outer block */
+    padding: 0 0 5% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    background-color: #043124;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.t4 .box2.showcase h2 {
+    text-indent: -9999px;
+    height: 0;
+    margin: 0;
+}
+
+.t4 .box2.showcase h2:first-of-type {
+    text-indent: 0;
+    color: #d9d0ac;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
+    border-radius: 0;
+    background: rgb(0, 0, 0, .75);
+    text-shadow: 0 2px 3px rgb(0, 0, 0, .75);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, .75)), to(rgba(0, 0, 0, 1)));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, .75) 75%, rgba(0, 0, 0, 1) 100%);
+    padding: 1.5em 15% 1em;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width:992px) {
+    .t4 .box2.showcase h2:first-of-type {
+        padding: 1.5em 10% 1em;
+    }
+}
+
+/* showcase button in module-buttons.css */
+
+.t4 .box2.image-only * {
+    display: none !important;
+}
