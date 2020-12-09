@@ -206,18 +206,6 @@
                         </select>
                     </div>
 
-                    <div class="form-group ml-auto">
-                        <label>Second Bar</label>
-                        <select id="second" class="form-control">
-                            <option value="SOV">Single Occupant Vehicle</option>
-                            <option value="MOV">Multi-Occupant Vehicle</option>
-                            <option value="Motorcycle">Motorcycle</option>
-                            <option value="Transit">Transit</option>
-                            <option value="Bicycle">Bicycle</option>
-                            <option value="Walking">Walking</option>
-                        </select>
-                    </div>
-
                 </form>
             </div>
         </nav>
@@ -226,26 +214,16 @@
             <canvas class="my-4 chartjs-render-monitor" id="myChart" width="554" height="233" style="display: block; width: 554px; height: 233px;">
         </main>
 
-        <div class="container" style="background-color: gold; width: 1000px;">
-            <div class="row">
-                <div class="col-5 mx-auto" style="text-align: center;">
-                    <h2 id="head1">Sustainability</h2>
-                    <br>
-                </div>
-                <div class="col-5 mx-auto" style="text-align: center;">
-                    <h2 id="head2">Single Occupant Vehicle</h2>
-                </div>
+        <div class="container" style="background-color: gold;">
+            <div class="col-5 mx-auto" style="text-align: center;">
+                <h2 id="head1">Sustainability</h2>
+                <br>
             </div>
-            <div class="row justify-content-around">
-                <div class="col-5 mx-auto" style="text-align: center;">
-                    <p id="p1">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
-                        we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
-                        impact the environment with the given mode.
-                    </p>
-                </div>
-                <div class="col-5 mx-auto" style="text-align: center;">
-                    <p id="p2">The single occupant vehicle carbon consumption per year with your given inputs would be </p>
-                </div>
+            <div class="col-5 mx-auto" style="text-align: center;">
+                <p id="p1">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
+                    we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
+                    impact the environment with the given mode.
+                </p>
             </div>
         </div>
 
@@ -368,18 +346,23 @@
             function timeCalc(seconds, freq) {
                 return (seconds/3600.0)*freq*52.0*2.0;
             }
+            
+            // Calculates gas price per year with mpg (value) and commute type (type)
+            function extraCost(value, type) {
+                return ((meterToMile(travelInfo[type][0]))/value * (frequency*2)) * 52 * 3.1;
+            }
 
             let graphInfo = {
                 sustainVals: [
-                    Math.round(sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency) * 10)/10, // Users consumption
+                    Math.round(sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency) * 10)/10,   // Users consumption
                     Math.round(sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency) * 10)/10,         // SOV
                     Math.round(sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency) * 10)/10,        // MOV
                     Math.round(sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency) * 10)/10,           // Motorcycle
-                    Math.round(sustainabilityCalc(5.18, meterToMile(travelInfo[3][0]), frequency) * 10)/10,         // Transit (Have to consider individual responsibility)
-                    0,                                                                          // Bike
-                    0                                                                           // Walking
+                    Math.round(sustainabilityCalc(50, meterToMile(travelInfo[3][0]), frequency) * 10)/10,           // Transit (should pull stats from https://afdc.energy.gov/data/)
+                    0,                                                                                              // Bike
+                    0                                                                                               // Walking
                     ],
-                timeVals: [                                                                     // LOGIC ERROR?
+                timeVals: [
                     Math.round(timeCalc(travelInfo[userType][1], frequency)),
                     Math.round(timeCalc(travelInfo[0][1], frequency)),
                     Math.round(timeCalc(travelInfo[0][1], frequency)),
@@ -388,25 +371,25 @@
                     Math.round(timeCalc(travelInfo[2][1], frequency)),
                     Math.round(timeCalc(travelInfo[1][1], frequency))
                 ],
-                moneyVals: [            // All is yearly
-                    money,
-                    6201.0,             // SOV (sources in google drive)
-                    6201.0,             // MOV (can be split, sole, or no responsibility)
-                    1500.0,             // Motorcycle (from https://www.nadaguides.com/Motorcycles/shopping-guides/how-much-does-it-cost-to-service-a-motorcycle#:~:text=Just%20as%20new%20and%20used,it%20in%2C%20and%20so%20on.)
-                    700.0,              // Transit (from https://www.usatoday.com/story/money/2018/09/25/transportation-costs-cities-most-expensive/37866627/)
-                    350.0,              // Bike (from https://www.treehugger.com/how-much-does-it-cost-to-commute-by-bike-4858452#:~:text=Based%20on%20an%20annual%20average,or%203.84%20minutes%20a%20day.)
-                    0                   // Walking (costs shoes but w/e)
+                moneyVals: [                                          // All is yearly (Future iterations should pull stats from https://afdc.energy.gov/data/)
+                    Math.round(money + extraCost(mpg, userType)),     // user
+                    Math.round(money + extraCost(25.1, 0)),           // SOV (sources in google drive)
+                    Math.round(money + extraCost(25.5, 0)),           // MOV (TODO: calculate the split)
+                    Math.round(money + extraCost(44, 0)),             // Motorcycle
+                    500,                                              // Transit (TODO: Transit cost calculations)
+                    0,                                                // Bike
+                    0                                                 // Walk
                 ]
             }
 
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'horizontalBar',
                 data: {
-                    labels: ["Your Values", $('#second option:selected').text()],
+                    labels: ["Your Values", "Single Occupant Vehicle", "Multi-Occupant Vehicle", "Motorcycle", "Transit", "Bicycle", "Walking"],
                     datasets: [{
-                        data: [graphInfo.sustainVals[0], graphInfo.sustainVals[1]],
-                        backgroundColor: ["#dad9u","#3e95cd"],
+                        data: graphInfo.sustainVals,
+                        backgroundColor: ["#dad9u","#3e95cd", "#eb4034", "#ebe534", "#34ed4a", "#8d2ded", "#07eded"],
                         barPercentage: 0.5,
                         barThickness: 6,
                         maxBarThickness: 8,
@@ -417,7 +400,7 @@
                     legend: {   display: false  },
                     title: {
                         display: true,
-                        text: 'Carbon Emissions (tons/yr)'
+                        text: 'Carbon Emissions (tons per year)'
                     },
                     scales: {
                         yAxes: [{
@@ -429,15 +412,9 @@
                 }
             });
 
-            function secondOptionSwitch() {
-                myChart.data.labels = ['Your Values', $('#second option:selected').text()];
-                changeCompare($('#second option:selected').text(), 1, getType($('#parent option:selected').text()));
-                myChart.update();
-            }
-
             $('#parent').change(function(){
                 if ($('#parent option:selected').text() == 'Sustainability') {
-                    myChart.options.title.text = 'Carbon Emissions (tons/yr)';
+                    myChart.options.title.text = 'Carbon Emissions (tons per year)';
                     $("#p1").html(
                         `
                         The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
@@ -447,7 +424,7 @@
                     );
                 }
                 else if ($('#parent option:selected').text() == 'Time') {
-                    myChart.options.title.text = 'Time Traveled (hrs/yr)';
+                    myChart.options.title.text = 'Time Traveled (hours per year)';
                     $("#p1").html(
                         `
                         The time concerns of a commute mode are the amount of time that we predict this commute mode to take in your situation.
@@ -457,7 +434,7 @@
                     );
                 }
                 else if ($('#parent option:selected').text() == 'Money') {
-                    myChart.options.title.text = 'Travel Cost (dollars/yr)';
+                    myChart.options.title.text = 'Travel Cost (dollars per year)';
                     $("#p1").html(
                         `
                         The money concerns of a commute mode is just how much it will cost you to pay for your typical commute on a yearly scale.
@@ -465,8 +442,7 @@
                     );
                 }
 
-                changeCompare('Your Values', 0, getType($('#parent option:selected').text()));
-                secondOptionSwitch();
+                myChart.data.datasets[0].data = getType($('#parent option:selected').text());
                 myChart.update();
                 $("#head1").html($('#parent option:selected').text());
             });
@@ -479,48 +455,6 @@
                 else if (value == 'Money')
                     return graphInfo.moneyVals;
             }
-
-            function changeCompare(value, index, array) {
-                if (value == 'Your Values')
-                    myChart.data.datasets[0].data[index] = array[0];
-                else if (value == 'Single Occupant Vehicle')
-                    myChart.data.datasets[0].data[index] = array[1];
-                else if (value == 'Multi-Occupant Vehicle')
-                    myChart.data.datasets[0].data[index] = array[2];
-                else if (value == 'Motorcycle')
-                    myChart.data.datasets[0].data[index]= array[3];
-                else if (value == 'Transit')
-                    myChart.data.datasets[0].data[index] = array[4];
-                else if (value == 'Bicycle')
-                    myChart.data.datasets[0].data[index] = array[5];
-                else if (value == 'Walking')
-                    myChart.data.datasets[0].data[index] = array[6];
-            }
-
-            // Initializing the second text box
-            let temp = 'better';
-            if (myChart.data.datasets[0].data[1] < myChart.data.datasets[0].data[0])
-                temp = 'worse';
-            else if (myChart.data.datasets[0].data[1] == myChart.data.datasets[0].data[0])
-                temp = 'equivalent';
-
-            $('#p2').html('In terms of ' + $('#parent option:selected').text().toLowerCase() + ' your current commute mode is ' + temp + ' than '
-                + $('#second option:selected').text().toLowerCase() + 's on average.');
-
-            $('#second').change(function(){
-                $('#head2').html($('#second option:selected').text());
-
-                secondOptionSwitch();
-
-                let temp = 'better';
-                if (myChart.data.datasets[0].data[1] < myChart.data.datasets[0].data[0])
-                    temp = 'worse';
-                else if (myChart.data.datasets[0].data[1] == myChart.data.datasets[0].data[0])
-                    temp = 'equivalent';
-
-                $('#p2').html('In terms of ' + $('#parent option:selected').text().toLowerCase() + ' your current commute mode is ' + temp + ' than '
-                 + $('#second option:selected').text().toLowerCase() + 's on average.');
-            });
         </script>
     </body>
 </html>
