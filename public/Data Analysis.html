@@ -296,6 +296,7 @@
             let travelInfo = JSON.parse(window.localStorage.getItem('travelInfo'));
             let frequency = window.localStorage.getItem('frequency');
             let userType = window.localStorage.getItem('mode');
+            let occupants = window.localStorage.getItem('vehicleOccupants');
             processType();
 
             // Process some slightly different data for database storage
@@ -354,7 +355,7 @@
 
             let graphInfo = {
                 sustainVals: [
-                    Math.round(sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency) * 10)/10,   // Users consumption
+                    Math.round((sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency)/occupants) * 10)/10,   // Users consumption
                     Math.round(sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency) * 10)/10,         // SOV
                     Math.round(sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency) * 10)/10,        // MOV
                     Math.round(sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency) * 10)/10,           // Motorcycle
