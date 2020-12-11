@@ -214,7 +214,7 @@
             <canvas class="my-4 chartjs-render-monitor" id="myChart" width="554" height="233" style="display: block; width: 554px; height: 233px;">
         </main>
 
-        <div class="container" style="background-color: gold;">
+        <div class="container" style="background-color: gold; padding-top: 10px; padding-bottom: 10px;">
             <div class="col-5 mx-auto" style="text-align: center;">
                 <h2 id="head1">Sustainability</h2>
                 <br>
@@ -297,6 +297,7 @@
             let frequency = window.localStorage.getItem('frequency');
             let userType = window.localStorage.getItem('mode');
             let occupants = window.localStorage.getItem('vehicleOccupants');
+            let parkingVal = window.localStorage.getItem('prkingType');
             processType();
 
             // Process some slightly different data for database storage
@@ -319,7 +320,25 @@
                 console.log(response);
             });
 
-            let money = (insurance*12);                             // How much the user pays yearly in insurance & parking
+            
+            // How much the user pays yearly in insurance & parking
+            let money = (insurance*12);
+
+            // https://www.csus.edu/parking-transportation/parking/permit-pricing.html
+            function parkCost(x) {
+                if (parkingVal == 0) {
+                    if (x == 'Motorcycle') {
+                        return 118.0;
+                    }
+                    else if (x == 'SOV' || x == 'MOV') {
+                        return 475.0;
+                    }
+                }
+                else if (parkingVal == 1) {
+                    return 7.0*frequency*52.0;
+                }
+                return 0.0;
+            }
 
             function processType() {
                 if (userType == 'SOV')
@@ -355,13 +374,20 @@
 
             let graphInfo = {
                 sustainVals: [
-                    Math.round((sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency)/occupants) * 10)/10,   // Users consumption
-                    Math.round(sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency) * 10)/10,         // SOV
-                    Math.round(sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency) * 10)/10,        // MOV
-                    Math.round(sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency) * 10)/10,           // Motorcycle
-                    Math.round(sustainabilityCalc(50, meterToMile(travelInfo[3][0]), frequency) * 10)/10,           // Transit (should pull stats from https://afdc.energy.gov/data/)
-                    0,                                                                                              // Bike
-                    0                                                                                               // Walking
+                    // Users consumption
+                    Math.round((sustainabilityCalc(mpg, meterToMile(travelInfo[userType][0]), frequency)/occupants) * 10)/10,
+                    // SOV
+                    Math.round(sustainabilityCalc(24.2, meterToMile(travelInfo[0][0]), frequency) * 10)/10,
+                    // MOV
+                    Math.round(sustainabilityCalc(25.50, meterToMile(travelInfo[0][0]), frequency) * 10)/10,
+                    // Motorcycle
+                    Math.round(sustainabilityCalc(44, meterToMile(travelInfo[0][0]), frequency) * 10)/10,
+                    // Transit (should pull stats from https://afdc.energy.gov/data/)
+                    Math.round(sustainabilityCalc(50, meterToMile(travelInfo[3][0]), frequency) * 10)/10,
+                    // Bike
+                    0,
+                    // Walking
+                    0
                     ],
                 timeVals: [
                     Math.round(timeCalc(travelInfo[userType][1], frequency)),
@@ -372,14 +398,21 @@
                     Math.round(timeCalc(travelInfo[2][1], frequency)),
                     Math.round(timeCalc(travelInfo[1][1], frequency))
                 ],
-                moneyVals: [                                          // All is yearly (Future iterations should pull stats from https://afdc.energy.gov/data/)
-                    Math.round(money + extraCost(mpg, userType)),     // user
-                    Math.round(money + extraCost(25.1, 0)),           // SOV (sources in google drive)
-                    Math.round(money + extraCost(25.5, 0)),           // MOV (TODO: calculate the split)
-                    Math.round(money + extraCost(44, 0)),             // Motorcycle
-                    500,                                              // Transit (TODO: Transit cost calculations)
-                    0,                                                // Bike
-                    0                                                 // Walk
+                moneyVals: [   // All is yearly (Future iterations should pull stats from https://afdc.energy.gov/data/)
+                    // user
+                    Math.round(money + extraCost(mpg, userType) + parkCost(window.localStorage.getItem('mode'))),
+                    // SOV (sources in google drive)
+                    Math.round(money + extraCost(25.1, 0) + parkCost('SOV')),
+                    // MOV (TODO: calculate the split)
+                    Math.round(money + extraCost(25.5, 0) + parkCost('MOV')),
+                    // Motorcycle
+                    Math.round(money + extraCost(44, 0) + parkCost('Motorcycle')),
+                    // Transit (TODO: Transit cost calculations)
+                    500,
+                    // Bike
+                    0,
+                    // Walk
+                    0
                 ]
             }
 
