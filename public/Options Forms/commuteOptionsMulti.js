@@ -35,5 +35,5 @@
       }
     }
     window.localStorage.setItem('prkingType', parking);
-  
+    window.localStorage.setItem('mode', 'MOV');
   }
