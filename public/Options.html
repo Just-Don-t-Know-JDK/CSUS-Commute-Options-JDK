@@ -376,10 +376,16 @@
                 window.localStorage.setItem('mode', 'Bike');
                 window.location.href = 'RoutingInfo.html';
             });
+
             $('#Walk').click(function() {
                 window.localStorage.setItem('mode', 'Walk');
                 window.location.href = 'RoutingInfo.html';
             });
+
+            window.localStorage.setItem('mpg', 0);
+            window.localStorage.setItem('insurance', 0);
+            window.localStorage.setItem('prkingType', 2);
+            window.localStorage.setItem('vehicleOccupants', 1);
         </script>
 
     </body>
