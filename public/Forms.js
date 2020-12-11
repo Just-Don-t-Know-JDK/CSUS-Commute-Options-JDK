@@ -17,6 +17,7 @@ function showTab(n) {
     document.getElementById("nextBtn").className = "btn btn-primary";
     if (n == x.length) {
       document.getElementById("nextBtn").type = "submit";
+      document.getElementById('nextBtn').id = "submit";
     }
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
@@ -24,6 +25,14 @@ function showTab(n) {
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
 }
+
+$('#regForm').submit(function(e) {
+  e.preventDefault();
+  // Then send to server
+});
+$('#submit').click(function() {
+  window.location.replace('Options.html');
+});
 
 function nextPrev(n) {
   // This function will figure out which tab to display
