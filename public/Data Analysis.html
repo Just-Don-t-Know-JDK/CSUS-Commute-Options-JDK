@@ -214,19 +214,126 @@
             <canvas class="my-4 chartjs-render-monitor" id="myChart" width="554" height="233" style="display: block; width: 554px; height: 233px;">
         </main>
 
-        <div class="container" style="background-color: gold; padding-top: 10px; padding-bottom: 10px;">
-            <div class="col-5 mx-auto" style="text-align: center;">
-                <h2 id="head1">Sustainability</h2>
-                <br>
+        <div class="container">
+            <div class="row justify-content-center" style="padding-top: 10px; padding-bottom: 10px;">
+                <div class="col-mx-auto" style="text-align: center;">
+                    <h2 id="head1">Sustainability</h2>
+                </div>
             </div>
-            <div class="col-5 mx-auto" style="text-align: center;">
-                <p id="p1">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
-                    we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
-                    impact the environment with the given mode.
-                </p>
+            <div class="row justify-content-center" style="padding-top: 10px; padding-bottom: 10px;">
+                <div class="col-mx-auto" style="text-align: center;">
+                    <p id="p1">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
+                        we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
+                        impact the environment with the given mode.
+                    </p>
+                </div>
             </div>
         </div>
 
+        <div class="container text-center">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#extraInfo" aria-expanded="false" aria-controls="extraInfo">
+                View Extra Info
+            </button>
+        </div>
+        <br>
+        <div class="container collapse" id="extraInfo">
+            <div class="row justify-content-center" style="padding: 5px;">
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">User's Info</li>
+                        <li class="list-group-item">
+                            <p id="User">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Average SOV Info</li>
+                        <li class="list-group-item">
+                            <p id="SOV">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Average MOV Info</li>
+                        <li class="list-group-item">
+                            <p id="MOV">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Average Motorcycle Info</li>
+                        <li class="list-group-item">
+                            <p id="Motorcycle">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Average Transit Info</li>
+                        <li class="list-group-item">
+                            <p id="Transit">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Average Bike Info</li>
+                        <li class="list-group-item">
+                            <p id="Bike">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Average Walking Info</li>
+                        <li class="list-group-item">
+                            <p id="Walk">
+                                MPG:<br>
+                                Distance:<br>
+                                Frequency to CSUS:<br>
+                                Yearly Carbon Emissions:
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+        </div>
+        
+        
 
         <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
             <div class="container-fluid" style="background-color: black;">
@@ -446,6 +553,44 @@
                 }
             });
 
+            extraInfoSwap('Sustainability');
+
+            function extraInfoSwap(value) {
+                const types = ['User', 'SOV', 'MOV', 'Motorcycle', 'Transit', 'Bike', 'Walk'];
+                const mpgVals = [mpg, 24.2, 25.5, 44.0, 50.0, 0, 0];
+                const dist = [travelInfo[userType][0], travelInfo[0][0], travelInfo[0][0], travelInfo[0][0], travelInfo[3][0], travelInfo[2][0], travelInfo[1][0]];
+                const park = [parkCost(window.localStorage.getItem('mode')), parkCost('SOV'), parkCost('MOV'), parkCost('Motorcycle'), 0, 0, 0];
+                const insure = [money, money, money, money, 0, 0, 0];
+                const gasCost = [extraCost(mpg, userType), extraCost(25.1, 0), extraCost(25.5, 0), extraCost(44, 0), 0, 0, 0];
+                const misc = [0, 0, 0, 0, 0, 0, 0];
+
+                for (var i = 0; i < types.length; i++) {
+                    if (value == 'Time') {
+                        $('#'+types[i]).html(
+                            "Time traveled: " + graphInfo.timeVals[i]
+                        );
+                    }
+                    else if (value == 'Money') {
+                        $('#'+types[i]).html(
+                            "Parking: " + park[i] + "<br>" +
+                            "Insurance: " + insure[i] + "<br>" +
+                            "Gas: " + gasCost[i] + "<br>" +
+                            "Misc: " + misc[i] + "<br>" +
+                            "Total: " + graphInfo.moneyVals[i]
+                        );
+                    }
+                    else {
+                        $('#'+types[i]).html(
+                            "MPG: " + mpgVals[i] + "<br>" +
+                            "Distance: " + dist[i] + "<br>" +
+                            "Frequency: " + frequency + "<br>" +
+                            "Occupants: " + occupants + "<br>" +
+                            "Carbon Emissions: " + graphInfo.sustainVals[i]
+                        );
+                    }
+                }
+            }
+
             $('#parent').change(function(){
                 if ($('#parent option:selected').text() == 'Sustainability') {
                     myChart.options.title.text = 'Carbon Emissions (tons per year)';
@@ -456,6 +601,7 @@
                         impact the environment with the given mode.
                         `
                     );
+                    extraInfoSwap('Sustainability');
                 }
                 else if ($('#parent option:selected').text() == 'Time') {
                     myChart.options.title.text = 'Time Traveled (hours per year)';
@@ -466,6 +612,7 @@
                         you would commute a week and then upscaled the data to a yearly scale.
                         `
                     );
+                    extraInfoSwap('Time');
                 }
                 else if ($('#parent option:selected').text() == 'Money') {
                     myChart.options.title.text = 'Travel Cost (dollars per year)';
@@ -474,6 +621,7 @@
                         The money concerns of a commute mode is just how much it will cost you to pay for your typical commute on a yearly scale.
                         `
                     );
+                    extraInfoSwap('Money');
                 }
 
                 myChart.data.datasets[0].data = getType($('#parent option:selected').text());
