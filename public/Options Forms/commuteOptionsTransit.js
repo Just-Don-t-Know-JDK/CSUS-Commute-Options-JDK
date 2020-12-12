@@ -20,14 +20,39 @@
   
   function sendInfo() {
     var mode = 'Transit';
-    //var milesPerGallon = document.getElementById("mpg").value;
-    //var insuranceCost = document.getElementById("insuranceCost").value;
-    //var address = document.getElementById("addy").value;
-    //window.localStorage.setItem('mpg', milesPerGallon);
-    //window.localStorage.setItem('insurance', insuranceCost);
-    //window.localStorage.setItem('addy', address);
+
+    var ele = document.getElementsByName('custom-radio1'); 
+    var transPass;
+    for(i = 0; i < ele.length; i++) 
+    {              
+      if(ele[i].checked) 
+      {
+        transPass = document.getElementById("sub").innerHTML = ele[i].id; 
+      // document.write(parking);
+      }
+    }
+    var ele1 = document.getElementsByName('custom-radio2'); 
+    var isStudent;
+    for(i = 0; i < ele1.length; i++) 
+    {              
+      if(ele1[i].checked) 
+      {
+        isStudent = document.getElementById("sub").innerHTML = ele1[i].id; 
+      // document.write(parking);
+      }
+    }
+    var ele2 = document.getElementsByName('custom-radio2'); 
+    var isFac;
+    for(i = 0; i < ele2.length; i++) 
+    {              
+      if(ele2[i].checked) 
+      {
+        isFac = document.getElementById("sub").innerHTML = ele2[i].id; 
+        document.write(isFac);
+      }
+    }
+    window.localStorage.setItem('isAFaculty', isFac);
+    window.localStorage.setItem('isAStudent', isStudent);
+    window.localStorage.setItem('transitPass', transPass);
     window.localStorage.setItem('mode',mode);
-    //console.log(milesPerGallon);
-    //console.log(insuranceCost);
-    //document.write("Hello" + milesPerGallon +insuranceCost);
   }

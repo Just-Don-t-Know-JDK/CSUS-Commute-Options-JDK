@@ -213,14 +213,33 @@
           <form action="../RoutingInfo.html" class="needs-validation" style="color: white;" novalidate>
             <h2 style="color: white;">Please fill out the following information</h2>
             <label for="insuranceCost">Do you have a Transit Pass?</label>
-            <!-- <br> -->
             <div class="custom-control-inline custom-radio custom-control form-group">
-              <input type="radio" class="custom-control-input" id="customControlValidation" name="custom-radio" required>
-              <label class="custom-control-label" for="customControlValidation" required>Yes</label>
+              <input type="radio" class="custom-control-input" id="hasTransitPass" name="custom-radio1" required>
+              <label class="custom-control-label" for="hasTransitPass" required>Yes</label>
             </div>
             <div class="custom-control-inline custom-control custom-radio form-group">
-              <input type="radio" class="custom-control-input" id="customControlValidation1" name="custom-radio" required>
-              <label class="custom-control-label" for="customControlValidation1" required>No</label>
+              <input type="radio" class="custom-control-input" id="NoHasTransitPass" name="custom-radio1" required>
+              <label class="custom-control-label" for="NoHasTransitPass" required>No</label>
+            </div>
+            <br>
+            <label for="insuranceCost">Are you a Sac State student?</label>
+            <div class="custom-control-inline custom-radio custom-control form-group">
+              <input type="radio" class="custom-control-input" id="SacStateStudent" name="custom-radio2" required>
+              <label class="custom-control-label" for="SacStateStudent" required>Yes</label>
+            </div>
+            <div class="custom-control-inline custom-control custom-radio form-group">
+              <input type="radio" class="custom-control-input" id="NoSacStateStudent" name="custom-radio2" required>
+              <label class="custom-control-label" for="NoSacStateStudent" required>No</label>
+            </div>
+            <br>
+            <label for="insuranceCost">Are you a Sac State faculty memeber?</label>
+            <div class="custom-control-inline custom-radio custom-control form-group">
+              <input type="radio" class="custom-control-input" id="FacMember" name="custom-radio3" required>
+              <label class="custom-control-label" for="FacMember" required>Yes</label>
+            </div>
+            <div class="custom-control-inline custom-control custom-radio form-group">
+              <input type="radio" class="custom-control-input" id="NoFacMember" name="custom-radio3" required>
+              <label class="custom-control-label" for="NoFacMember" required>No</label>
             </div>
                 <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub" onclick="sendInfo()">Submit</button> 
           </form>
