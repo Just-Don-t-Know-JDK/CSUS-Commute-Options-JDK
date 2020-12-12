@@ -48,7 +48,7 @@
       if(ele2[i].checked) 
       {
         isFac = document.getElementById("sub").innerHTML = ele2[i].id; 
-        document.write(isFac);
+        //document.write(isFac);
       }
     }
     window.localStorage.setItem('isAFaculty', isFac);
