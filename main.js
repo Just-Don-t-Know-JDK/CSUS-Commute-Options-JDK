@@ -16,7 +16,11 @@ surveyDB.loadDatabase();
 
 // receive survey data for survey.db
 app.post('/survey', (request, response) => {
-    // stuff goes here for the survey responses...
+    console.log(request.body);
+    surveyDB.insert(request.body);
+    response.json({
+        status: 'success'
+    });
 });
 
 // receive the commute info data for commuteInfo.db

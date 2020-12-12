@@ -183,7 +183,7 @@
 
   <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect" style="background: url('img/guy\ west.jpg'); background-repeat: no-repeat; background-position: center center; background-size: fixed;">
     <!-- Form Wheel -->
-    <form id="regForm" action="Options.html">
+    <form id="regForm">
 
       <h1>UTAPS Survey:</h1>
       
@@ -191,26 +191,26 @@
       <div class="tab">
         <div>Enter your e-mail for more news from UTAPS!</div>
         <br>
-        <p><input type="email" name="emailAddress" placeholder="Email"></p>
+        <p><input type="email" name="emailAddress" id="emailAddress" placeholder="Email"></p>
       </div>
       
       <div class="tab">
             <div>What is your usual mode of transportation?</div>
             <br>
             <div class="form-check">
-            <input class="form-check-input" type="radio" value="Car">
+            <input class="form-check-input" type="radio" value="Car" name="transport">
             <label class="label" for="car">Car</label>
             </div>
             <div class="form-check">
-            <input class="form-check-input" type="radio" value="Bike/Walking">
+            <input class="form-check-input" type="radio" value="Bike/Walking" name="transport">
             <label class="label" for="bike">Bike/Walking</label>
             </div>
             <div class="form-check">
-            <input class="form-check-input" type="radio" value="Public Transportation">
+            <input class="form-check-input" type="radio" value="Public Transportation" name="transport">
             <label class="label" for="publictrans">Public Transportation</label>
             </div>
             <div class="form-check">
-            <input class="form-check-input" type="radio" value="__other_option__">
+            <input class="form-check-input" type="radio" value="__other_option__" name="transport">
             <label class="label" for="other">Other: </label>
             <div class="form-check-inline">
             <input class="form-check-input form-control-sm" type="text">
@@ -221,32 +221,32 @@
       <div class="tab">
         <div>Do you carpool? If so how often and with how many people?</div>
         <br>
-        <input type="text" placeholder="Your answer">
+        <input type="text" placeholder="Your answer" id="carpool">
       </div>
       
       <div class="tab">
         <div>Do you use ride sharing apps? (e.g Uber, Lyft, etc.) If so how often?</div>
         <br>
-        <input type="text" placeholder="Your answer">
+        <input type="text" placeholder="Your answer" id="rideShare">
       </div>
 
       <div class="tab">
         <div>How much distance do you travel on your commute?</div>
         <br>
         <div class="form-check">
-          <input class="form-check-input" type="radio" value="Less Than 5 Miles">
+          <input class="form-check-input" type="radio" value="Less Than 5 Miles" name="distance">
           <label class="label" for="less5">Less Than 5 Miles</label>
           </div>
           <div class="form-check">
-          <input class="form-check-input" type="radio" value="Between 5 and 10 Miles">
+          <input class="form-check-input" type="radio" value="Between 5 and 10 Miles" name="distance">
           <label class="label" for="5and10">Between 5 and 10 Miles</label>
           </div>
           <div class="form-check">
-          <input class="form-check-input" type="radio" value="Between 10 and 15 Miles">
+          <input class="form-check-input" type="radio" value="Between 10 and 15 Miles" name="distance">
           <label class="label" for="10and15">Between 10 and 15 Miles</label>
           </div>
           <div class="form-check">
-          <input class="form-check-input" type="radio" value="Unsure/Unkown">
+          <input class="form-check-input" type="radio" value="Unsure/Unkown" name="distance">
           <label class="label" for="unsure">Unsure/Unknown</label>
           </div>
       </div>
@@ -254,7 +254,7 @@
       <div class="tab">
         <div>Do you use bicycle/scooter sharing? If so how often?</div>
         <br>
-        <input type="text" placeholder="Your answer">
+        <input type="text" placeholder="Your answer" id="Bike/Scooter">
       </div>
       
       <div style="overflow:auto;">

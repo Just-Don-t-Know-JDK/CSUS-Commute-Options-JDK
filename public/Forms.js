@@ -1,5 +1,6 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
+let formData = {};
 
 function showTab(n) {
   // This function will display the specified tab of the form ...
@@ -16,8 +17,7 @@ function showTab(n) {
     document.getElementById("nextBtn").innerHTML = "Submit";
     document.getElementById("nextBtn").className = "btn btn-primary";
     if (n == x.length) {
-      document.getElementById("nextBtn").type = "submit";
-      document.getElementById('nextBtn').id = "submit";
+      document.getElementById('nextBtn').onclick = sendInfo();
     }
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
@@ -26,13 +26,43 @@ function showTab(n) {
   fixStepIndicator(n)
 }
 
-$('#regForm').submit(function(e) {
-  e.preventDefault();
-  // Then send to server
-});
-$('#submit').click(function() {
+function sendInfo() {
+  formData.email = document.getElementById('emailAddress').value;
+
+  let temp = document.getElementsByName('transport');
+  for (i = 0; i < temp.length; i++) {
+    if (temp[i].checked) {
+      formData.transport_method = temp[i].value;
+      break;
+    }
+  }
+
+  formData.carpool = document.getElementById('carpool').value;
+  formData.ride_share = document.getElementById('rideShare').value;
+
+  temp = document.getElementsByName('distance');
+  for (i = 0; i < temp.length; i++) {
+    if (temp[i].checked) {
+      formData.distance = temp[i].value;
+      break;
+    }
+  }
+
+  formData.jump_bike = document.getElementById('Bike/Scooter').value;
+
+  const options = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  }
+  fetch('/survey', options).then(response => {
+    console.log(response);
+  });
+
   window.location.replace('Options.html');
-});
+}
 
 function nextPrev(n) {
   // This function will figure out which tab to display
@@ -46,7 +76,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("regForm").submit();
+    sendInfo();
     return false;
   }
   // Otherwise, display the correct tab:
