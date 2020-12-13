@@ -194,9 +194,9 @@
     <div class="container">
         <form id="form">
             <!-- Location 1 -->
-            <div class="row">
+            <div class="container">
                 <div class="location-label">
-                    <label>Address: </label>                                    
+                    <label>Address: </label>
                 </div>
                 <div class="location-input">
                     <input type="text" id="addy" name="origin" placeholder="Enter a start location..."> 
@@ -207,16 +207,19 @@
             <div class="row">
                 <button class="button" type="button" onclick="clearRoute();">Clear</button>
                 <button class="button" type="button" onclick="calcAll()">Route</button>
-                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
             </div>
             
             <!-- Stats table -->                
             <div id="output" class="result-table"></div>
        </form>
-                
-            <div class="container-map" id="google-map"></div>   
+
+        <div class="container-map" id="google-map"></div>
+
+        <label for="freq">How often do you go to Sacramento State (weekly)?</label>
+        <input type="number" id ="frequency" placeholder="1" required>
+
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
     </div>
-</div>
 
 <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
   <div class="container-fluid" style="background-color: black;">

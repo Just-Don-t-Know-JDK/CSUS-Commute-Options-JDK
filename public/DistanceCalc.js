@@ -130,5 +130,8 @@ $('#form').submit(function(e){
 });
 
 $('#submit').click(function(){
-    window.location.replace('Data Analysis.html');
+    if (document.getElementById('frequency').value > 0) {
+        window.localStorage.setItem('frequency', document.getElementById('frequency').value);
+        window.location.href='Data Analysis.html';
+    }
 });
