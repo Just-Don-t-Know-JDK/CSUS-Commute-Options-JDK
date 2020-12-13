@@ -59,6 +59,7 @@ function calcRoute(theMode, count) {
             if (count == userType)
                 //display route
                 directionsDisplay.setDirections(result);
+            return true;
         } else {
             //delete route from map
             directionsDisplay.setDirections({ routes: [] });
@@ -67,8 +68,8 @@ function calcRoute(theMode, count) {
 
             //Show error message 
            
-            alert("Can't find road! Please try again!");
             clearRoute();
+            return false;
         }
     });
 }
@@ -92,12 +93,16 @@ function calcAll() {
     console.log(userType);
     processType();
     console.log(userType);
-    calcRoute(google.maps.TravelMode.DRIVING, 0);
-    calcRoute(google.maps.TravelMode.WALKING, 1);
-    calcRoute(google.maps.TravelMode.BICYCLING, 2);
-    calcRoute(google.maps.TravelMode.TRANSIT, 3);
-    console.log(mapData);
-    window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
+
+    if (calcRoute(google.maps.TravelMode.DRIVING, 0)) {
+        calcRoute(google.maps.TravelMode.WALKING, 1);
+        calcRoute(google.maps.TravelMode.BICYCLING, 2);
+        calcRoute(google.maps.TravelMode.TRANSIT, 3);
+        console.log(mapData);
+        window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
+    }
+    else
+        alert("Address Invalid!");
 }
 
 // Clear results
