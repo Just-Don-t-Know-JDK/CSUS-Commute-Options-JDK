@@ -184,16 +184,36 @@
       </div>
   </nav>
 
-    <!-- JUMBOTRON -->
-    <div class="jumbotron" style="background-color: gold;">
+     <!-- Header -->
+     <header class="bg-image-full">
+        <style>
+          @media only screen and (min-width: 992px) {
+            .bg-image-full {
+              background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
+            }
+          }
+        </style>
+        <style>
+          @media only screen and (max-width: 991px) {
+            main:not(.t1) .bg-image-full {
+              background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+            }
+          }
+        </style>
         <div class="container">
-            <h1 style="color: #00573d;">Transit Information</h1>
-            <hr class="my-4">
-                <!-- <p style="color: #00573d;">Here are some details regarding where 
-                    to park at Sacramento State along with how to pay for parking to aviod tickets!</p> -->
-            </hr>
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h1 class="text-right" style="color: white;">
+                Transit
+                <span>Resources</span>
+              </h1>
+            </div>
+          </div>
         </div>
-    </div>
+      </header>
+
     <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect" style="color: #00573d;">
         <h2 style="color: #CBB778; margin-left: auto; margin-right: auto;">Below is information regarding using the Sacramento transit 
             system to get to and from Sacramento State. This is a great method for someone who wants to save the planet and save money!
@@ -265,7 +285,7 @@
                   <li><a class="url uid" href="https://www.flickr.com/photos/sacstate">Visit Sac State at Flickr</a></li>
                   <li><a class="url uid" href="https://www.youtube.com/SacStateVideo">Visit Sac State at Youtube</a></li>
               </ul>
-              <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page">
+              <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page" style="padding-top: 20px;">
                   <img alt="Sac State Logo, white on dark" src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png">
               </a>
               <address class="col-md-4 order-md-3 adr text-light" translate="no" typeof="schema:PostalAddress">

@@ -184,16 +184,35 @@
       </div>
   </nav>
 
-    <!-- JUMBOTRON -->
-    <div class="jumbotron" style="background-color: gold;">
+     <!-- Header -->
+     <header class="bg-image-full">
+        <style>
+          @media only screen and (min-width: 992px) {
+            .bg-image-full {
+              background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
+            }
+          }
+        </style>
+        <style>
+          @media only screen and (max-width: 991px) {
+            main:not(.t1) .bg-image-full {
+              background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+            }
+          }
+        </style>
         <div class="container">
-            <h1 style="color: #00573d;">Ride Sharing</h1>
-            <hr class="my-4">
-                <p style="color: #00573d;">something useful
-                </p>
-            </hr>
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h1 class="text-right" style="color: white;">
+                Ride Sharing
+                <span>Resources</span>
+              </h1>
+            </div>
+          </div>
         </div>
-    </div>
+      </header>
     
     <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect" style="color: #00573d;">
         <h2 style="color: #CBB778; margin-left: auto; margin-right: auto;">Below, are the two major ride sharing apps used
@@ -241,7 +260,7 @@
                   <li><a class="url uid" href="https://www.youtube.com/SacStateVideo">Visit Sac State at Youtube</a></li>
               </ul>
               <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page">
-                  <img alt="Sac State Logo, white on dark" src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png">
+                  <img alt="Sac State Logo, white on dark" src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png" style="padding-top: 20px;">
               </a>
               <address class="col-md-4 order-md-3 adr text-light" translate="no" typeof="schema:PostalAddress">
                  <span class="organization-name org fn" property="schema:name">California State University, Sacramento</span>
