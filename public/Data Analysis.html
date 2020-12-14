@@ -186,12 +186,43 @@
             </div>
         </nav>
 
-        <nav class="navbar-expand-lg navbar-dark" style="background-color: gold; padding: 10px;">
+         <!-- Header -->
+      <header class="bg-image-full">
+        <style>
+          @media only screen and (min-width: 992px) {
+            .bg-image-full {
+              background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
+            }
+          }
+        </style>
+        <style>
+          @media only screen and (max-width: 991px) {
+            main:not(.t1) .bg-image-full {
+              background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+            }
+          }
+        </style>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h1 class="text-right" style="color: white;">
+                Results
+                <span>Commute Options</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect" style="color:white;">
+        <nav class="navbar-expand-lg navbar-dark" style="padding: 10px;">
             <div class="container">
                 <form id="option" class="form">
 
                     <div class="form-group">
-                        <label>Cost Comparison type</label>
+                        <label style="color: white;">Cost Comparison type</label>
                         <select id="parent" class="form-control">
                             <option value="sustainability">Sustainability</option>
                             <option value="time">Time</option>
@@ -206,18 +237,19 @@
         <main class="col bg-faded py-3 mx-auto" style="width: 1200px;">
             <canvas class="my-4 chartjs-render-monitor" id="myChart" width="554" height="233" style="display: block; width: 554px; height: 233px;">
         </main>
+        </section>
 
         <!-- Jose: if you see this, make the jumbotron thing say "Results" and a picture -->
 
-        <div class="container">
+        <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect" style="color:white;">
             <div class="row justify-content-center" style="padding-top: 10px; padding-bottom: 10px;">
                 <div class="col-mx-auto" style="text-align: center;">
-                    <h2 id="head1">Sustainability</h2>
+                    <h2 id="head1" style="color: white;">Sustainability</h2>
                 </div>
             </div>
             <div class="row justify-content-center" style="padding-top: 10px; padding-bottom: 10px;">
                 <div class="col-mx-auto" style="text-align: center;">
-                    <p id="p1">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
+                    <p id="p1" style="color: white;">The sustainability of a commute mode represents its impact on the environment. To come to our calculations for each mode, 
                         we took the averages of each mode's miles per gallon alongside your inputted data to determine how much you would on average
                         impact the environment with the given mode.
                     </p>
@@ -232,7 +264,7 @@
         </div>
         <br>
 
-        <div class="container collapse" id="extraInfo">
+        <div class="container collapse" id="extraInfo" style="color: black;">
             <div class="row justify-content-center" style="padding: 5px;">
                 <div class="col-md-auto">
                     <ul class="list-group">
@@ -327,6 +359,7 @@
                 </div>
             </div>
             <br>
+            
         </div>
         
         <div class="container text-center">
@@ -335,6 +368,7 @@
             </button>
         </div>
         <br>
+        </section>
 
         <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
             <div class="container-fluid" style="background-color: black;">
