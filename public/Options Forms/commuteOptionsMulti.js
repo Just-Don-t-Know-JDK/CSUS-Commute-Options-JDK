@@ -30,7 +30,7 @@
     {              
       if(ele[i].checked) 
       {
-        parking = document.getElementById("sub").innerHTML = ele[i].id; 
+        parking = ele[i].id; 
         // document.write(parking);
       }
     }
