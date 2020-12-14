@@ -27,7 +27,7 @@
     {              
       if(ele[i].checked) 
       {
-        transPass = document.getElementById("sub").innerHTML = ele[i].id; 
+        transPass = ele[i].id; 
       // document.write(parking);
       }
     }
@@ -37,7 +37,7 @@
     {              
       if(ele1[i].checked) 
       {
-        isStudent = document.getElementById("sub").innerHTML = ele1[i].id; 
+        isStudent = ele1[i].id; 
       // document.write(parking);
       }
     }
@@ -47,7 +47,7 @@
     {              
       if(ele2[i].checked) 
       {
-        isFac = document.getElementById("sub").innerHTML = ele2[i].id; 
+        isFac = ele2[i].id;
         //document.write(isFac);
       }
     }

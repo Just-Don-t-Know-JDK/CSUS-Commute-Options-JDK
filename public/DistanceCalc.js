@@ -94,7 +94,7 @@ function calcAll() {
     processType();
     console.log(userType);
 
-    if (calcRoute(google.maps.TravelMode.DRIVING, 0)) {
+    if (!calcRoute(google.maps.TravelMode.DRIVING, 0)) {
         calcRoute(google.maps.TravelMode.WALKING, 1);
         calcRoute(google.maps.TravelMode.BICYCLING, 2);
         calcRoute(google.maps.TravelMode.TRANSIT, 3);
@@ -124,14 +124,11 @@ var options = {
 var input1 = document.getElementById("addy");
 var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
 
-$('#form').submit(function(e){
-    e.preventDefault();
-    window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
-});
-
 $('#submit').click(function(){
-    if (document.getElementById('frequency').value > 0) {
-        window.localStorage.setItem('frequency', document.getElementById('frequency').value);
+    console.log($('input[name="freq"]').val());
+    if ($('input[name="freq"]').val() > 0) {
+        window.localStorage.setItem('frequency', $('input[name="freq"]').val());
+        window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
         window.location.href='Data Analysis.html';
     }
 });
