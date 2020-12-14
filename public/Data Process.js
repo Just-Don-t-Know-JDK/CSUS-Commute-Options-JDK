@@ -172,6 +172,8 @@ var myChart = new Chart(ctx, {
 
 extraInfoSwap('Sustainability');
 
+Chart.defaults.global.defaultFontColor = "#fff";
+
 function extraInfoSwap(value) {
     const types = ['User', 'SOV', 'MOV', 'Motorcycle', 'Transit', 'Bike', 'Walk'];
     const mpgVals = [mpg, 24.2, 25.5, 44.0, 50.0, 0, 0];
