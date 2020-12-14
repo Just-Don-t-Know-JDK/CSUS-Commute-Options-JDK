@@ -182,51 +182,40 @@
           </div>
       </nav>
 
-        <div class = "jumbotron" style = "background-color: gold">
-            <div class = "container" stlye = "width: 18rem">
-                <h1 style = "color: #00573d;">Multi-Occupant Vehicle</h1>
-                <p style = "color: #00573d;">Please answer the questions regarding the size of your carpool and the year, make, and model of your vehicle.</p>
-                <hr class="my-4">
-                </h1>
+         <!-- Header -->
+      <header class="bg-image-full">
+        <style>
+          @media only screen and (min-width: 992px) {
+            .bg-image-full {
+              background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
+            }
+          }
+        </style>
+        <style>
+          @media only screen and (max-width: 991px) {
+            main:not(.t1) .bg-image-full {
+              background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+            }
+          }
+        </style>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h1 class="text-right" style="color: white;">
+                Multi-Occupant
+                <span>Commute Options</span>
+              </h1>
             </div>
-            <a href="../Options.html" class="btn btn-primary btn-sm">Back</a>
+          </div>
         </div>
-        <div class = container>
-           <!-- number of people in vehicle --> 
-            <!--Year the car was made 
-              hard coded year for max need to change to sys date
-            <form action="/action_page.php" class = "was-validated">
-                <div class = "form-group">
-                    <label for="usr">What year was your car made?</label>
-                    <input type="number" class = "form-control" id ="makeYear" placeholder="Enter vehicle year" name = "year" min = "1900" max = "2025" required>
-                    <div class = "invalid-feedback">Please enter a valid year</div>
-                    
-                </div>
-            </form>
-        
-            <form action="/action_page.php" class = "was-validated">
-                <div class = "form-group">
-                    <label for="usr">Who makes your vehicle?</label>
-                    <select name="cars" class="custom-select" required>
-                        <option selected disabled>Select Vehicle Manufacturer</option>
-                        <option value="volvo">Volvo</option>, <option value="Subaru">Subaru</option>, <option value="ford">Ford</option>,<option value="chevy">Chevy</option>, <option value="Volkswagen">Volkswagen</option>
-                        <option value="fiat">Fiat</option>, <option value="BMW">BMW</option>,<option value="Bently">Bently</option>,  
-                        <option value="audi">Audi</option>
-                    </select>
-                </div>
-            </form>
-            model of car
-            <form action="/action_page.php" class = "was-validated">
-                <div class = "form-group">
-                    <label for="usr">What is your vehicle model?</label>
-                    <input type="text" class = "form-control" id ="vehicleModel" placeholder="Enter vehicle model" name = "model" required>
-                    <div class = "invalid-feedback">Please select model</div>
-                    <input type="submit">
-                </div> -->
-                <!-- insurance cost 
-                 hard coded in max and min amounts-->
-            <form action="../RoutingInfo.html" id="MULTIOVdata" class = "needs-validation" novalidate>
+      </header>
+
+        <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect">
+            <form action="../RoutingInfo.html" id="MULTIOVdata" class = "needs-validation" novalidate style="color:white;">
               <div class = "form-group">
+                <h2 style="color: white;">Please Fill Out the Following Information</h2>
                 <label for="usr">How many people do you commute with?</label>
                 <input type="number" class = "form-control" id ="vehicleOccupants" placeholder="Enter total people in car (including yourself)" name = "carpool amount" min = "2" max = "100" required>
                 <div class = "invalid-feedback">Please enter a valid amount of people</div>
@@ -259,6 +248,7 @@
                   <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub" onclick="sendInfo()">submit</button>
               </div> 
             </form>
+        </section>
 
             <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
               <div class="container-fluid" style="background-color: black;">
@@ -273,7 +263,7 @@
                           <li><a class="url uid" href="https://www.flickr.com/photos/sacstate">Visit Sac State at Flickr</a></li>
                           <li><a class="url uid" href="https://www.youtube.com/SacStateVideo">Visit Sac State at Youtube</a></li>
                       </ul>
-                      <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page">
+                      <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page" style="padding-top: 20px;">
                           <img alt="Sac State Logo, white on dark" src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png">
                       </a>
                       <address class="col-md-4 order-md-3 adr text-light" translate="no" typeof="schema:PostalAddress">

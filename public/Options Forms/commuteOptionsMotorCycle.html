@@ -182,48 +182,41 @@
           </div>
       </nav>
 
-        <div class = "jumbotron" style = "background-color: gold">
-            <div class = "container" stlye = "width: 18rem">
-                <h1 style = "color: #00573d;">Motorcycle</h1>
-                <p style = "color: #00573d;">Please answer the questions regarding the year, make, and model of your motorcycle.</p>
-                <hr class="my-4">
-                </h1>
+       <!-- Header -->
+       <header class="bg-image-full">
+        <style>
+          @media only screen and (min-width: 992px) {
+            .bg-image-full {
+              background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
+            }
+          }
+        </style>
+        <style>
+          @media only screen and (max-width: 991px) {
+            main:not(.t1) .bg-image-full {
+              background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+            }
+          }
+        </style>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h1 class="text-right" style="color: white;">
+                Motorcycle
+                <span>Commute Options</span>
+              </h1>
             </div>
-            <a href="../Options.html" class="btn btn-primary btn-sm">Back</a>
-
+          </div>
         </div>
-        <div class = container>
+      </header>
+
+        <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect">
             <!-- Year the motorcycle was made -->
-          <form action="../RoutingInfo.html" class = "needs-validation" novalidate>
-               <!-- <div class = "form-group">
-                    <label for="usr">What year was your motorcycle made?</label>
-                    <input type="number" class = "form-control" id ="makeYear" placeholder="Enter motorcycle year" name = "year" min = "1900" max = "2025" required>
-                    <div class = "invalid-feedback">Please enter a valid year</div>
-                                    </div>
-            </form>
-            //make of motorcycle
-            <form action="/action_page.php" class = "was-validated">
-                <div class = "form-group">
-                    <label for="usr">Who makes your motorcycle?</label>
-                    <select name="cars" class="custom-select" required>
-                        <option selected disabled>Select Motorcycle Manufacturer</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                    </select>
-                </div>
-            </form>
-            //model of motorcycle 
-            <form action="/action_page.php" class = "was-validated">
-                <div class = "form-group">
-                    <label for="usr">What is your motorcycle model?</label>
-                    <input type="text" class = "form-control" id ="motorcycleModel" placeholder="Enter motorcycle model" name = "model" required>
-                    <div class = "invalid-feedback">Please select a valid model</div>
-                </div>
-            </form>-->
-            <!-- insurance cost 
-              hard coded in max and min amounts -->
+          <form action="../RoutingInfo.html" class = "needs-validation" novalidate style="color: white;">
             <div class = "form-group">
+              <h2 style="color: white;">Please Fill out the following information</h2>
               <label for="mpg">What is your MPG?</label>
               <input type="number" class = "form-control" id ="mpg" placeholder="Enter your mpg" name = "cost" min = "1" max = "900" required>
               <div class = "invalid-feedback">Please enter a valid amount</div>
@@ -251,7 +244,7 @@
                 <button class="btn btn-primary btn-lg btn-block" type="submit" id="sub" onclick="sendInfo()">submit</button>
             </div> 
           </form>
-        </div>
+        </section>
 
         <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
           <div class="container-fluid" style="background-color: black;">
@@ -266,7 +259,7 @@
                       <li><a class="url uid" href="https://www.flickr.com/photos/sacstate">Visit Sac State at Flickr</a></li>
                       <li><a class="url uid" href="https://www.youtube.com/SacStateVideo">Visit Sac State at Youtube</a></li>
                   </ul>
-                  <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page">
+                  <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page" style="padding-top: 20px;">
                       <img alt="Sac State Logo, white on dark" src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png">
                   </a>
                   <address class="col-md-4 order-md-3 adr text-light" translate="no" typeof="schema:PostalAddress">
