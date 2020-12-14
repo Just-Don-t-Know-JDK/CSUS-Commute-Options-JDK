@@ -177,10 +177,18 @@ Chart.defaults.global.defaultFontColor = "#fff";
 function extraInfoSwap(value) {
     const types = ['User', 'SOV', 'MOV', 'Motorcycle', 'Transit', 'Bike', 'Walk'];
     const mpgVals = [mpg, 24.2, 25.5, 44.0, 50.0, 0, 0];
-    const dist = [travelInfo[userType][0], travelInfo[0][0], travelInfo[0][0], travelInfo[0][0], travelInfo[3][0], travelInfo[2][0], travelInfo[1][0]];
+    const dist = [
+        meterToMile(travelInfo[userType][0]),
+        meterToMile(travelInfo[0][0]),
+        meterToMile(travelInfo[0][0]),
+        meterToMile(travelInfo[0][0]),
+        meterToMile(travelInfo[3][0]),
+        meterToMile(travelInfo[2][0]),
+        meterToMile(travelInfo[1][0])
+    ];
     const park = [parkCost(window.localStorage.getItem('mode')), parkCost('SOV'), parkCost('MOV'), parkCost('Motorcycle'), 0, 0, 0];
     const insure = [money, money, money, money, 0, 0, 0];
-    const gasCost = [extraCost(mpg, userType), extraCost(25.1, 0), extraCost(25.5, 0), extraCost(44, 0), 0, 0, 0];
+    const gasCost = [Math.round(extraCost(mpg, userType)), Math.round(extraCost(25.1, 0)), Math.round(extraCost(25.5, 0)), Math.round(extraCost(44, 0)), 0, 0, 0];
     const misc = [0, 0, 0, 0, transitCost, 0, 0];
 
     for (var i = 0; i < types.length; i++) {
