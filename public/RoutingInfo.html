@@ -180,46 +180,83 @@
       </div>
   </nav>
 
-    <!-- JUMBOTRON -->
-    <div class="jumbotron" style="background-color: gold;">
+     <!-- Header -->
+     <header class="bg-image-full">
+        <style>
+          @media only screen and (min-width: 992px) {
+            .bg-image-full {
+              background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
+            }
+          }
+        </style>
+        <style>
+          @media only screen and (max-width: 991px) {
+            main:not(.t1) .bg-image-full {
+              background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+            }
+          }
+        </style>
         <div class="container">
-          <h1 style="color: #00573d;">Routing Info</h1>
-          <hr class="my-4">
-                <p style="color: #00573d;">To calculate the information behind your current commute habits, we need to know how far you are from Sacramento State!
-                </p>
-          </hr>
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h1 class="text-right" style="color: white;">
+                Routing Information
+                <span>Commute Options</span>
+              </h1>
+            </div>
+          </div>
         </div>
-    </div>
+      </header>
 
-    <div class="container">
-        <form id="form">
-            <!-- Location 1 -->
+    <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect">
+        <!--
+        <form id="form" style="color: white;">
+            <!-- Location 1 
             <div class="container">
                 <div class="location-label">
                     <label>Address: </label>
                 </div>
                 <div class="location-input">
-                    <input type="text" id="addy" name="origin" placeholder="Enter a start location..."> 
+                    <input type="text" id="addy" name="origin" placeholder="Enter a location..."> 
                 </div>
-            </div>
-
-            <!-- Submit button -->
+                <div class="location-label">
+                    <label for="freq">How often do you go to Sacramento State (weekly)?</label>
+                </div>
+                <div class="location-input">
+                    <input type="number" id ="frequency" placeholder="1" required>                    
+                </div>
+            </div>    
+            <!-- Route and Clear buttons 
             <div class="row">
                 <button class="button" type="button" onclick="clearRoute();">Clear</button>
                 <button class="button" type="button" onclick="calcAll()">Route</button>
             </div>
-            
-            <!-- Stats table -->                
+            <!-- Stats table                
+            <div id="output" class="result-table"></div>
+       </form>
+       -->
+
+       <form id="form" style="color: white;">
+            <div class="form-group">
+                <h2 style="color:white;">Please Fill Out the Following Information</h2>
+                <label for="address">Address: </label>
+                <input type="text" id="addy" name="origin" placeholder="Enter a location...">
+                <lable for="freq">How often do you go to Sacramento State (weekly)?</lable>
+                <input type="number" id="frequencey" placeholder="1" required>
+                <div class="row">
+                    <button class="button" type="button" onclick="clearRoute();">Clear</button>
+                    <button class="button" type="button" onclick="calcAll();">Route</button>
+                </div>
+            </div>
             <div id="output" class="result-table"></div>
        </form>
 
         <div class="container-map" id="google-map"></div>
 
-        <label for="freq">How often do you go to Sacramento State (weekly)?</label>
-        <input type="number" id ="frequency" placeholder="1" required>
-
         <button id="submit" type="submit" class="btn btn-primary">Submit</button>
-    </div>
+    </section>
 
 <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
   <div class="container-fluid" style="background-color: black;">
@@ -234,7 +271,7 @@
               <li><a class="url uid" href="https://www.flickr.com/photos/sacstate">Visit Sac State at Flickr</a></li>
               <li><a class="url uid" href="https://www.youtube.com/SacStateVideo">Visit Sac State at Youtube</a></li>
           </ul>
-          <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page">
+          <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page" style="padding-top: 20px;">
               <img alt="Sac State Logo, white on dark" src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png">
           </a>
           <address class="col-md-4 order-md-3 adr text-light" translate="no" typeof="schema:PostalAddress">
