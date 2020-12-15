@@ -7,6 +7,8 @@ const mapOptions = {
     zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 };
+// Hide results button so the user uses the route button first
+document.getElementById('submit').style.visibility = 'hidden';
 
 let distance, duration;
 
@@ -98,6 +100,8 @@ function calcAll() {
     calcRoute(google.maps.TravelMode.TRANSIT, 3);
     console.log(mapData);
     window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
+    // Set results button to visible to user
+    document.getElementById('submit').style.visibility = 'visible';
 }
 
 // Clear results
@@ -105,6 +109,8 @@ function clearRoute(){
     // Set display address value to blank
     document.getElementById("addy").value = "";
     directionsDisplay.setDirections({ routes: [] });
+    // Hide results button from user
+    document.getElementById('submit').style.visibility = 'hidden';
 }
 
 // Create autocomplete objects for all inputs
