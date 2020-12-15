@@ -10,9 +10,6 @@ const mapOptions = {
 
 let distance, duration;
 
-// Hide result box
-document.getElementById("output").style.display = "none";
-
 // Create/Init map
 const map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
 
@@ -37,7 +34,7 @@ let userType = window.localStorage.getItem('mode');
 
 // Define calcRoute function
 function calcRoute(theMode, count) {
-    //create request using the user's travel mode and chosen address
+    // Create request using the user's travel mode and chosen address
     var request = {
         origin: document.getElementById("addy").value,
         destination: sacState,
@@ -58,18 +55,20 @@ function calcRoute(theMode, count) {
             mapData[count][0] = distance.value;
             mapData[count][1] = duration.value;
             // If the user's mode matches that being calculated display the route
-            if (count == userType)
+            if (count == userType) {
                 //display route onto map
                 directionsDisplay.setDirections(result);
-            return true;
+            }
         } else {
             //delete route from map
             directionsDisplay.setDirections({ routes: [] });
             //center map on sac state
             map.setCenter(sacState);
-            //Show error message 
+            //Show error message once and clear route
             clearRoute();
-            return false;
+            if(count == 0) {
+                alert("Address Invalid");
+            }
         }
     });
 }
@@ -87,41 +86,37 @@ function processType() {
     }
 }
 
+// Calculates all the distance and times for each commute mode
 function calcAll() {
     console.log(userType);
     processType();
     console.log(userType);
-
-    if (!calcRoute(google.maps.TravelMode.DRIVING, 0)) {
-        calcRoute(google.maps.TravelMode.WALKING, 1);
-        calcRoute(google.maps.TravelMode.BICYCLING, 2);
-        calcRoute(google.maps.TravelMode.TRANSIT, 3);
-        console.log(mapData);
-        window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
-    }
-    else
-        alert("Address Invalid!");
+    // Calculate the routes of each travel mode 
+    calcRoute(google.maps.TravelMode.DRIVING, 0);
+    calcRoute(google.maps.TravelMode.WALKING, 1);
+    calcRoute(google.maps.TravelMode.BICYCLING, 2);
+    calcRoute(google.maps.TravelMode.TRANSIT, 3);
+    console.log(mapData);
+    window.localStorage.setItem('travelInfo', JSON.stringify(mapData));
 }
 
 // Clear results
-
 function clearRoute(){
-    document.getElementById("output").style.display = "none";
+    // Set display address value to blank
     document.getElementById("addy").value = "";
     directionsDisplay.setDirections({ routes: [] });
-    
 }
 
 // Create autocomplete objects for all inputs
-
 var options = {
     types: ['address']
 }
 
-
+// Set input to address input
 var input1 = document.getElementById("addy");
+// Add autocomplete to address input passing in the element id and setting autocomplete to addresses
 var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
-
+// On submit send data to server
 $('#submit').click(function(){
     console.log($('input[name="freq"]').val());
     if ($('input[name="freq"]').val() > 0) {
