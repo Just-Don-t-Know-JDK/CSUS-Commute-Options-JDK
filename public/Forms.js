@@ -26,11 +26,12 @@ function showTab(n) {
   fixStepIndicator(n)
 }
 
+// Sends email address and other info to server
 function sendInfo() {
   formData.email = document.getElementById('emailAddress').value;
 
   let temp = document.getElementsByName('transport');
-  for (i = 0; i < temp.length; i++) {
+  for (var i = 0; i < temp.length; i++) {
     if (temp[i].checked) {
       formData.transport_method = temp[i].value;
       break;
