@@ -10,16 +10,6 @@
         <link rel="stylesheet" href="../sac css/all.css">
 
         <title>Single Occupant Vehicle | Sac State Commute Options</title>
-        <!-- Style for map-->
-        <style>
-          /* Setting size for the map div */
-          #map {
-            /* Map Height */
-            height: 400px;
-            /* Map Width */
-            width: 100%;
-          }
-        </style>
     </head>
     <body>
         <!-- Navbar -->
@@ -196,7 +186,7 @@
           @media only screen and (min-width: 992px) {
             .bg-image-full {
               background-image: linear-gradient(90deg, rgba(196,182,129,0) 50%,
-              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+              rgba(0,78,56,0.6) 50%, rgba(0,78,56,1) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
             }
           }
         </style>
@@ -204,7 +194,7 @@
           @media only screen and (max-width: 991px) {
             main:not(.t1) .bg-image-full {
               background-image: linear-gradient(270deg, rgba(0,78,56,0.3) 5%,
-              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/college/social-sciences-interdisciplinary-studies/_internal/_images/fall_gingko.jpg');
+              rgba(0,78,56,.6) 100%), url('https://www.csus.edu/parking-transportation/_internal/_images/structurev-2000.jpg');
             }
           }
         </style>
@@ -220,6 +210,7 @@
         </div>
       </header>
 
+      <!-- Form -->
         <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect">
                 <form action="../RoutingInfo.html" id="SOVdata" class="needs-validation" style="color: white;" novalidate>
                   <div class = "form-group">
@@ -233,8 +224,6 @@
                     <input type="number" class ="form-control" id ="insuranceCost" placeholder="Enter monthly insurance cost" name = "cost" min = "0" max = "100000" required>
                     <div class = "invalid-feedback">Please enter a valid amount</div>
                   </div>
-                    <!-- amount spent on parking. need to anticipate types of parking: daily parking pass,
-                    semester parking pass, off campus parking, or free-->
                   <div class="custom-control-inline custom-radio custom-control form-group">
                     <input type="radio" class="custom-control-input" id="semesterParkingPass" name="custom-radio" required>
                     <label class="custom-control-label" for="semesterParkingPass" required>Semester parking pass</label>
@@ -253,7 +242,7 @@
         
             </section>
 
-
+        <!--Footer -->
         <footer aria-labelledby="container-fluid" class="footer vcard" id="csus-global-footer">
           <div class="container-fluid" style="background-color: black;">
               <h2 aria-hidden="true" class="d-none" id="footer-extras">Campus Contact Information</h2>
