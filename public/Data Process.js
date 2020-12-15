@@ -34,6 +34,7 @@ fetch('/userData', options).then(response => {
 let money = (insurance*12);
 
 // https://www.csus.edu/parking-transportation/parking/permit-pricing.html
+// Calculates the cost of parking based on the resource above
 function parkCost(x) {
     if (parkingVal == 0) {
         if (x == 'Motorcycle') {
@@ -46,9 +47,12 @@ function parkCost(x) {
     else if (parkingVal == 1) {
         return 7.0*frequency*52.0;
     }
-    return 0.0;
+    else {
+        return 0.0;
+    }
 }
 
+// Calculates the cost of transit based on user values
 function processTransit() {
     if (!window.localStorage.getItem('isAStudent')) {
         transitCost = 0;
@@ -64,6 +68,7 @@ function processTransit() {
     }
 }
 
+// Parses the userType from a string to an integer so that variables like travelInfo can be easily accessed
 function processType() {
     if (userType == 'SOV')
         userType = 0;
@@ -79,14 +84,17 @@ function processType() {
         userType = 1;
 }
 
+// Calcs CO2 emmisions
 function sustainabilityCalc(mpg, distance, freq) {
     return ((((8887/mpg)*distance*2.0*freq*52.0)/1000)*2.205)/1000  // CO2 emissions in kg converted to lbs then to tons
 }
 
+// Simple meters to mile conversion function
 function meterToMile(meters) {
     return meters*0.000621371192;
 }
 
+// Simple conversion from seconds per trip to hours per trips/year
 function timeCalc(seconds, freq) {
     return (seconds/3600.0)*freq*52.0*2.0;
 }
@@ -96,6 +104,7 @@ function extraCost(value, type) {
     return ((meterToMile(travelInfo[type][0]))/value * (frequency*2)) * 52 * 3.1;
 }
 
+// Contains all the info for the graph in a JSON format
 let graphInfo = {
     sustainVals: [
         // Users consumption
@@ -114,12 +123,19 @@ let graphInfo = {
         0
         ],
     timeVals: [
+        // User
         Math.round(timeCalc(travelInfo[userType][1], frequency)),
+        // SOV
         Math.round(timeCalc(travelInfo[0][1], frequency)),
+        // MOV
         Math.round(timeCalc(travelInfo[0][1], frequency)),
+        // Motorcycle
         Math.round(timeCalc(travelInfo[0][1], frequency)),
+        // Transit
         Math.round(timeCalc(travelInfo[3][1], frequency)),
+        // Bike
         Math.round(timeCalc(travelInfo[2][1], frequency)),
+        // Walk
         Math.round(timeCalc(travelInfo[1][1], frequency))
     ],
     moneyVals: [   // All is yearly (Future iterations should pull stats from https://afdc.energy.gov/data/)
@@ -140,6 +156,7 @@ let graphInfo = {
     ]
 }
 
+// Chart.js options and chart creation (More functions related to the chart near the bottom)
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
@@ -170,21 +187,24 @@ var myChart = new Chart(ctx, {
     }
 });
 
+// Initialize the tables below the graph
 extraInfoSwap('Sustainability');
 
+// Make the chart font white
 Chart.defaults.global.defaultFontColor = "#fff";
 
+// Swaps the information in the Extra Info tables based on a String from the dropdown box
 function extraInfoSwap(value) {
     const types = ['User', 'SOV', 'MOV', 'Motorcycle', 'Transit', 'Bike', 'Walk'];
     const mpgVals = [mpg, 24.2, 25.5, 44.0, 50.0, 0, 0];
     const dist = [
-        meterToMile(travelInfo[userType][0]),
-        meterToMile(travelInfo[0][0]),
-        meterToMile(travelInfo[0][0]),
-        meterToMile(travelInfo[0][0]),
-        meterToMile(travelInfo[3][0]),
-        meterToMile(travelInfo[2][0]),
-        meterToMile(travelInfo[1][0])
+        Math.round(meterToMile(travelInfo[userType][0])),
+        Math.round(meterToMile(travelInfo[0][0])),
+        Math.round(meterToMile(travelInfo[0][0])),
+        Math.round(meterToMile(travelInfo[0][0])),
+        Math.round(meterToMile(travelInfo[3][0])),
+        Math.round(meterToMile(travelInfo[2][0])),
+        Math.round(meterToMile(travelInfo[1][0]))
     ];
     const park = [parkCost(window.localStorage.getItem('mode')), parkCost('SOV'), parkCost('MOV'), parkCost('Motorcycle'), 0, 0, 0];
     const insure = [money, money, money, money, 0, 0, 0];
@@ -218,7 +238,9 @@ function extraInfoSwap(value) {
     }
 }
 
+// If the dropdown box changes, update in three different ways (Sustainability, Time, Money)
 $('#parent').change(function(){
+    // Sustainability selected, so swap the description at the bottom and the extra info box
     if ($('#parent option:selected').text() == 'Sustainability') {
         myChart.options.title.text = 'Carbon Emissions (tons per year)';
         $("#p1").html(
@@ -230,6 +252,7 @@ $('#parent').change(function(){
         );
         extraInfoSwap('Sustainability');
     }
+    // Time selected
     else if ($('#parent option:selected').text() == 'Time') {
         myChart.options.title.text = 'Time Traveled (hours per year)';
         $("#p1").html(
@@ -241,6 +264,7 @@ $('#parent').change(function(){
         );
         extraInfoSwap('Time');
     }
+    // Money selected
     else if ($('#parent option:selected').text() == 'Money') {
         myChart.options.title.text = 'Travel Cost (dollars per year)';
         $("#p1").html(
@@ -251,11 +275,13 @@ $('#parent').change(function(){
         extraInfoSwap('Money');
     }
 
+    // Changes the graph data to one of the three different comparison types, then updates the graph & it's header
     myChart.data.datasets[0].data = getType($('#parent option:selected').text());
     myChart.update();
     $("#head1").html($('#parent option:selected').text());
 });
 
+// Returns the value of the graphInfo structure based on the string passed to it
 function getType(value) {
     if (value == 'Sustainability')
         return graphInfo.sustainVals;

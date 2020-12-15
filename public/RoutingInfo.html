@@ -11,7 +11,7 @@
     <!-- Sac State Styling -->
     <link rel="stylesheet" href="sac css/all.css">
 
-    <title>Routing Info</title>
+    <title>Routing Info | Sac State Commute Options</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -217,7 +217,7 @@
     <section aria-labelledby="connect-header" class="jumbotron paral paralsec" id="connect">
        <form id="form" style="color: white;">
             <div class="form-group">
-                <h2 style="color:white;">Please Fill Out the Following Information</h2>
+                <h2 style="color:white;">Please fill out the following information:</h2>
                 <label for="freq">How often do you go to Sacramento State (weekly)?</label>
                 <input type="number" class="form-control" id="frequencey" name="freq" placeholder="1" required>
             </div>
@@ -226,9 +226,9 @@
                 <input type="text" class="form-control" id="addy" name="origin" placeholder="Please enter an address">
                 <br>
                 <!-- Clear route on map and set address to blank -->
-                <button class="btn btn-primary" type="button" onclick="clearRoute();">Clear</button>
+                <button class="btn btn-secondary" type="button" onclick="clearRoute();">Clear</button>
                 <!-- On route calculate all routes -->
-                <button class="btn btn-primary" type="button" onclick="calcAll();">Route</button>
+                <button class="btn btn-info" type="button" onclick="calcAll();">Route</button>
             </div>
        </form>
        <!-- Map Container -->
