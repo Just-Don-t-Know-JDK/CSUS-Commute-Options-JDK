@@ -1,5 +1,5 @@
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// DATA VALIDATION
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -18,6 +18,7 @@
     }, false);
   })();
   
+  //SENDING INFORMATION TO THE SERVER
   function sendInfo() {
     var milesPerGallon = document.getElementById("mpg").value;
     var insuranceCost = document.getElementById("insuranceCost").value;

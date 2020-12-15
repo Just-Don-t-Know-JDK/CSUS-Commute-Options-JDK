@@ -1,5 +1,5 @@
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// ERROR VALIDATION
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -17,7 +17,8 @@
       });
     }, false);
   })();
-  
+
+  // SEND INFO TO SERVER
   function sendInfo() {
     var mode = 'Transit';
 
