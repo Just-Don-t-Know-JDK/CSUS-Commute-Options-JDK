@@ -46,7 +46,9 @@ function parkCost(x) {
     else if (parkingVal == 1) {
         return 7.0*frequency*52.0;
     }
-    return 0.0;
+    else {
+        return 0.0;
+    }
 }
 
 function processTransit() {
@@ -178,13 +180,13 @@ function extraInfoSwap(value) {
     const types = ['User', 'SOV', 'MOV', 'Motorcycle', 'Transit', 'Bike', 'Walk'];
     const mpgVals = [mpg, 24.2, 25.5, 44.0, 50.0, 0, 0];
     const dist = [
-        meterToMile(travelInfo[userType][0]),
-        meterToMile(travelInfo[0][0]),
-        meterToMile(travelInfo[0][0]),
-        meterToMile(travelInfo[0][0]),
-        meterToMile(travelInfo[3][0]),
-        meterToMile(travelInfo[2][0]),
-        meterToMile(travelInfo[1][0])
+        Math.round(meterToMile(travelInfo[userType][0])),
+        Math.round(meterToMile(travelInfo[0][0])),
+        Math.round(meterToMile(travelInfo[0][0])),
+        Math.round(meterToMile(travelInfo[0][0])),
+        Math.round(meterToMile(travelInfo[3][0])),
+        Math.round(meterToMile(travelInfo[2][0])),
+        Math.round(meterToMile(travelInfo[1][0]))
     ];
     const park = [parkCost(window.localStorage.getItem('mode')), parkCost('SOV'), parkCost('MOV'), parkCost('Motorcycle'), 0, 0, 0];
     const insure = [money, money, money, money, 0, 0, 0];
